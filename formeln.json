@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "michaelis-menten-kinetik",
+    "name": "Michaelis-Menten-Kinetik",
+    "symbol": "v = vmax·[S]/(Km + [S])",
+    "latex": "v = \\frac{v_{max} \\cdot [S]}{K_m + [S]}",
+    "kategorie": "biologie",
+    "unterkategorie": "Biochemie",
+    "beschreibung": "Die Michaelis-Menten-Gleichung beschreibt die Reaktionsgeschwindigkeit einer Enzymreaktion in Abhängigkeit von der Substratkonzentration [S]. Bei [S] = Km gilt v = vmax/2.",
+    "einheiten": "v in [mol/(L·s)], vmax in [mol/(L·s)], [S] in [mol/L], Km in [mol/L]",
+    "variablen": [
+      { "symbol": "v", "bedeutung": "Reaktionsgeschwindigkeit", "einheit": "mol/(L·s)" },
+      { "symbol": "vmax", "bedeutung": "Maximale Reaktionsgeschwindigkeit", "einheit": "mol/(L·s)" },
+      { "symbol": "[S]", "bedeutung": "Substratkonzentration", "einheit": "mol/L" },
+      { "symbol": "Km", "bedeutung": "Michaelis-Konstante (Substratkonzentration bei vmax/2)", "einheit": "mol/L" }
+    ],
+    "hintergrund": "Leonor Michaelis und Maud Leonora Menten entwickelten das Modell 1913. Es beschreibt das hyperbolische Sättigungsverhalten von Enzymen und erlaubt die Charakterisierung von Enzymeffizienz und Hemmung.",
+    "beispiel": "Enzym mit vmax=10 μmol/(L·s) und Km=2 mM. Bei [S]=2 mM: v=10×2/(2+2)=5 μmol/(L·s)=vmax/2 ✓. Bei [S]=10 mM: v=10×10/(2+10)≈8,33 μmol/(L·s).",
+    "anwendung": "Enzymkinetik-Analyse, Hemmstoffcharakterisierung (kompetitiv/unkompetitiv), Pharmakologie (IC₅₀), Biotechnologie, medizinische Diagnostik",
+    "quellen": ["Michaelis, L. & Menten, M.L. (1913). Die Kinetik der Invertinwirkung. Biochemische Zeitschrift.", "Nelson & Cox (2021). Lehninger Principles of Biochemistry."],
+    "verwandte": ["hardy-weinberg", "logistisches-wachstum"],
+    "schwierigkeit": "universitaet"
+  },
+  {
+    "slug": "hardy-weinberg",
+    "name": "Hardy-Weinberg-Gleichgewicht",
+    "symbol": "p² + 2pq + q² = 1",
+    "latex": "p^2 + 2pq + q^2 = 1",
+    "kategorie": "biologie",
+    "unterkategorie": "Populationsgenetik",
+    "beschreibung": "Das Hardy-Weinberg-Gleichgewicht beschreibt die Genotyphäufigkeiten in einer idealen Population ohne Evolution. p² = Häufigkeit Homozygot-Dominant, 2pq = Heterozygot, q² = Homozygot-Rezessiv.",
+    "einheiten": "p, q dimensionslos (Allelfrequenzen, 0 ≤ p,q ≤ 1, p+q=1)",
+    "variablen": [
+      { "symbol": "p", "bedeutung": "Häufigkeit des dominanten Allels (A)", "einheit": "dimensionslos" },
+      { "symbol": "q", "bedeutung": "Häufigkeit des rezessiven Allels (a) = 1−p", "einheit": "dimensionslos" },
+      { "symbol": "p²", "bedeutung": "Häufigkeit des Genotyps AA", "einheit": "dimensionslos" },
+      { "symbol": "2pq", "bedeutung": "Häufigkeit des Genotyps Aa (Träger)", "einheit": "dimensionslos" },
+      { "symbol": "q²", "bedeutung": "Häufigkeit des Genotyps aa (Erkrankte)", "einheit": "dimensionslos" }
+    ],
+    "hintergrund": "Godfrey Hardy und Wilhelm Weinberg zeigten 1908 unabhängig voneinander: In einer idealen, unendlich großen Population ohne Selektion, Mutation, Migration und Gendrift bleiben Allelfrequenzen konstant.",
+    "beispiel": "Mukoviszidose-Gen (rezessiv): Krankheitshäufigkeit q²=1/2500. → q=1/50=0,02, p=0,98. Träger-Häufigkeit: 2pq=2×0,98×0,02≈3,9% (ca. 1 von 26 Personen ist Träger).",
+    "anwendung": "Populationsgenetik, Evolutionsbiologie, Humangenetik (Krankheitsprävalenz), Züchtung, forensische Genetik",
+    "quellen": ["Hardy, G.H. (1908). Mendelian proportions in a mixed population. Science.", "Weinberg, W. (1908). Über den Nachweis der Vererbung beim Menschen. Jahreshefte des Vereins f. vaterl. Naturkunde in Württemberg."],
+    "verwandte": ["michaelis-menten-kinetik", "logistisches-wachstum"],
+    "schwierigkeit": "fortgeschritten"
+  },
+  {
+    "slug": "logistisches-wachstum",
+    "name": "Logistisches Wachstum",
+    "symbol": "dN/dt = rN·(K−N)/K",
+    "latex": "\\frac{dN}{dt} = rN \\cdot \\frac{K - N}{K}",
+    "kategorie": "biologie",
+    "unterkategorie": "Ökologie",
+    "beschreibung": "Das logistische Wachstumsmodell beschreibt, wie eine Population wächst, wenn sie durch eine Kapazitätsgrenze K (Tragfähigkeit) limitiert wird. Bei N→K nähert sich dN/dt→0.",
+    "einheiten": "N = Populationsgröße (Individuen), t in [Zeiteinheit], r = intrinsische Wachstumsrate [1/Zeit], K = Kapazitätsgrenze",
+    "variablen": [
+      { "symbol": "N", "bedeutung": "Aktuelle Populationsgröße", "einheit": "Individuen" },
+      { "symbol": "dN/dt", "bedeutung": "Wachstumsrate der Population", "einheit": "Individuen/Zeit" },
+      { "symbol": "r", "bedeutung": "Intrinsische (maximale) Wachstumsrate", "einheit": "1/Zeit" },
+      { "symbol": "K", "bedeutung": "Kapazitätsgrenze (Carrying Capacity)", "einheit": "Individuen" }
+    ],
+    "hintergrund": "Pierre François Verhulst entwickelte das Modell 1838 als Verbesserung des exponentiellen Wachstumsmodells von Malthus. Es ist das Standardmodell der Populationsökologie.",
+    "beispiel": "Bakterienpopulation mit r=0,5/h, K=10⁶. Bei N=10⁵: dN/dt = 0,5×10⁵×(10⁶−10⁵)/10⁶ = 0,5×10⁵×0,9 = 4,5×10⁴ Bakt/h. Bei N=10⁶: dN/dt=0 (Gleichgewicht).",
+    "anwendung": "Populationsökologie, Epidemiologie (Infektionskrankheiten: SIR-Modell), Fischerei-Management, Tumorwachstum, Marktdurchdringung",
+    "quellen": ["Verhulst, P.F. (1838). Notice sur la loi que la population suit dans son accroissement. Correspondance Mathématique et Physique.", "Gotelli, N.J. (2008). A Primer of Ecology."],
+    "verwandte": ["michaelis-menten-kinetik", "hardy-weinberg"],
+    "schwierigkeit": "fortgeschritten"
+  }
+]

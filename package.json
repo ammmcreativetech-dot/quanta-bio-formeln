@@ -1,0 +1,46 @@
+{
+  "name": "quanta-bio-formeln",
+  "version": "1.0.0",
+  "description": "3 wissenschaftlich aufbereitete Biologie-Formeln für Studium und Universität — Enzymkinetik (Michaelis-Menten-Kinetik), Populationsgenetik (Hardy-Weinberg-Gleichgewicht), Ökologie (Logistisches Wachstum). Mit LaTeX, Variablen, Herleitung und Praxisbeispiel. Von Quanta (quanta-study.de).",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "formeln.json"
+  ],
+  "scripts": {
+    "test": "node -e \"const f = require('.'); console.log('✅', f.formeln.length, 'Bio-Formeln geladen');\""
+  },
+  "keywords": [
+    "biologie",
+    "biologie-formeln",
+    "biology",
+    "enzymkinetik",
+    "michaelis-menten",
+    "hardy-weinberg",
+    "populationsgenetik",
+    "oekologie",
+    "biochemie",
+    "medizin",
+    "vorklinik",
+    "latex",
+    "mint",
+    "studium",
+    "university",
+    "fsrs",
+    "quanta",
+    "education",
+    "germany"
+  ],
+  "author": "Quanta <ammm.creativetech@gmail.com> (https://quanta-study.de)",
+  "license": "CC-BY-4.0",
+  "homepage": "https://quanta-study.de/biologie-lernen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammmcreativetech-dot/quanta-bio-formeln.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ammmcreativetech-dot/quanta-bio-formeln/issues"
+  }
+}
