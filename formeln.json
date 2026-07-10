@@ -42,7 +42,41 @@
       "logistisches-wachstum"
     ],
     "abiturRelevant": false,
-    "schwierigkeit": "universitaet"
+    "schwierigkeit": "universitaet",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Michaelis%E2%80%93Menten_kinetics"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "v=Vmax*[S]/(Km+[S])",
+      "v = Vmax [S] / (Km + [S])",
+      "Michaelis-Menten Kinetik",
+      "Enzymkinetik Formel",
+      "Michaelis-Menten equation",
+      "Km Vmax Formel",
+      "Reaktionsgeschwindigkeit Enzym"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/michaelis-menten",
+    "herleitung": {
+      "gueltigkeit": "Gilt für einfache Enzymkinetik mit quasi-stationärem ES-Komplex und ohne starke Allosterie oder Substrathemmung.",
+      "schritte": [
+        "Mechanismus: E + S ⇌ ES → E + P.",
+        "Quasi-Steady-State für ES führt zu v = Vmax[S]/(Km+[S])."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Substratkonzentration aus Rate",
+        "latex": "[S] = \\frac{vK_m}{V_{max}-v}",
+        "hinweis": "Nur sinnvoll für v < Vmax."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "K_m direkt als maximale Geschwindigkeit deuten.",
+        "korrektur": "Vmax ist die maximale Geschwindigkeit; K_m ist eine Konzentration."
+      }
+    ]
   },
   {
     "slug": "logistisches-wachstum",
@@ -87,6 +121,661 @@
       "michaelis-menten"
     ],
     "abiturRelevant": false,
-    "schwierigkeit": "universitaet"
+    "schwierigkeit": "universitaet",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Logistic_function"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "dN/dt = r*N*(1-N/K)",
+      "N(t)=K/(1+e^(-r(t-t0)))",
+      "logistisches Wachstum Formel",
+      "Populationswachstum Formel",
+      "logistic growth formula",
+      "Kapazitätsgrenze Wachstum",
+      "Wachstumsgleichung Biologie"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/logistisches-wachstum",
+    "herleitung": {
+      "gueltigkeit": "Gilt für Wachstum mit begrenzter Ressource und konstanter Kapazitätsgrenze K im Modellzeitraum.",
+      "schritte": [
+        "Ohne Grenze gilt dN/dt = rN.",
+        "Der Faktor (1 - N/K) bremst das Wachstum bei Annäherung an K."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Pro-Kopf-Wachstumsrate",
+        "latex": "\\frac{1}{N}\\frac{dN}{dt}=r\\left(1-\\frac{N}{K}\\right)",
+        "hinweis": "Bei N = K/2 ist die absolute Wachstumsrate maximal."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "Logistisches Wachstum als dauerhaft exponentiell behandeln.",
+        "korrektur": "Nur für N << K ist es näherungsweise exponentiell."
+      }
+    ]
+  },
+  {
+    "slug": "hardy-weinberg",
+    "name": "Hardy-Weinberg-Gleichgewicht",
+    "latex": "p^2 + 2pq + q^2 = 1",
+    "symbol": "p² + 2pq + q² = 1",
+    "kategorie": "biologie",
+    "unterkategorie": "Genetik",
+    "beschreibung": "Das Hardy-Weinberg-Gleichgewicht verknüpft in einer idealen Population die Allelfrequenzen p und q mit den Genotypfrequenzen und bleibt von Generation zu Generation konstant, solange keine Evolutionsfaktoren wirken.",
+    "einheiten": "p, q, p², 2pq, q² sind dimensionslose Häufigkeiten (0 bis 1); p + q = 1",
+    "variablen": [
+      {
+        "symbol": "p",
+        "bedeutung": "Frequenz des dominanten Allels A",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "q",
+        "bedeutung": "Frequenz des rezessiven Allels a",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "p²",
+        "bedeutung": "Frequenz der homozygot dominanten Genotypen (AA)",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "2pq",
+        "bedeutung": "Frequenz der heterozygoten Genotypen (Aa), die Träger",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "q²",
+        "bedeutung": "Frequenz der homozygot rezessiven Genotypen (aa)",
+        "einheit": "– (0…1)"
+      }
+    ],
+    "hintergrund": "Godfrey H. Hardy und Wilhelm Weinberg leiteten 1908 unabhängig voneinander her, dass sich Allel- und Genotypfrequenzen ohne Evolutionsfaktoren nicht ändern. Die Genotypfrequenzen sind das Ausmultiplizieren von (p + q)² bei zufälliger Paarung. Voraussetzungen: sehr große Population, keine Mutation, Selektion, Migration oder Gendrift und Panmixie.",
+    "beispiel": "Zeigen 16 % der Individuen den rezessiven Phänotyp, gilt q² = 0,16, also q = 0,4 und p = 1 − 0,4 = 0,6. Dann ist p² = 0,36 (36 % AA) und 2pq = 2·0,6·0,4 = 0,48 (48 % Aa). Kontrolle: 0,36 + 0,48 + 0,16 = 1,00 ✓.",
+    "anwendung": "Populationsgenetik, Berechnung von Trägerfrequenzen für rezessive Erbkrankheiten, Humangenetik, Evolutionsbiologie, Nachweis von Selektion durch Abweichung vom Gleichgewicht",
+    "quellen": [
+      "Hardy, G.H. (1908). Mendelian Proportions in a Mixed Population. Science, 28(706), 49–50.",
+      "Weinberg, W. (1908). Über den Nachweis der Vererbung beim Menschen. Jahreshefte des Vereins für vaterländische Naturkunde in Württemberg, 64, 369–382."
+    ],
+    "verwandte": [
+      "exponentielles-wachstum",
+      "logistisches-wachstum",
+      "normalverteilung"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "fortgeschritten",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle",
+      "https://de.wikipedia.org/wiki/Wilhelm_Weinberg"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "p^2+2pq+q^2=1",
+      "p²+2pq+q²=1",
+      "p+q=1",
+      "Hardy-Weinberg-Gleichgewicht",
+      "Hardy Weinberg Gleichung",
+      "Hardy-Weinberg-Regel",
+      "Allelfrequenz berechnen",
+      "Genotypfrequenz",
+      "Trägerfrequenz Erbkrankheit",
+      "Hardy-Weinberg equilibrium"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/hardy-weinberg",
+    "herleitung": {
+      "gueltigkeit": "Gilt für eine ideale Population: sehr groß, keine Mutation, Selektion, Migration oder Gendrift und mit zufälliger Paarung; für ein Gen mit zwei Allelen.",
+      "schritte": [
+        "Die Allelfrequenzen ergänzen sich zu p + q = 1.",
+        "Quadrieren: (p + q)² = p² + 2pq + q² = 1 liefert die drei Genotypfrequenzen."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Rezessive Allelfrequenz aus dem Phänotyp",
+        "latex": "q = \\sqrt{q^2}",
+        "hinweis": "Nur der homozygot rezessive Phänotyp (aa) hat direkt die Frequenz q²."
+      },
+      {
+        "ziel": "Dominante Allelfrequenz",
+        "latex": "p = 1 - q",
+        "hinweis": "Folgt aus p + q = 1."
+      },
+      {
+        "ziel": "Heterozygotenanteil (Träger)",
+        "latex": "2pq = 2q(1-q)",
+        "hinweis": "Der Faktor 2 zählt Aa und aA."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "q mit q² verwechseln.",
+        "korrektur": "Der rezessive Phänotyp liefert q²; q erhält man erst durch Wurzelziehen."
+      },
+      {
+        "fehler": "Den Faktor 2 bei 2pq vergessen.",
+        "korrektur": "Heterozygote entstehen auf zwei Wegen (Aa und aA), daher 2pq."
+      },
+      {
+        "fehler": "Heterozygote zum dominanten Phänotyp p² zählen.",
+        "korrektur": "Der dominante Phänotyp umfasst p² + 2pq; nur der Genotyp AA ist p²."
+      },
+      {
+        "fehler": "Das Gleichgewicht trotz Selektion oder kleiner Population annehmen.",
+        "korrektur": "Bei Evolutionsfaktoren gilt die Formel nicht; Abweichungen weisen genau darauf hin."
+      }
+    ]
+  },
+  {
+    "slug": "exponentielles-wachstum",
+    "name": "Exponentielles Wachstum",
+    "latex": "N(t) = N_0 \\cdot e^{r \\cdot t}",
+    "symbol": "N(t) = N₀·e^(r·t)",
+    "kategorie": "biologie",
+    "unterkategorie": "Populationsbiologie",
+    "beschreibung": "Das exponentielle Wachstumsmodell beschreibt eine Population, die bei unbegrenzten Ressourcen mit konstanter Rate wächst, sodass die Zunahme stets proportional zur aktuellen Größe ist.",
+    "einheiten": "N in Individuen, N₀ in Individuen, r in 1/Zeit, t in Zeit",
+    "variablen": [
+      {
+        "symbol": "N(t)",
+        "bedeutung": "Populationsgröße zur Zeit t",
+        "einheit": "Individuen"
+      },
+      {
+        "symbol": "N₀",
+        "bedeutung": "Anfangsgröße der Population (t = 0)",
+        "einheit": "Individuen"
+      },
+      {
+        "symbol": "r",
+        "bedeutung": "Wachstumskonstante (Geburts- minus Sterberate)",
+        "einheit": "1/t"
+      },
+      {
+        "symbol": "t",
+        "bedeutung": "Zeit",
+        "einheit": "s, h, d oder Jahr"
+      }
+    ],
+    "hintergrund": "Das Modell ist die Lösung der Differentialgleichung dN/dt = r·N: Jede Zunahme ist proportional zur vorhandenen Zahl. Thomas Malthus (1798) beschrieb damit ungebremstes Bevölkerungswachstum. Real gilt es nur in der Anfangsphase (N ≪ K); danach bremst die Kapazitätsgrenze und das logistische Modell übernimmt. Verdopplungszeit: t½ = ln 2 / r.",
+    "beispiel": "Startet eine Bakterienkultur mit N₀ = 1000 und r = 0,5/h, dann gilt nach t = 10 h: N = 1000·e^(0,5·10) = 1000·e⁵ ≈ 1000·148,4 ≈ 148 400. Die Verdopplungszeit beträgt t½ = ln 2 / 0,5 ≈ 1,39 h.",
+    "anwendung": "Ökologie (Anfangsphase von Populationen), Mikrobiologie (Bakterienwachstum), Epidemiologie, Radioaktivität und Verzinsung als analoge Prozesse, Kontrastmodell zum logistischen Wachstum",
+    "quellen": [
+      "Malthus, T.R. (1798). An Essay on the Principle of Population. London: J. Johnson."
+    ],
+    "verwandte": [
+      "logistisches-wachstum",
+      "hardy-weinberg",
+      "michaelis-menten"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "fortgeschritten",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Exponential_growth"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "N(t)=N0*e^(r*t)",
+      "N(t) = N0 e^(rt)",
+      "dN/dt = r*N",
+      "exponentielles Wachstum Formel",
+      "exponentielles Wachstum berechnen",
+      "Verdopplungszeit",
+      "Wachstumskonstante",
+      "Bakterienwachstum Formel",
+      "exponential growth formula"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/exponentielles-wachstum",
+    "herleitung": {
+      "gueltigkeit": "Gilt bei unbegrenzten Ressourcen und konstanter Wachstumsrate r, also nur in der Anfangsphase realer Populationen (N ≪ K).",
+      "schritte": [
+        "Trennung der Variablen: dN/N = r·dt.",
+        "Integrieren und mit N(0) = N₀ auflösen: N(t) = N₀·e^{rt}."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Wachstumsrate aus zwei Messungen",
+        "latex": "r = \\frac{1}{t}\\ln\\!\\left(\\frac{N}{N_0}\\right)",
+        "hinweis": "Aus N₀, N und der verstrichenen Zeit t."
+      },
+      {
+        "ziel": "Verdopplungszeit",
+        "latex": "t_{1/2} = \\frac{\\ln 2}{r}",
+        "hinweis": "Unabhängig von N₀; nur von r bestimmt."
+      },
+      {
+        "ziel": "Zeit bis zu einer Zielgröße",
+        "latex": "t = \\frac{1}{r}\\ln\\!\\left(\\frac{N}{N_0}\\right)",
+        "hinweis": "Umstellung von N(t) = N₀·e^{rt} nach t."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "Wachstum dauerhaft exponentiell annehmen.",
+        "korrektur": "Real bremst die Kapazitätsgrenze; dann gilt das logistische Modell."
+      },
+      {
+        "fehler": "Kontinuierliches e^{rt} mit diskretem (1 + r)^t verwechseln.",
+        "korrektur": "r im e-Modell ist die momentane Rate, nicht der prozentuale Zuwachs pro Schritt."
+      },
+      {
+        "fehler": "Einheiten von r und t nicht abstimmen.",
+        "korrektur": "Ist r in 1/h, muss t in Stunden eingesetzt werden, damit r·t dimensionslos ist."
+      },
+      {
+        "fehler": "Verdopplungszeit von N₀ abhängig machen.",
+        "korrektur": "t½ = ln 2 / r hängt nur von r ab, nie von der Anfangsgröße."
+      }
+    ]
+  },
+  {
+    "slug": "chi-quadrat-test",
+    "name": "Chi-Quadrat-Test (Anpassungstest)",
+    "latex": "\\chi^2 = \\sum \\frac{(B - E)^2}{E}",
+    "symbol": "χ² = Σ (B − E)² / E",
+    "kategorie": "biologie",
+    "unterkategorie": "Genetik",
+    "beschreibung": "Der Chi-Quadrat-Anpassungstest prüft, ob beobachtete Häufigkeiten (z. B. Phänotypen eines Kreuzungsversuchs) mit den nach einer Hypothese erwarteten Häufigkeiten (z. B. einem Mendel-Spaltungsverhältnis) verträglich sind.",
+    "einheiten": "χ², B, E sind dimensionslose Anzahlen; der Prüfwert χ² ist einheitenlos",
+    "variablen": [
+      {
+        "symbol": "χ²",
+        "bedeutung": "Prüfgröße (Summe der gewichteten Abweichungsquadrate)",
+        "einheit": "– (dimensionslos)"
+      },
+      {
+        "symbol": "B",
+        "bedeutung": "beobachtete Häufigkeit einer Klasse (observed)",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "E",
+        "bedeutung": "erwartete Häufigkeit dieser Klasse (expected, aus der Hypothese)",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "df",
+        "bedeutung": "Freiheitsgrade = Anzahl der Klassen − 1",
+        "einheit": "– (dimensionslos)"
+      }
+    ],
+    "hintergrund": "Karl Pearson führte den Test 1900 ein. Man vergleicht den berechneten χ²-Wert mit einem kritischen Wert aus der Chi-Quadrat-Tabelle für die passenden Freiheitsgrade df und ein Signifikanzniveau (meist α = 5 %). Ist χ² kleiner als der kritische Wert, wird die Nullhypothese (beobachtet = erwartet) beibehalten; ist χ² größer, wird sie verworfen. In der Genetik prüft man so, ob eine Kreuzung dem erwarteten Verhältnis (3:1, 9:3:3:1) folgt. Bei einem Verhältnis mit k Klassen gilt df = k − 1.",
+    "beispiel": "Monohybrider Erbgang, 100 Nachkommen, erwartet 3:1 → E = 75 und 25. Beobachtet: B = 80 und 20. χ² = (80−75)²/75 + (20−25)²/25 = 25/75 + 25/25 = 0,333 + 1,000 = 1,333. df = 1, kritischer Wert 3,84. Da 1,333 < 3,84 ist die Abweichung nicht signifikant, das 3:1-Verhältnis wird beibehalten.",
+    "anwendung": "Genetik (Test von Spaltungsverhältnissen), Ökologie (Verteilungstests), Qualitätskontrolle, jede Prüfung von Häufigkeiten gegen ein erwartetes Muster",
+    "quellen": [
+      "Pearson, K. (1900). On the criterion that a given system of deviations from the probable... Philosophical Magazine, Series 5, 50(302), 157–175."
+    ],
+    "verwandte": [
+      "hardy-weinberg",
+      "normalverteilung",
+      "standardabweichung"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "fortgeschritten",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Chi-squared_test"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "chi^2 = sum (B-E)^2/E",
+      "χ²=Σ(B-E)²/E",
+      "Chi-Quadrat-Test",
+      "Chi Quadrat Test Genetik",
+      "Anpassungstest",
+      "chi square test",
+      "beobachtet erwartet Test",
+      "Spaltungsverhältnis prüfen",
+      "Freiheitsgrade Chi Quadrat"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/chi-quadrat-test",
+    "herleitung": {
+      "gueltigkeit": "Gilt als Anpassungstest für gezählte Häufigkeiten in disjunkten Klassen mit ausreichend großen Erwartungswerten (Faustregel E ≥ 5).",
+      "schritte": [
+        "Berechne je Klasse den Erwartungswert E aus der Hypothese und bilde (B − E)²/E.",
+        "Summiere über alle Klassen zu χ² und vergleiche mit dem kritischen Wert für df = Klassen − 1."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Freiheitsgrade beim Anpassungstest",
+        "latex": "df = k - 1",
+        "hinweis": "k ist die Anzahl der Klassen; nur bei geschätzten Parametern zieht man weitere ab."
+      },
+      {
+        "ziel": "Beitrag einer einzelnen Klasse",
+        "latex": "\\chi^2_i = \\frac{(B_i - E_i)^2}{E_i}",
+        "hinweis": "Zeigt, welche Klasse am stärksten zur Abweichung beiträgt."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "Prozente statt absoluter Anzahlen einsetzen.",
+        "korrektur": "χ² braucht gezählte Häufigkeiten; erwartete Anzahlen ergeben sich als Verhältnis · Gesamtzahl."
+      },
+      {
+        "fehler": "Die Freiheitsgrade falsch bestimmen.",
+        "korrektur": "Beim reinen Anpassungstest gilt df = Klassen − 1, nicht die Gesamtzahl der Individuen."
+      },
+      {
+        "fehler": "Ein kleines χ² als Beweis der Hypothese deuten.",
+        "korrektur": "Der Test kann die Nullhypothese nur beibehalten oder verwerfen, nie beweisen."
+      },
+      {
+        "fehler": "Beim Signifikanzvergleich die Richtung verwechseln.",
+        "korrektur": "Erst wenn χ² größer als der kritische Wert ist, wird die Hypothese verworfen."
+      }
+    ]
+  },
+  {
+    "slug": "shannon-index",
+    "name": "Shannon-Index (Biodiversität)",
+    "latex": "H' = -\\sum_{i=1}^{S} p_i \\cdot \\ln(p_i)",
+    "symbol": "H' = −Σ pᵢ·ln(pᵢ)",
+    "kategorie": "biologie",
+    "unterkategorie": "Ökologie",
+    "beschreibung": "Der Shannon-Index (Shannon-Wiener-Index) misst die Diversität einer Lebensgemeinschaft. Er berücksichtigt sowohl den Artenreichtum als auch die Gleichmäßigkeit (Evenness), mit der sich die Individuen auf die Arten verteilen.",
+    "einheiten": "H' und pᵢ sind dimensionslos; pᵢ = nᵢ/N ist ein Anteil (0…1)",
+    "variablen": [
+      {
+        "symbol": "H'",
+        "bedeutung": "Shannon-Diversitätsindex (Diversität der Gemeinschaft)",
+        "einheit": "– (dimensionslos)"
+      },
+      {
+        "symbol": "pᵢ",
+        "bedeutung": "relative Häufigkeit der Art i, also nᵢ/N",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "nᵢ",
+        "bedeutung": "Individuenzahl der Art i",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "N",
+        "bedeutung": "Gesamtzahl aller Individuen",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "Artenzahl (species richness)",
+        "einheit": "Anzahl"
+      }
+    ],
+    "hintergrund": "Claude Shannon entwickelte das Maß 1948 in der Informationstheorie; die Ökologie übernahm es als Diversitätsmaß. Meist wird der natürliche Logarithmus ln verwendet (Einheit „nats\"), seltener log₂ oder log₁₀. H' ist null bei nur einer Art und wird maximal (Hmax = ln S), wenn alle Arten gleich häufig sind. Aus H' und Hmax berechnet man die Evenness E = H'/ln S als Maß für die Gleichverteilung (0…1).",
+    "beispiel": "Gemeinschaft mit 3 Arten, Individuen 10, 6, 4 → N = 20, also p = 0,5; 0,3; 0,2. H' = −(0,5·ln0,5 + 0,3·ln0,3 + 0,2·ln0,2) = −(0,5·(−0,693) + 0,3·(−1,204) + 0,2·(−1,609)) = −(−0,347 − 0,361 − 0,322) = 1,030. Maximal wäre Hmax = ln3 = 1,099, die Evenness ist also E = 1,030/1,099 = 0,94.",
+    "anwendung": "Ökologie (Vergleich der Artenvielfalt von Lebensräumen), Umweltmonitoring, Bewertung von Renaturierung und Störungen, Gewässergüte",
+    "quellen": [
+      "Shannon, C.E. (1948). A Mathematical Theory of Communication. Bell System Technical Journal, 27(3), 379–423."
+    ],
+    "verwandte": [
+      "simpson-index",
+      "logistisches-wachstum",
+      "standardabweichung"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "fortgeschritten",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Diversity_index#Shannon_index"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "H' = -sum p_i ln(p_i)",
+      "H=-Σpi·ln(pi)",
+      "Shannon-Index",
+      "Shannon-Wiener-Index",
+      "Biodiversität Formel",
+      "Diversitätsindex",
+      "shannon diversity index",
+      "Evenness berechnen",
+      "Artenvielfalt Index"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/shannon-index",
+    "herleitung": {
+      "gueltigkeit": "Gilt für Diversitätsvergleiche von Gemeinschaften, deren Arten und Individuenzahlen vollständig erfasst oder repräsentativ gestichprobt sind.",
+      "schritte": [
+        "Berechne die relativen Häufigkeiten pᵢ = nᵢ/N jeder Art.",
+        "Summiere pᵢ·ln(pᵢ) über alle Arten und kehre das Vorzeichen um."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Maximale Diversität",
+        "latex": "H'_{max} = \\ln S",
+        "hinweis": "Wird erreicht, wenn alle S Arten gleich häufig sind."
+      },
+      {
+        "ziel": "Evenness (Gleichmäßigkeit)",
+        "latex": "E = \\frac{H'}{\\ln S}",
+        "hinweis": "Liegt zwischen 0 und 1; 1 bedeutet perfekte Gleichverteilung."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "Absolute Individuenzahlen statt Anteile pᵢ einsetzen.",
+        "korrektur": "In die Formel gehen die relativen Häufigkeiten pᵢ = nᵢ/N ein, nicht die rohen Zahlen."
+      },
+      {
+        "fehler": "Das Minuszeichen vergessen.",
+        "korrektur": "Da ln(pᵢ) für pᵢ < 1 negativ ist, macht das führende Minus H' positiv."
+      },
+      {
+        "fehler": "H'-Werte mit verschiedenen Logarithmen vergleichen.",
+        "korrektur": "Nur Werte mit derselben Basis (meist ln) sind vergleichbar."
+      },
+      {
+        "fehler": "H' allein als Gleichmäßigkeit deuten.",
+        "korrektur": "H' hängt auch von der Artenzahl ab; die Evenness E = H'/ln S trennt beides."
+      }
+    ]
+  },
+  {
+    "slug": "simpson-index",
+    "name": "Simpson-Index (Dominanz und Diversität)",
+    "latex": "D = \\sum_{i=1}^{S} p_i^{\\,2}",
+    "symbol": "D = Σ pᵢ²",
+    "kategorie": "biologie",
+    "unterkategorie": "Ökologie",
+    "beschreibung": "Der Simpson-Index D misst die Dominanz in einer Lebensgemeinschaft: die Wahrscheinlichkeit, dass zwei zufällig gezogene Individuen zur selben Art gehören. Der Kehrwert (1 − D) ist der Simpson-Diversitätsindex und steigt mit der Vielfalt.",
+    "einheiten": "D, 1 − D und pᵢ sind dimensionslos; pᵢ = nᵢ/N ist ein Anteil (0…1)",
+    "variablen": [
+      {
+        "symbol": "D",
+        "bedeutung": "Simpson-Dominanzindex (Wahrscheinlichkeit gleicher Art)",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "pᵢ",
+        "bedeutung": "relative Häufigkeit der Art i, also nᵢ/N",
+        "einheit": "– (0…1)"
+      },
+      {
+        "symbol": "nᵢ",
+        "bedeutung": "Individuenzahl der Art i",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "N",
+        "bedeutung": "Gesamtzahl aller Individuen",
+        "einheit": "Anzahl"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "Artenzahl (species richness)",
+        "einheit": "Anzahl"
+      }
+    ],
+    "hintergrund": "Edward H. Simpson führte das Maß 1949 ein. Ein großer D (nahe 1) bedeutet, dass wenige Arten dominieren, also geringe Diversität. Deshalb betrachtet man meist den Simpson-Diversitätsindex 1 − D (Gini-Simpson) oder den reziproken Simpson-Index 1/D, die beide mit der Vielfalt steigen. Für endliche Stichproben nutzt man die unverzerrte Form D = Σ nᵢ(nᵢ−1)/[N(N−1)]. Im Vergleich zum Shannon-Index gewichtet Simpson häufige Arten stärker und reagiert weniger empfindlich auf seltene Arten.",
+    "beispiel": "Gemeinschaft mit 3 Arten, Individuen 10, 6, 4 → N = 20, also p = 0,5; 0,3; 0,2. D = 0,5² + 0,3² + 0,2² = 0,25 + 0,09 + 0,04 = 0,38. Der Diversitätsindex ist 1 − D = 0,62, der reziproke Simpson-Index 1/D = 1/0,38 = 2,63. Die endliche Form ergibt D = (10·9 + 6·5 + 4·3)/(20·19) = 132/380 = 0,347.",
+    "anwendung": "Ökologie (Diversitätsvergleich, Dominanzstrukturen), Umweltmonitoring, Naturschutz, Vergleich gestörter und ungestörter Habitate",
+    "quellen": [
+      "Simpson, E.H. (1949). Measurement of Diversity. Nature, 163(4148), 688."
+    ],
+    "verwandte": [
+      "shannon-index",
+      "logistisches-wachstum",
+      "hardy-weinberg"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "fortgeschritten",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Diversity_index#Simpson_index"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "D = sum p_i^2",
+      "D=Σpi²",
+      "Simpson-Index",
+      "Simpson Diversitätsindex",
+      "simpson index",
+      "1-D Simpson",
+      "reziproker Simpson-Index",
+      "Dominanzindex Ökologie",
+      "Biodiversität Simpson"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/simpson-index",
+    "herleitung": {
+      "gueltigkeit": "Gilt für Diversitäts- und Dominanzvergleiche von Gemeinschaften; die endliche Form D = Σ nᵢ(nᵢ−1)/[N(N−1)] ist bei kleinen Stichproben genauer.",
+      "schritte": [
+        "Berechne die relativen Häufigkeiten pᵢ = nᵢ/N jeder Art.",
+        "Quadriere die Anteile und summiere sie zu D = Σ pᵢ²; die Diversität ist 1 − D."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Simpson-Diversitätsindex",
+        "latex": "D_{div} = 1 - \\sum p_i^{\\,2}",
+        "hinweis": "Steigt mit der Vielfalt; 0 bei einer Art, nahe 1 bei vielen gleich häufigen Arten."
+      },
+      {
+        "ziel": "Reziproker Simpson-Index",
+        "latex": "D^{-1} = \\frac{1}{\\sum p_i^{\\,2}}",
+        "hinweis": "Gibt die effektive Artenzahl an; entspricht bei Gleichverteilung genau S."
+      },
+      {
+        "ziel": "Unverzerrte Form für Stichproben",
+        "latex": "D = \\frac{\\sum n_i(n_i - 1)}{N(N - 1)}",
+        "hinweis": "Zieht ohne Zurücklegen; bei kleinen N genauer als die Anteilsform."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "D (Dominanz) und 1 − D (Diversität) verwechseln.",
+        "korrektur": "Großes D heißt hohe Dominanz und geringe Vielfalt; die Diversität ist 1 − D."
+      },
+      {
+        "fehler": "Individuenzahlen statt Anteile quadrieren.",
+        "korrektur": "In D = Σ pᵢ² gehen die Anteile pᵢ = nᵢ/N ein, nicht die rohen Zahlen."
+      },
+      {
+        "fehler": "Anteils- und endliche Form für dieselbe Aufgabe mischen.",
+        "korrektur": "Man entscheidet sich für eine Form; die endliche Form nutzt nᵢ und N direkt."
+      },
+      {
+        "fehler": "Simpson und Shannon als identisch behandeln.",
+        "korrektur": "Simpson gewichtet häufige Arten stärker, Shannon reagiert empfindlicher auf seltene Arten."
+      }
+    ]
+  },
+  {
+    "slug": "lincoln-index",
+    "name": "Lincoln-Index (Fang-Wiederfang-Methode)",
+    "latex": "N = \\frac{M \\cdot C}{R}",
+    "symbol": "N = (M·C) / R",
+    "kategorie": "biologie",
+    "unterkategorie": "Ökologie",
+    "beschreibung": "Der Lincoln-Petersen-Index schätzt die Größe einer Population, die nicht vollständig gezählt werden kann. Ein erster Fang wird markiert und freigelassen; aus dem Anteil markierter Tiere im zweiten Fang folgt die Gesamtzahl.",
+    "einheiten": "N, M, C, R sind dimensionslose Anzahlen (Individuen)",
+    "variablen": [
+      {
+        "symbol": "N",
+        "bedeutung": "geschätzte Gesamtgröße der Population",
+        "einheit": "Individuen"
+      },
+      {
+        "symbol": "M",
+        "bedeutung": "im ersten Fang markierte und freigelassene Individuen",
+        "einheit": "Individuen"
+      },
+      {
+        "symbol": "C",
+        "bedeutung": "Gesamtzahl der Individuen im zweiten Fang",
+        "einheit": "Individuen"
+      },
+      {
+        "symbol": "R",
+        "bedeutung": "im zweiten Fang wiedergefangene markierte Individuen",
+        "einheit": "Individuen"
+      }
+    ],
+    "hintergrund": "Die Methode beruht auf einem Dreisatz: Der Anteil Markierter in der Population (M/N) entspricht dem Anteil Markierter im zweiten Fang (R/C), also M/N = R/C, umgestellt N = M·C/R. Frederick Lincoln (1930) und Carl Petersen prägten das Verfahren. Voraussetzungen: geschlossene Population (keine Geburten, Tode, Zu- oder Abwanderung zwischen den Fängen), gute Durchmischung, Markierung ohne Einfluss auf Überleben oder Fangbarkeit. Bei kleinem R ist die Schätzung stark verzerrt; dann nutzt man die Chapman-Korrektur N = (M+1)(C+1)/(R+1) − 1.",
+    "beispiel": "Man fängt M = 40 Fische, markiert und lässt sie frei. Beim zweiten Fang sind C = 50 Fische darunter R = 8 markierte. Dann ist N = (40·50)/8 = 2000/8 = 250 Fische. Die Chapman-Korrektur liefert N = (41·51)/9 − 1 = 2091/9 − 1 ≈ 231.",
+    "anwendung": "Ökologie (Bestandsschätzung von Tierpopulationen), Fischereibiologie, Wildtiermanagement, Naturschutz, Epidemiologie (Schätzung verborgener Fallzahlen)",
+    "quellen": [
+      "Lincoln, F.C. (1930). Calculating Waterfowl Abundance on the Basis of Banding Returns. USDA Circular 118, 1–4."
+    ],
+    "verwandte": [
+      "logistisches-wachstum",
+      "exponentielles-wachstum",
+      "shannon-index"
+    ],
+    "abiturRelevant": true,
+    "schwierigkeit": "grundlegend",
+    "quellenLinks": [
+      "https://en.wikipedia.org/wiki/Mark_and_recapture"
+    ],
+    "dateUpdated": "2026-07-09",
+    "suchbegriffe": [
+      "N = M*C/R",
+      "N=(M·C)/R",
+      "Lincoln-Index",
+      "Lincoln-Petersen-Index",
+      "Fang-Wiederfang-Methode",
+      "mark recapture",
+      "Populationsgröße schätzen",
+      "Bestandsschätzung Formel",
+      "Fang Wiederfang Biologie"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/lincoln-index",
+    "herleitung": {
+      "gueltigkeit": "Gilt für eine geschlossene Population mit guter Durchmischung, bei der die Markierung Überleben und Fangbarkeit nicht beeinflusst.",
+      "schritte": [
+        "Ansatz aus dem Dreisatz: M/N = R/C.",
+        "Nach N auflösen: N = M·C/R."
+      ]
+    },
+    "umstellungen": [
+      {
+        "ziel": "Chapman-Korrektur (kleiner Wiederfang)",
+        "latex": "N = \\frac{(M+1)(C+1)}{R+1} - 1",
+        "hinweis": "Verringert die Verzerrung, wenn R klein ist."
+      },
+      {
+        "ziel": "Nötiger Wiederfang aus geschätzter Größe",
+        "latex": "R = \\frac{M \\cdot C}{N}",
+        "hinweis": "Umstellung von N = M·C/R; hilft bei der Versuchsplanung."
+      }
+    ],
+    "typischeFehler": [
+      {
+        "fehler": "C und R verwechseln.",
+        "korrektur": "C ist der ganze zweite Fang, R nur die darin wiedergefangenen Markierten."
+      },
+      {
+        "fehler": "Die Formel bei offener Population anwenden.",
+        "korrektur": "Geburten, Tode oder Wanderung zwischen den Fängen verfälschen die Schätzung."
+      },
+      {
+        "fehler": "Bei sehr kleinem R der Rohschätzung vertrauen.",
+        "korrektur": "Kleines R verzerrt stark nach oben; dann die Chapman-Korrektur verwenden."
+      },
+      {
+        "fehler": "Annehmen, Markierte mischen sich nicht wieder unter.",
+        "korrektur": "Zwischen den Fängen braucht es genug Zeit für eine gleichmäßige Durchmischung."
+      }
+    ]
   }
 ]

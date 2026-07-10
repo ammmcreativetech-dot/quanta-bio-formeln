@@ -1,7 +1,7 @@
 {
   "name": "quanta-bio-formeln",
-  "version": "1.0.2",
-  "description": "3 wissenschaftlich aufbereitete Biologie-Formeln für Studium und Universität — Enzymkinetik (Michaelis-Menten-Kinetik), Populationsgenetik (Hardy-Weinberg-Gleichgewicht), Ökologie (Logistisches Wachstum). Mit LaTeX, Variablen, Herleitung und Praxisbeispiel. Von Quanta (quanta-study.de).",
+  "version": "2.0.0",
+  "description": "8 wissenschaftlich aufbereitete Biologie-Formeln für Abitur, Studium und Universität — Biochemie, Genetik, Populationsbiologie, Ökologie. Mit LaTeX, Variablen, Herleitung, Umstellungen und typischen Fehlern. Von Quanta (quanta-study.de).",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
