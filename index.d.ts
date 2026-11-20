@@ -1,61 +1,21 @@
-export interface FormelVariable {
-  symbol: string;
-  bedeutung: string;
-  einheit: string;
-}
-
-export interface FormelHerleitung {
-  /** Gültigkeitsbereich / Annahmen der Formel. */
-  gueltigkeit: string;
-  /** Herleitungsschritte in Reihenfolge. */
-  schritte: string[];
-}
-
-export interface FormelUmstellung {
-  /** Nach welcher Größe umgestellt wird. */
-  ziel: string;
-  /** LaTeX der umgestellten Form. */
-  latex: string;
-  /** Hinweis zur Umstellung (Definitionsbereich, Vorzeichen, ...). */
-  hinweis: string;
-}
-
-export interface FormelTypischerFehler {
-  /** Häufiger Fehler. */
-  fehler: string;
-  /** Korrektur / richtige Deutung. */
-  korrektur: string;
-}
+/** Compact German formula references; schema 3.0.0. */
+export type FormelFach = "biologie";
+export type FormelKapitel = "bio-biochemie-molekularbiologie" | "bio-biostatistik" | "bio-genetik-evolution" | "bio-oekologie-population" | "bio-physiologie";
+export type FormelBildungsniveau = "sek1" | "sek2" | "hochschulbruecke" | "bachelor" | "fachvertiefung";
+export interface FormelVariable { symbol: string; bedeutung: string; einheit: string; }
 export interface Formel {
-  slug: string;
-  name: string;
-  symbol: string;
-  latex: string;
-  kategorie: 'biologie';
-  unterkategorie: string;
-  beschreibung: string;
-  einheiten: string;
-  variablen: FormelVariable[];
-  hintergrund: string;
-  beispiel: string;
-  anwendung: string;
-  quellen: string[];
-  verwandte: string[];
+  slug: string; name: string; latex: string; symbol: string;
+  kategorie: FormelFach; kapitel: FormelKapitel; unterkategorie: string;
+  bildungsniveaus: FormelBildungsniveau[];
   schwierigkeit: 'grundlegend' | 'fortgeschritten' | 'universitaet';
-abiturRelevant?: boolean;
-  quellenLinks?: string[];
-  dateUpdated?: string;
-  suchbegriffe?: string[];
-  /** Interaktive Formelseite (Herleitung interaktiv, Klausur-Aufgaben & FAQ). */
-  url?: string;
-  /** Herleitung mit Gültigkeitsbereich und Schritten (aus dem Abitur-Blueprint). */
-  herleitung?: FormelHerleitung;
-  /** Umstellungen der Formel nach anderen Größen. */
-  umstellungen?: FormelUmstellung[];
-  /** Typische Fehler und ihre Korrektur. */
-  typischeFehler?: FormelTypischerFehler[];
+  abiturRelevant: boolean; variablen: FormelVariable[];
+  quellen: string[]; quellenLinks: string[]; url: string;
 }
-
-export declare const formeln: Formel[];
-export declare function getFormelBySlug(slug: string): Formel | undefined;
-export declare function getFormelByUnterkategorie(unterkategorie: string): Formel[];
+export const formeln: Formel[];
+export function getAllFormeln(): Formel[];
+export function getFormelBySlug(slug: string): Formel | undefined;
+export function getFormelByKategorie(subject: FormelFach): Formel[];
+export function getFormelByUnterkategorie(label: string): Formel[];
+export function getFormelByKapitel(chapter: FormelKapitel): Formel[];
+export function getFormelByBildungsniveau(level: FormelBildungsniveau): Formel[];
+export function getAbiturFormeln(): Formel[];

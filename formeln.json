@@ -5,9 +5,15 @@
     "latex": "v = \\frac{V_{\\max} \\cdot [S]}{K_m + [S]}",
     "symbol": "v = Vmax·[S] / (Km + [S])",
     "kategorie": "biologie",
-    "unterkategorie": "Biochemie",
-    "beschreibung": "Die Michaelis-Menten-Gleichung beschreibt die Abhängigkeit der Enzymreaktionsgeschwindigkeit von der Substratkonzentration. Dieses Modell ist ein zentrales Modell der Enzymkinetik.",
-    "einheiten": "v in mol/(L·s), Vmax in mol/(L·s), [S] in mol/L, Km in mol/L",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
     "variablen": [
       {
         "symbol": "v",
@@ -26,756 +32,4524 @@
       },
       {
         "symbol": "Km",
-        "bedeutung": "Michaelis-Konstante ([S] bei v = Vmax/2)",
+        "bedeutung": "Michaelis-Konstante ([S] bei \\(v=\\frac{V_{\\max}}2\\))",
         "einheit": "mol/L"
       }
     ],
-    "hintergrund": "Leonor Michaelis und Maud Menten (1913) leiteten die Gleichung aus dem Mechanismus E + S ⇌ ES → E + P ab. Km ist ein Maß für die Substrat­affinität: niedriges Km = hohe Affinität. Die Lineweaver-Burk-Auftragung (1/v vs. 1/[S]) linearisiert die Kurve.",
-    "beispiel": "Vmax = 10 µmol/(L·s), Km = 2 mmol/L. Bei [S] = Km: v = 10·0,002/(0,002+0,002) = 5 µmol/(L·s) = Vmax/2 ✓. Bei [S] >> Km: v ≈ Vmax.",
-    "anwendung": "Pharmakologie (IC₅₀, Wirkstoffdesign), Biotechnologie, Medizinische Biochemie, Metabolismus-Modellierung, Diagnostik",
     "quellen": [
-      "Michaelis, L. & Menten, M.L. (1913). Die Kinetik der Invertinwirkung. Biochemische Zeitschrift, 49, 333–369."
+      "TU Delft Open Textbook. Biochemistry, §3: Enzymes; Michaelis–Menten rate equation.",
+      "IUPAC Gold Book: Michaelis–Menten kinetics, M03892.",
+      "IUPAC Gold Book: Michaelis–Menten mechanism, M03893."
     ],
-    "verwandte": [
-      "arrhenius-gleichung",
-      "massenwirkungsgesetz",
-      "logistisches-wachstum"
-    ],
-    "abiturRelevant": false,
-    "schwierigkeit": "universitaet",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Michaelis%E2%80%93Menten_kinetics"
+      "https://interactivetextbooks.tudelft.nl/biochemistry/content/Chapter_3_Enzymes.html",
+      "https://goldbook.iupac.org/terms/view/M03892",
+      "https://goldbook.iupac.org/terms/view/M03893"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "v=Vmax*[S]/(Km+[S])",
-      "v = Vmax [S] / (Km + [S])",
-      "Michaelis-Menten Kinetik",
-      "Enzymkinetik Formel",
-      "Michaelis-Menten equation",
-      "Km Vmax Formel",
-      "Reaktionsgeschwindigkeit Enzym"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/michaelis-menten",
-    "herleitung": {
-      "gueltigkeit": "Gilt für einfache Enzymkinetik mit quasi-stationärem ES-Komplex und ohne starke Allosterie oder Substrathemmung.",
-      "schritte": [
-        "Mechanismus: E + S ⇌ ES → E + P.",
-        "Quasi-Steady-State für ES führt zu v = Vmax[S]/(Km+[S])."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Substratkonzentration aus Rate",
-        "latex": "[S] = \\frac{vK_m}{V_{max}-v}",
-        "hinweis": "Nur sinnvoll für v < Vmax."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "K_m direkt als maximale Geschwindigkeit deuten.",
-        "korrektur": "Vmax ist die maximale Geschwindigkeit; K_m ist eine Konzentration."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/michaelis-menten"
   },
   {
     "slug": "logistisches-wachstum",
     "name": "Logistisches Wachstum",
-    "latex": "\\frac{dN}{dt} = r \\cdot N \\cdot \\left(1 - \\frac{N}{K}\\right)",
-    "symbol": "dN/dt = r·N·(1 − N/K)",
+    "latex": "\\frac{dN}{dt}=rN\\left(1-\\frac NK\\right),\\qquad N(t)=\\frac{KN_0}{N_0+(K-N_0)e^{-rt}}",
+    "symbol": "dN/dt = rN(1 − N/K); N(t) = KN₀/[N₀ + (K − N₀)e^(−rt)]",
     "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
     "unterkategorie": "Populationsbiologie",
-    "beschreibung": "Die Differentialgleichung des logistischen Wachstums beschreibt Populationswachstum mit Kapazitätsgrenze und ist ein realistisches Modell für biologische Populationen.",
-    "einheiten": "N in Individuen, r in 1/Zeit, K in Individuen, t in Zeit",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
     "variablen": [
       {
-        "symbol": "N",
-        "bedeutung": "Populationsgröße (Anzahl Individuen)",
-        "einheit": "Individuen"
-      },
-      {
-        "symbol": "r",
-        "bedeutung": "Intrinsische Wachstumsrate (birth − death rate)",
-        "einheit": "1/t"
+        "symbol": "N,N₀",
+        "bedeutung": "Momentaner beziehungsweise anfänglicher nichtnegativer Modellbestand",
+        "einheit": "1"
       },
       {
         "symbol": "K",
-        "bedeutung": "Kapazitätsgrenze (Carrying Capacity) des Lebensraums",
-        "einheit": "Individuen"
+        "bedeutung": "Positive konstante Tragfähigkeit des erklärten Modells",
+        "einheit": "1"
+      },
+      {
+        "symbol": "r",
+        "bedeutung": "Nichtnegative konstante intrinsische Rate",
+        "einheit": "s⁻¹"
       },
       {
         "symbol": "t",
-        "bedeutung": "Zeit",
-        "einheit": "s, d oder Jahr"
+        "bedeutung": "Vergangene nichtnegative Zeit",
+        "einheit": "s"
+      },
+      {
+        "symbol": "g,G",
+        "bedeutung": "Pro-Kopf-Rate r(1−N/K) und absolute Rate rN(1−N/K)",
+        "einheit": "s⁻¹"
       }
     ],
-    "hintergrund": "Pierre François Verhulst (1838) korrigierte Malthus'exponentiellen Ansatz: Bei N << K: nahezu exponentielles Wachstum; bei N → K: dN/dt → 0. Wendepunkt (stärkste Rate) bei N = K/2. Analytische Lösung: N(t) = K/(1 + ((K−N₀)/N₀)·e^(−rt)).",
-    "beispiel": "Bakterien: r = 0,5/h, K = 10⁶, N₀ = 1000. Nach t = 10 h: N ≈ 10⁶/(1 + 999·e⁻⁵) ≈ 860 000. Bei t → ∞: N → K.",
-    "anwendung": "Ökologie (Populationsdynamik), Epidemiologie (SIR-Modelle), Bakterienwachstum, Tumorwachstum, Marktsättigung",
     "quellen": [
-      "Verhulst, P.F. (1838). Notice sur la loi que la population suit dans son accroissement. Correspondance Mathématique et Physique, 10, 113–121."
+      "OpenStax Calculus Volume 2, section 4.4: logistic initial-value problem, separation, equilibria, explicit solution and inflection conditions",
+      "OpenStax Biology 2e, section 45.3: density factor, above-capacity decline and limits of population models"
     ],
-    "verwandte": [
-      "normalverteilung",
-      "bayes-theorem",
-      "michaelis-menten"
-    ],
-    "abiturRelevant": false,
-    "schwierigkeit": "universitaet",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Logistic_function"
+      "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "dN/dt = r*N*(1-N/K)",
-      "N(t)=K/(1+e^(-r(t-t0)))",
-      "logistisches Wachstum Formel",
-      "Populationswachstum Formel",
-      "logistic growth formula",
-      "Kapazitätsgrenze Wachstum",
-      "Wachstumsgleichung Biologie"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/logistisches-wachstum",
-    "herleitung": {
-      "gueltigkeit": "Gilt für Wachstum mit begrenzter Ressource und konstanter Kapazitätsgrenze K im Modellzeitraum.",
-      "schritte": [
-        "Ohne Grenze gilt dN/dt = rN.",
-        "Der Faktor (1 - N/K) bremst das Wachstum bei Annäherung an K."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Pro-Kopf-Wachstumsrate",
-        "latex": "\\frac{1}{N}\\frac{dN}{dt}=r\\left(1-\\frac{N}{K}\\right)",
-        "hinweis": "Bei N = K/2 ist die absolute Wachstumsrate maximal."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "Logistisches Wachstum als dauerhaft exponentiell behandeln.",
-        "korrektur": "Nur für N << K ist es näherungsweise exponentiell."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/logistisches-wachstum"
   },
   {
     "slug": "hardy-weinberg",
     "name": "Hardy-Weinberg-Gleichgewicht",
-    "latex": "p^2 + 2pq + q^2 = 1",
-    "symbol": "p² + 2pq + q² = 1",
+    "latex": "p+q=1,\\qquad f_{AA}=p^2,\\quad f_{Aa}=2pq,\\quad f_{aa}=q^2",
+    "symbol": "p + q = 1; f(AA) = p²; f(Aa) = 2pq; f(aa) = q²",
     "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
     "unterkategorie": "Genetik",
-    "beschreibung": "Das Hardy-Weinberg-Gleichgewicht verknüpft in einer idealen Population die Allelfrequenzen p und q mit den Genotypfrequenzen und bleibt von Generation zu Generation konstant, solange keine Evolutionsfaktoren wirken.",
-    "einheiten": "p, q, p², 2pq, q² sind dimensionslose Häufigkeiten (0 bis 1); p + q = 1",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "p",
-        "bedeutung": "Frequenz des dominanten Allels A",
-        "einheit": "– (0…1)"
+        "symbol": "p,q",
+        "bedeutung": "Frequenzen zweier Allele A und a im passenden Gametenpool",
+        "einheit": "1"
       },
       {
-        "symbol": "q",
-        "bedeutung": "Frequenz des rezessiven Allels a",
-        "einheit": "– (0…1)"
+        "symbol": "p²,2pq,q²",
+        "bedeutung": "Erwartete AA-, Aa- und aa-Anteile neu gebildeter Zygoten",
+        "einheit": "1"
       },
       {
-        "symbol": "p²",
-        "bedeutung": "Frequenz der homozygot dominanten Genotypen (AA)",
-        "einheit": "– (0…1)"
+        "symbol": "NAA,NAa,Naa",
+        "bedeutung": "Beobachtete Genotypzahlen für die direkte Allelkopienzählung",
+        "einheit": "1"
       },
       {
-        "symbol": "2pq",
-        "bedeutung": "Frequenz der heterozygoten Genotypen (Aa), die Träger",
-        "einheit": "– (0…1)"
-      },
-      {
-        "symbol": "q²",
-        "bedeutung": "Frequenz der homozygot rezessiven Genotypen (aa)",
-        "einheit": "– (0…1)"
+        "symbol": "N",
+        "bedeutung": "Summe beobachteter diploider Individuen",
+        "einheit": "1"
       }
     ],
-    "hintergrund": "Godfrey H. Hardy und Wilhelm Weinberg leiteten 1908 unabhängig voneinander her, dass sich Allel- und Genotypfrequenzen ohne Evolutionsfaktoren nicht ändern. Die Genotypfrequenzen sind das Ausmultiplizieren von (p + q)² bei zufälliger Paarung. Voraussetzungen: sehr große Population, keine Mutation, Selektion, Migration oder Gendrift und Panmixie.",
-    "beispiel": "Zeigen 16 % der Individuen den rezessiven Phänotyp, gilt q² = 0,16, also q = 0,4 und p = 1 − 0,4 = 0,6. Dann ist p² = 0,36 (36 % AA) und 2pq = 2·0,6·0,4 = 0,48 (48 % Aa). Kontrolle: 0,36 + 0,48 + 0,16 = 1,00 ✓.",
-    "anwendung": "Populationsgenetik, Berechnung von Trägerfrequenzen für rezessive Erbkrankheiten, Humangenetik, Evolutionsbiologie, Nachweis von Selektion durch Abweichung vom Gleichgewicht",
     "quellen": [
+      "Graham Coop: Population and Quantitative Genetics, chapter 2, allele counting, Hardy-Weinberg proportions and conditions for temporal equilibrium",
+      "Suza and Lamkey: Crop Genetics, Population Genetics, allele/genotypic frequencies and Hardy-Weinberg model",
       "Hardy, G.H. (1908). Mendelian Proportions in a Mixed Population. Science, 28(706), 49–50.",
       "Weinberg, W. (1908). Über den Nachweis der Vererbung beim Menschen. Jahreshefte des Vereins für vaterländische Naturkunde in Württemberg, 64, 369–382."
     ],
-    "verwandte": [
-      "exponentielles-wachstum",
-      "logistisches-wachstum",
-      "normalverteilung"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "fortgeschritten",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle",
-      "https://de.wikipedia.org/wiki/Wilhelm_Weinberg"
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/02:_Allele_and_Genotype_Frequencies",
+      "https://bio.libretexts.org/Bookshelves/Agriculture_and_Horticulture/Crop_Genetics_(Suza_and_Lamkey)/01:_Chapters/1.06:_Population_Genetics",
+      "https://pubmed.ncbi.nlm.nih.gov/17779291/",
+      "https://wellcomecollection.org/works/ek48psze/items"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "p^2+2pq+q^2=1",
-      "p²+2pq+q²=1",
-      "p+q=1",
-      "Hardy-Weinberg-Gleichgewicht",
-      "Hardy Weinberg Gleichung",
-      "Hardy-Weinberg-Regel",
-      "Allelfrequenz berechnen",
-      "Genotypfrequenz",
-      "Trägerfrequenz Erbkrankheit",
-      "Hardy-Weinberg equilibrium"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/hardy-weinberg",
-    "herleitung": {
-      "gueltigkeit": "Gilt für eine ideale Population: sehr groß, keine Mutation, Selektion, Migration oder Gendrift und mit zufälliger Paarung; für ein Gen mit zwei Allelen.",
-      "schritte": [
-        "Die Allelfrequenzen ergänzen sich zu p + q = 1.",
-        "Quadrieren: (p + q)² = p² + 2pq + q² = 1 liefert die drei Genotypfrequenzen."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Rezessive Allelfrequenz aus dem Phänotyp",
-        "latex": "q = \\sqrt{q^2}",
-        "hinweis": "Nur der homozygot rezessive Phänotyp (aa) hat direkt die Frequenz q²."
-      },
-      {
-        "ziel": "Dominante Allelfrequenz",
-        "latex": "p = 1 - q",
-        "hinweis": "Folgt aus p + q = 1."
-      },
-      {
-        "ziel": "Heterozygotenanteil (Träger)",
-        "latex": "2pq = 2q(1-q)",
-        "hinweis": "Der Faktor 2 zählt Aa und aA."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "q mit q² verwechseln.",
-        "korrektur": "Der rezessive Phänotyp liefert q²; q erhält man erst durch Wurzelziehen."
-      },
-      {
-        "fehler": "Den Faktor 2 bei 2pq vergessen.",
-        "korrektur": "Heterozygote entstehen auf zwei Wegen (Aa und aA), daher 2pq."
-      },
-      {
-        "fehler": "Heterozygote zum dominanten Phänotyp p² zählen.",
-        "korrektur": "Der dominante Phänotyp umfasst p² + 2pq; nur der Genotyp AA ist p²."
-      },
-      {
-        "fehler": "Das Gleichgewicht trotz Selektion oder kleiner Population annehmen.",
-        "korrektur": "Bei Evolutionsfaktoren gilt die Formel nicht; Abweichungen weisen genau darauf hin."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/hardy-weinberg"
   },
   {
     "slug": "exponentielles-wachstum",
     "name": "Exponentielles Wachstum",
-    "latex": "N(t) = N_0 \\cdot e^{r \\cdot t}",
-    "symbol": "N(t) = N₀·e^(r·t)",
+    "latex": "\\frac{dN}{dt}=rN,\\qquad N(t)=N_0e^{rt}",
+    "symbol": "N(t) = N₀e^(rt); dN/dt = rN",
     "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
     "unterkategorie": "Populationsbiologie",
-    "beschreibung": "Das exponentielle Wachstumsmodell beschreibt eine Population, die bei unbegrenzten Ressourcen mit konstanter Rate wächst, sodass die Zunahme stets proportional zur aktuellen Größe ist.",
-    "einheiten": "N in Individuen, N₀ in Individuen, r in 1/Zeit, t in Zeit",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "N(t)",
-        "bedeutung": "Populationsgröße zur Zeit t",
-        "einheit": "Individuen"
-      },
-      {
-        "symbol": "N₀",
-        "bedeutung": "Anfangsgröße der Population (t = 0)",
-        "einheit": "Individuen"
+        "symbol": "N(t),N₀",
+        "bedeutung": "Modellbestand nach t und beim Anfangszensus",
+        "einheit": "1"
       },
       {
         "symbol": "r",
-        "bedeutung": "Wachstumskonstante (Geburts- minus Sterberate)",
-        "einheit": "1/t"
+        "bedeutung": "Konstante signierte momentane Nettorate",
+        "einheit": "s⁻¹"
       },
       {
         "symbol": "t",
-        "bedeutung": "Zeit",
-        "einheit": "s, h, d oder Jahr"
+        "bedeutung": "Vergangene nichtnegative Zeit",
+        "einheit": "s"
+      },
+      {
+        "symbol": "T₂,T½",
+        "bedeutung": "Verdopplungs- beziehungsweise Halbierungszeit bei passendem Vorzeichen",
+        "einheit": "s"
       }
     ],
-    "hintergrund": "Das Modell ist die Lösung der Differentialgleichung dN/dt = r·N: Jede Zunahme ist proportional zur vorhandenen Zahl. Thomas Malthus (1798) beschrieb damit ungebremstes Bevölkerungswachstum. Real gilt es nur in der Anfangsphase (N ≪ K); danach bremst die Kapazitätsgrenze und das logistische Modell übernimmt. Verdopplungszeit: t½ = ln 2 / r.",
-    "beispiel": "Startet eine Bakterienkultur mit N₀ = 1000 und r = 0,5/h, dann gilt nach t = 10 h: N = 1000·e^(0,5·10) = 1000·e⁵ ≈ 1000·148,4 ≈ 148 400. Die Verdopplungszeit beträgt t½ = ln 2 / 0,5 ≈ 1,39 h.",
-    "anwendung": "Ökologie (Anfangsphase von Populationen), Mikrobiologie (Bakterienwachstum), Epidemiologie, Radioaktivität und Verzinsung als analoge Prozesse, Kontrastmodell zum logistischen Wachstum",
     "quellen": [
-      "Malthus, T.R. (1798). An Essay on the Principle of Population. London: J. Johnson."
+      "Stephen C. Stearns, Yale E&EB122 lecture26: transcript chapter 2, proportional growth, integration and doubling; chapter 3 rate/time distinctions",
+      "OpenStax Biology 2e, section 45.3: exponential population growth, signed per-capita rate and limits",
+      "OpenStax Calculus Volume 2, section 4.4: initial-value equation, exponential reference and logistic contrast"
     ],
-    "verwandte": [
-      "logistisches-wachstum",
-      "hardy-weinberg",
-      "michaelis-menten"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "fortgeschritten",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Exponential_growth"
+      "https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122/lecture-26",
+      "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth",
+      "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "N(t)=N0*e^(r*t)",
-      "N(t) = N0 e^(rt)",
-      "dN/dt = r*N",
-      "exponentielles Wachstum Formel",
-      "exponentielles Wachstum berechnen",
-      "Verdopplungszeit",
-      "Wachstumskonstante",
-      "Bakterienwachstum Formel",
-      "exponential growth formula"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/exponentielles-wachstum",
-    "herleitung": {
-      "gueltigkeit": "Gilt bei unbegrenzten Ressourcen und konstanter Wachstumsrate r, also nur in der Anfangsphase realer Populationen (N ≪ K).",
-      "schritte": [
-        "Trennung der Variablen: dN/N = r·dt.",
-        "Integrieren und mit N(0) = N₀ auflösen: N(t) = N₀·e^{rt}."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Wachstumsrate aus zwei Messungen",
-        "latex": "r = \\frac{1}{t}\\ln\\!\\left(\\frac{N}{N_0}\\right)",
-        "hinweis": "Aus N₀, N und der verstrichenen Zeit t."
-      },
-      {
-        "ziel": "Verdopplungszeit",
-        "latex": "t_{1/2} = \\frac{\\ln 2}{r}",
-        "hinweis": "Unabhängig von N₀; nur von r bestimmt."
-      },
-      {
-        "ziel": "Zeit bis zu einer Zielgröße",
-        "latex": "t = \\frac{1}{r}\\ln\\!\\left(\\frac{N}{N_0}\\right)",
-        "hinweis": "Umstellung von N(t) = N₀·e^{rt} nach t."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "Wachstum dauerhaft exponentiell annehmen.",
-        "korrektur": "Real bremst die Kapazitätsgrenze; dann gilt das logistische Modell."
-      },
-      {
-        "fehler": "Kontinuierliches e^{rt} mit diskretem (1 + r)^t verwechseln.",
-        "korrektur": "r im e-Modell ist die momentane Rate, nicht der prozentuale Zuwachs pro Schritt."
-      },
-      {
-        "fehler": "Einheiten von r und t nicht abstimmen.",
-        "korrektur": "Ist r in 1/h, muss t in Stunden eingesetzt werden, damit r·t dimensionslos ist."
-      },
-      {
-        "fehler": "Verdopplungszeit von N₀ abhängig machen.",
-        "korrektur": "t½ = ln 2 / r hängt nur von r ab, nie von der Anfangsgröße."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/exponentielles-wachstum"
   },
   {
     "slug": "chi-quadrat-test",
-    "name": "Chi-Quadrat-Test (Anpassungstest)",
-    "latex": "\\chi^2 = \\sum \\frac{(B - E)^2}{E}",
-    "symbol": "χ² = Σ (B − E)² / E",
+    "name": "Chi-Quadrat-Test (Pearson)",
+    "latex": "X^2=\\sum_i\\frac{(O_i-E_i)^2}{E_i},\\qquad E_i>0",
+    "symbol": "X² = Σ (Oᵢ − Eᵢ)²/Eᵢ; Eᵢ > 0",
     "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
     "unterkategorie": "Genetik",
-    "beschreibung": "Der Chi-Quadrat-Anpassungstest prüft, ob beobachtete Häufigkeiten (z. B. Phänotypen eines Kreuzungsversuchs) mit den nach einer Hypothese erwarteten Häufigkeiten (z. B. einem Mendel-Spaltungsverhältnis) verträglich sind.",
-    "einheiten": "χ², B, E sind dimensionslose Anzahlen; der Prüfwert χ² ist einheitenlos",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "χ²",
-        "bedeutung": "Prüfgröße (Summe der gewichteten Abweichungsquadrate)",
-        "einheit": "– (dimensionslos)"
+        "symbol": "Oᵢ",
+        "bedeutung": "Beobachtete Anzahl einer disjunkten Kategorie oder Zelle",
+        "einheit": "1"
       },
       {
-        "symbol": "B",
-        "bedeutung": "beobachtete Häufigkeit einer Klasse (observed)",
-        "einheit": "Anzahl"
+        "symbol": "Eᵢ",
+        "bedeutung": "Positive erwartete Anzahl unter dem Nullmodell",
+        "einheit": "1"
       },
       {
-        "symbol": "E",
-        "bedeutung": "erwartete Häufigkeit dieser Klasse (expected, aus der Hypothese)",
-        "einheit": "Anzahl"
+        "symbol": "N",
+        "bedeutung": "Gesamtumfang der ausgewerteten Beobachtungseinheiten",
+        "einheit": "1"
       },
       {
         "symbol": "df",
-        "bedeutung": "Freiheitsgrade = Anzahl der Klassen − 1",
-        "einheit": "– (dimensionslos)"
+        "bedeutung": "Freiheitsgrade der passenden asymptotischen Referenz",
+        "einheit": "1"
+      },
+      {
+        "symbol": "p",
+        "bedeutung": "Obere Nullmodell-Wahrscheinlichkeit eines mindestens so großen Prüfwerts",
+        "einheit": "1"
       }
     ],
-    "hintergrund": "Karl Pearson führte den Test 1900 ein. Man vergleicht den berechneten χ²-Wert mit einem kritischen Wert aus der Chi-Quadrat-Tabelle für die passenden Freiheitsgrade df und ein Signifikanzniveau (meist α = 5 %). Ist χ² kleiner als der kritische Wert, wird die Nullhypothese (beobachtet = erwartet) beibehalten; ist χ² größer, wird sie verworfen. In der Genetik prüft man so, ob eine Kreuzung dem erwarteten Verhältnis (3:1, 9:3:3:1) folgt. Bei einem Verhältnis mit k Klassen gilt df = k − 1.",
-    "beispiel": "Monohybrider Erbgang, 100 Nachkommen, erwartet 3:1 → E = 75 und 25. Beobachtet: B = 80 und 20. χ² = (80−75)²/75 + (20−25)²/25 = 25/75 + 25/25 = 0,333 + 1,000 = 1,333. df = 1, kritischer Wert 3,84. Da 1,333 < 3,84 ist die Abweichung nicht signifikant, das 3:1-Verhältnis wird beibehalten.",
-    "anwendung": "Genetik (Test von Spaltungsverhältnissen), Ökologie (Verteilungstests), Qualitätskontrolle, jede Prüfung von Häufigkeiten gegen ein erwartetes Muster",
     "quellen": [
-      "Pearson, K. (1900). On the criterion that a given system of deviations from the probable... Philosophical Magazine, Series 5, 50(302), 157–175."
+      "NIST/SEMATECH e-Handbook 1.3.5.15: Pearson goodness-of-fit statistic, expected counts and estimated-parameter degrees of freedom",
+      "NIST/SEMATECH e-Handbook 7.4.6: contingency-table Pearson statistic and degrees of freedom",
+      "NIST/SEMATECH e-Handbook 1.3.6.7.4: upper-tail chi-square critical values, including df1/0.95=3.841",
+      "R stats official chisq.test documentation: integer counts, goodness-of-fit versus contingency data, continuity correction and residual definitions",
+      "Penn State STAT 200, Lesson 11: Chi-Square Tests, sections 11.2–11.3, expected counts and right-tail interpretation",
+      "Graham Coop: Population and Quantitative Genetics, chapter 2, allele counting and Hardy-Weinberg proportions",
+      "Ralf Kittler (July 2017), Internationale BiologieOlympiade/IPN: Statistik, Chi²-Test, learning sheet"
     ],
-    "verwandte": [
-      "hardy-weinberg",
-      "normalverteilung",
-      "standardabweichung"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "fortgeschritten",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Chi-squared_test"
+      "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm",
+      "https://itl.nist.gov/div898/handbook/prc/section4/prc46.htm",
+      "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3674.htm",
+      "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/chisq.test.html",
+      "https://online.stat.psu.edu/stat200/Lesson11",
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/02:_Allele_and_Genotype_Frequencies",
+      "https://www.scienceolympiaden.de/media/1004/download/IBO-Lernbl%C3%A4tter-ChiQuadratTest2019.pdf?v=1"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "chi^2 = sum (B-E)^2/E",
-      "χ²=Σ(B-E)²/E",
-      "Chi-Quadrat-Test",
-      "Chi Quadrat Test Genetik",
-      "Anpassungstest",
-      "chi square test",
-      "beobachtet erwartet Test",
-      "Spaltungsverhältnis prüfen",
-      "Freiheitsgrade Chi Quadrat"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/chi-quadrat-test",
-    "herleitung": {
-      "gueltigkeit": "Gilt als Anpassungstest für gezählte Häufigkeiten in disjunkten Klassen mit ausreichend großen Erwartungswerten (Faustregel E ≥ 5).",
-      "schritte": [
-        "Berechne je Klasse den Erwartungswert E aus der Hypothese und bilde (B − E)²/E.",
-        "Summiere über alle Klassen zu χ² und vergleiche mit dem kritischen Wert für df = Klassen − 1."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Freiheitsgrade beim Anpassungstest",
-        "latex": "df = k - 1",
-        "hinweis": "k ist die Anzahl der Klassen; nur bei geschätzten Parametern zieht man weitere ab."
-      },
-      {
-        "ziel": "Beitrag einer einzelnen Klasse",
-        "latex": "\\chi^2_i = \\frac{(B_i - E_i)^2}{E_i}",
-        "hinweis": "Zeigt, welche Klasse am stärksten zur Abweichung beiträgt."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "Prozente statt absoluter Anzahlen einsetzen.",
-        "korrektur": "χ² braucht gezählte Häufigkeiten; erwartete Anzahlen ergeben sich als Verhältnis · Gesamtzahl."
-      },
-      {
-        "fehler": "Die Freiheitsgrade falsch bestimmen.",
-        "korrektur": "Beim reinen Anpassungstest gilt df = Klassen − 1, nicht die Gesamtzahl der Individuen."
-      },
-      {
-        "fehler": "Ein kleines χ² als Beweis der Hypothese deuten.",
-        "korrektur": "Der Test kann die Nullhypothese nur beibehalten oder verwerfen, nie beweisen."
-      },
-      {
-        "fehler": "Beim Signifikanzvergleich die Richtung verwechseln.",
-        "korrektur": "Erst wenn χ² größer als der kritische Wert ist, wird die Hypothese verworfen."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/chi-quadrat-test"
   },
   {
     "slug": "shannon-index",
     "name": "Shannon-Index (Biodiversität)",
-    "latex": "H' = -\\sum_{i=1}^{S} p_i \\cdot \\ln(p_i)",
-    "symbol": "H' = −Σ pᵢ·ln(pᵢ)",
+    "latex": "H'=-\\sum_{i:p_i>0}p_i\\ln p_i,\\quad p_i=n_i/N",
+    "symbol": "H′ = −Σ pᵢ ln pᵢ",
     "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
     "unterkategorie": "Ökologie",
-    "beschreibung": "Der Shannon-Index (Shannon-Wiener-Index) misst die Diversität einer Lebensgemeinschaft. Er berücksichtigt sowohl den Artenreichtum als auch die Gleichmäßigkeit (Evenness), mit der sich die Individuen auf die Arten verteilen.",
-    "einheiten": "H' und pᵢ sind dimensionslos; pᵢ = nᵢ/N ist ein Anteil (0…1)",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "H'",
-        "bedeutung": "Shannon-Diversitätsindex (Diversität der Gemeinschaft)",
-        "einheit": "– (dimensionslos)"
+        "symbol": "H′",
+        "bedeutung": "Shannon-Entropie der beobachteten Artenanteile mit ln",
+        "einheit": "nats bei ln"
       },
       {
         "symbol": "pᵢ",
-        "bedeutung": "relative Häufigkeit der Art i, also nᵢ/N",
-        "einheit": "– (0…1)"
+        "bedeutung": "Anteil nᵢ/N; Nullanteile tragen nach Grenzwertkonvention null bei",
+        "einheit": "dimensionslos"
       },
       {
         "symbol": "nᵢ",
-        "bedeutung": "Individuenzahl der Art i",
-        "einheit": "Anzahl"
+        "bedeutung": "Individuen der Art i in derselben Probe",
+        "einheit": "Individuen"
       },
       {
         "symbol": "N",
-        "bedeutung": "Gesamtzahl aller Individuen",
-        "einheit": "Anzahl"
+        "bedeutung": "Positive Gesamtzahl aller gezählten Individuen",
+        "einheit": "Individuen"
       },
       {
         "symbol": "S",
-        "bedeutung": "Artenzahl (species richness)",
-        "einheit": "Anzahl"
+        "bedeutung": "Anzahl der Arten mit nᵢ>0, ohne Nullzeilen",
+        "einheit": "Arten"
       }
     ],
-    "hintergrund": "Claude Shannon entwickelte das Maß 1948 in der Informationstheorie; die Ökologie übernahm es als Diversitätsmaß. Meist wird der natürliche Logarithmus ln verwendet (Einheit „nats\"), seltener log₂ oder log₁₀. H' ist null bei nur einer Art und wird maximal (Hmax = ln S), wenn alle Arten gleich häufig sind. Aus H' und Hmax berechnet man die Evenness E = H'/ln S als Maß für die Gleichverteilung (0…1).",
-    "beispiel": "Gemeinschaft mit 3 Arten, Individuen 10, 6, 4 → N = 20, also p = 0,5; 0,3; 0,2. H' = −(0,5·ln0,5 + 0,3·ln0,3 + 0,2·ln0,2) = −(0,5·(−0,693) + 0,3·(−1,204) + 0,2·(−1,609)) = −(−0,347 − 0,361 − 0,322) = 1,030. Maximal wäre Hmax = ln3 = 1,099, die Evenness ist also E = 1,030/1,099 = 0,94.",
-    "anwendung": "Ökologie (Vergleich der Artenvielfalt von Lebensräumen), Umweltmonitoring, Bewertung von Renaturierung und Störungen, Gewässergüte",
     "quellen": [
-      "Shannon, C.E. (1948). A Mathematical Theory of Communication. Bell System Technical Journal, 27(3), 379–423."
+      "vegan: ecological diversity indices, logarithm convention and finite-sample Simpson",
+      "Shannon (1948): A Mathematical Theory of Communication, section 6 and Appendix 2",
+      "NIST Dataplot: Shannon diversity formulas, zero-frequency convention and maximum"
     ],
-    "verwandte": [
-      "simpson-index",
-      "logistisches-wachstum",
-      "standardabweichung"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "fortgeschritten",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Diversity_index#Shannon_index"
+      "https://vegandevs.github.io/vegan/reference/diversity.html",
+      "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+      "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/shannon.htm"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "H' = -sum p_i ln(p_i)",
-      "H=-Σpi·ln(pi)",
-      "Shannon-Index",
-      "Shannon-Wiener-Index",
-      "Biodiversität Formel",
-      "Diversitätsindex",
-      "shannon diversity index",
-      "Evenness berechnen",
-      "Artenvielfalt Index"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/shannon-index",
-    "herleitung": {
-      "gueltigkeit": "Gilt für Diversitätsvergleiche von Gemeinschaften, deren Arten und Individuenzahlen vollständig erfasst oder repräsentativ gestichprobt sind.",
-      "schritte": [
-        "Berechne die relativen Häufigkeiten pᵢ = nᵢ/N jeder Art.",
-        "Summiere pᵢ·ln(pᵢ) über alle Arten und kehre das Vorzeichen um."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Maximale Diversität",
-        "latex": "H'_{max} = \\ln S",
-        "hinweis": "Wird erreicht, wenn alle S Arten gleich häufig sind."
-      },
-      {
-        "ziel": "Evenness (Gleichmäßigkeit)",
-        "latex": "E = \\frac{H'}{\\ln S}",
-        "hinweis": "Liegt zwischen 0 und 1; 1 bedeutet perfekte Gleichverteilung."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "Absolute Individuenzahlen statt Anteile pᵢ einsetzen.",
-        "korrektur": "In die Formel gehen die relativen Häufigkeiten pᵢ = nᵢ/N ein, nicht die rohen Zahlen."
-      },
-      {
-        "fehler": "Das Minuszeichen vergessen.",
-        "korrektur": "Da ln(pᵢ) für pᵢ < 1 negativ ist, macht das führende Minus H' positiv."
-      },
-      {
-        "fehler": "H'-Werte mit verschiedenen Logarithmen vergleichen.",
-        "korrektur": "Nur Werte mit derselben Basis (meist ln) sind vergleichbar."
-      },
-      {
-        "fehler": "H' allein als Gleichmäßigkeit deuten.",
-        "korrektur": "H' hängt auch von der Artenzahl ab; die Evenness E = H'/ln S trennt beides."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/shannon-index"
   },
   {
     "slug": "simpson-index",
     "name": "Simpson-Index (Dominanz und Diversität)",
-    "latex": "D = \\sum_{i=1}^{S} p_i^{\\,2}",
-    "symbol": "D = Σ pᵢ²",
+    "latex": "\\lambda=D=\\sum_i p_i^2,\\qquad D_{GS}=1-\\lambda,\\qquad {}^2D=1/\\lambda",
+    "symbol": "λ = D = Σ pᵢ²; Gini-Simpson = 1−λ",
     "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
     "unterkategorie": "Ökologie",
-    "beschreibung": "Der Simpson-Index D misst die Dominanz in einer Lebensgemeinschaft: die Wahrscheinlichkeit, dass zwei zufällig gezogene Individuen zur selben Art gehören. Der Kehrwert (1 − D) ist der Simpson-Diversitätsindex und steigt mit der Vielfalt.",
-    "einheiten": "D, 1 − D und pᵢ sind dimensionslos; pᵢ = nᵢ/N ist ein Anteil (0…1)",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "D",
-        "bedeutung": "Simpson-Dominanzindex (Wahrscheinlichkeit gleicher Art)",
-        "einheit": "– (0…1)"
+        "symbol": "λ, D",
+        "bedeutung": "Dominanz Σpᵢ²; größer bedeutet mehr Gleichartigkeit zweier Ziehungen",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "DGS",
+        "bedeutung": "Gini-Simpson 1−λ; Wahrscheinlichkeit verschiedener Arten",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "²D",
+        "bedeutung": "Reziproker Simpson 1/λ; effektive Artenzahl zweiter Ordnung",
+        "einheit": "Arten"
       },
       {
         "symbol": "pᵢ",
-        "bedeutung": "relative Häufigkeit der Art i, also nᵢ/N",
-        "einheit": "– (0…1)"
+        "bedeutung": "Relative Häufigkeit nᵢ/N derselben Probe",
+        "einheit": "dimensionslos"
       },
       {
-        "symbol": "nᵢ",
-        "bedeutung": "Individuenzahl der Art i",
-        "einheit": "Anzahl"
-      },
-      {
-        "symbol": "N",
-        "bedeutung": "Gesamtzahl aller Individuen",
-        "einheit": "Anzahl"
-      },
-      {
-        "symbol": "S",
-        "bedeutung": "Artenzahl (species richness)",
-        "einheit": "Anzahl"
+        "symbol": "nᵢ, N",
+        "bedeutung": "Artenhäufigkeit und positive Gesamtzahl der Individuen",
+        "einheit": "Individuen"
       }
     ],
-    "hintergrund": "Edward H. Simpson führte das Maß 1949 ein. Ein großer D (nahe 1) bedeutet, dass wenige Arten dominieren, also geringe Diversität. Deshalb betrachtet man meist den Simpson-Diversitätsindex 1 − D (Gini-Simpson) oder den reziproken Simpson-Index 1/D, die beide mit der Vielfalt steigen. Für endliche Stichproben nutzt man die unverzerrte Form D = Σ nᵢ(nᵢ−1)/[N(N−1)]. Im Vergleich zum Shannon-Index gewichtet Simpson häufige Arten stärker und reagiert weniger empfindlich auf seltene Arten.",
-    "beispiel": "Gemeinschaft mit 3 Arten, Individuen 10, 6, 4 → N = 20, also p = 0,5; 0,3; 0,2. D = 0,5² + 0,3² + 0,2² = 0,25 + 0,09 + 0,04 = 0,38. Der Diversitätsindex ist 1 − D = 0,62, der reziproke Simpson-Index 1/D = 1/0,38 = 2,63. Die endliche Form ergibt D = (10·9 + 6·5 + 4·3)/(20·19) = 132/380 = 0,347.",
-    "anwendung": "Ökologie (Diversitätsvergleich, Dominanzstrukturen), Umweltmonitoring, Naturschutz, Vergleich gestörter und ungestörter Habitate",
     "quellen": [
-      "Simpson, E.H. (1949). Measurement of Diversity. Nature, 163(4148), 688."
+      "vegan: ecological diversity indices, logarithm convention and finite-sample Simpson",
+      "scikit-bio: Simpson/Gini-Simpson definition and finite-count option"
     ],
-    "verwandte": [
-      "shannon-index",
-      "logistisches-wachstum",
-      "hardy-weinberg"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "fortgeschritten",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Diversity_index#Simpson_index"
+      "https://vegandevs.github.io/vegan/reference/diversity.html",
+      "https://scikit.bio/docs/latest/generated/skbio.diversity.alpha.simpson.html"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "D = sum p_i^2",
-      "D=Σpi²",
-      "Simpson-Index",
-      "Simpson Diversitätsindex",
-      "simpson index",
-      "1-D Simpson",
-      "reziproker Simpson-Index",
-      "Dominanzindex Ökologie",
-      "Biodiversität Simpson"
-    ],
-    "url": "https://quanta-study.de/tafelwerk/simpson-index",
-    "herleitung": {
-      "gueltigkeit": "Gilt für Diversitäts- und Dominanzvergleiche von Gemeinschaften; die endliche Form D = Σ nᵢ(nᵢ−1)/[N(N−1)] ist bei kleinen Stichproben genauer.",
-      "schritte": [
-        "Berechne die relativen Häufigkeiten pᵢ = nᵢ/N jeder Art.",
-        "Quadriere die Anteile und summiere sie zu D = Σ pᵢ²; die Diversität ist 1 − D."
-      ]
-    },
-    "umstellungen": [
-      {
-        "ziel": "Simpson-Diversitätsindex",
-        "latex": "D_{div} = 1 - \\sum p_i^{\\,2}",
-        "hinweis": "Steigt mit der Vielfalt; 0 bei einer Art, nahe 1 bei vielen gleich häufigen Arten."
-      },
-      {
-        "ziel": "Reziproker Simpson-Index",
-        "latex": "D^{-1} = \\frac{1}{\\sum p_i^{\\,2}}",
-        "hinweis": "Gibt die effektive Artenzahl an; entspricht bei Gleichverteilung genau S."
-      },
-      {
-        "ziel": "Unverzerrte Form für Stichproben",
-        "latex": "D = \\frac{\\sum n_i(n_i - 1)}{N(N - 1)}",
-        "hinweis": "Zieht ohne Zurücklegen; bei kleinen N genauer als die Anteilsform."
-      }
-    ],
-    "typischeFehler": [
-      {
-        "fehler": "D (Dominanz) und 1 − D (Diversität) verwechseln.",
-        "korrektur": "Großes D heißt hohe Dominanz und geringe Vielfalt; die Diversität ist 1 − D."
-      },
-      {
-        "fehler": "Individuenzahlen statt Anteile quadrieren.",
-        "korrektur": "In D = Σ pᵢ² gehen die Anteile pᵢ = nᵢ/N ein, nicht die rohen Zahlen."
-      },
-      {
-        "fehler": "Anteils- und endliche Form für dieselbe Aufgabe mischen.",
-        "korrektur": "Man entscheidet sich für eine Form; die endliche Form nutzt nᵢ und N direkt."
-      },
-      {
-        "fehler": "Simpson und Shannon als identisch behandeln.",
-        "korrektur": "Simpson gewichtet häufige Arten stärker, Shannon reagiert empfindlicher auf seltene Arten."
-      }
-    ]
+    "url": "https://quanta-study.de/tafelwerk/simpson-index"
   },
   {
     "slug": "lincoln-index",
     "name": "Lincoln-Index (Fang-Wiederfang-Methode)",
-    "latex": "N = \\frac{M \\cdot C}{R}",
-    "symbol": "N = (M·C) / R",
+    "latex": "\\widehat N_{LP}=\\frac{MC}{R},\\qquad \\widehat N_C=\\frac{(M+1)(C+1)}{R+1}-1",
+    "symbol": "N̂LP = MC/R; N̂C = (M+1)(C+1)/(R+1)−1",
     "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
     "unterkategorie": "Ökologie",
-    "beschreibung": "Der Lincoln-Petersen-Index schätzt die Größe einer Population, die nicht vollständig gezählt werden kann. Ein erster Fang wird markiert und freigelassen; aus dem Anteil markierter Tiere im zweiten Fang folgt die Gesamtzahl.",
-    "einheiten": "N, M, C, R sind dimensionslose Anzahlen (Individuen)",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
     "variablen": [
       {
-        "symbol": "N",
-        "bedeutung": "geschätzte Gesamtgröße der Population",
+        "symbol": "N̂LP, N̂C",
+        "bedeutung": "Lincoln-Petersen- beziehungsweise Chapman-Punktschätzung",
         "einheit": "Individuen"
       },
       {
         "symbol": "M",
-        "bedeutung": "im ersten Fang markierte und freigelassene Individuen",
+        "bedeutung": "Markierte, tatsächlich freigelassene Tiere des ersten Fangs",
         "einheit": "Individuen"
       },
       {
         "symbol": "C",
-        "bedeutung": "Gesamtzahl der Individuen im zweiten Fang",
+        "bedeutung": "Verschiedene Tiere im zweiten Fang",
         "einheit": "Individuen"
       },
       {
         "symbol": "R",
-        "bedeutung": "im zweiten Fang wiedergefangene markierte Individuen",
+        "bedeutung": "Davon wiedererkannte markierte Tiere; R≤min(M,C)",
         "einheit": "Individuen"
       }
     ],
-    "hintergrund": "Die Methode beruht auf einem Dreisatz: Der Anteil Markierter in der Population (M/N) entspricht dem Anteil Markierter im zweiten Fang (R/C), also M/N = R/C, umgestellt N = M·C/R. Frederick Lincoln (1930) und Carl Petersen prägten das Verfahren. Voraussetzungen: geschlossene Population (keine Geburten, Tode, Zu- oder Abwanderung zwischen den Fängen), gute Durchmischung, Markierung ohne Einfluss auf Überleben oder Fangbarkeit. Bei kleinem R ist die Schätzung stark verzerrt; dann nutzt man die Chapman-Korrektur N = (M+1)(C+1)/(R+1) − 1.",
-    "beispiel": "Man fängt M = 40 Fische, markiert und lässt sie frei. Beim zweiten Fang sind C = 50 Fische darunter R = 8 markierte. Dann ist N = (40·50)/8 = 2000/8 = 250 Fische. Die Chapman-Korrektur liefert N = (41·51)/9 − 1 = 2091/9 − 1 ≈ 231.",
-    "anwendung": "Ökologie (Bestandsschätzung von Tierpopulationen), Fischereibiologie, Wildtiermanagement, Naturschutz, Epidemiologie (Schätzung verborgener Fallzahlen)",
     "quellen": [
-      "Lincoln, F.C. (1930). Calculating Waterfowl Abundance on the Basis of Banding Returns. USDA Circular 118, 1–4."
+      "Two-way capture-recapture methods with emphasis on the bootstrap, sections 1.1–1.2 and 5",
+      "FAO coastal shrimp stock assessment: Petersen method, mixing, closure and unequal catchability, section 7.3.2"
     ],
-    "verwandte": [
-      "logistisches-wachstum",
-      "exponentielles-wachstum",
-      "shannon-index"
-    ],
-    "abiturRelevant": true,
-    "schwierigkeit": "grundlegend",
     "quellenLinks": [
-      "https://en.wikipedia.org/wiki/Mark_and_recapture"
+      "https://link.springer.com/article/10.1007/s10260-026-00840-5",
+      "https://www.fao.org/4/ad015f/AD015F07.htm"
     ],
-    "dateUpdated": "2026-07-09",
-    "suchbegriffe": [
-      "N = M*C/R",
-      "N=(M·C)/R",
-      "Lincoln-Index",
-      "Lincoln-Petersen-Index",
-      "Fang-Wiederfang-Methode",
-      "mark recapture",
-      "Populationsgröße schätzen",
-      "Bestandsschätzung Formel",
-      "Fang Wiederfang Biologie"
+    "url": "https://quanta-study.de/tafelwerk/lincoln-index"
+  },
+  {
+    "slug": "ficksches-gesetz-erste-diffusion",
+    "name": "Ficksches Diffusionsgesetz (1. Gesetz)",
+    "latex": "J = -D \\cdot \\frac{dC}{dx}",
+    "symbol": "J = −D·dC/dx",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Diffusion und Stofftransport",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
     ],
-    "url": "https://quanta-study.de/tafelwerk/lincoln-index",
-    "herleitung": {
-      "gueltigkeit": "Gilt für eine geschlossene Population mit guter Durchmischung, bei der die Markierung Überleben und Fangbarkeit nicht beeinflusst.",
-      "schritte": [
-        "Ansatz aus dem Dreisatz: M/N = R/C.",
-        "Nach N auflösen: N = M·C/R."
-      ]
-    },
-    "umstellungen": [
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
       {
-        "ziel": "Chapman-Korrektur (kleiner Wiederfang)",
-        "latex": "N = \\frac{(M+1)(C+1)}{R+1} - 1",
-        "hinweis": "Verringert die Verzerrung, wenn R klein ist."
+        "symbol": "J",
+        "bedeutung": "Stoffflussdichte in positiver x-Richtung; Stoffmenge pro Zeit und Fläche",
+        "einheit": "mol/(m²·s)"
       },
       {
-        "ziel": "Nötiger Wiederfang aus geschätzter Größe",
-        "latex": "R = \\frac{M \\cdot C}{N}",
-        "hinweis": "Umstellung von N = M·C/R; hilft bei der Versuchsplanung."
+        "symbol": "D",
+        "bedeutung": "Diffusionskoeffizient des betrachteten Stoffes im Medium",
+        "einheit": "m²/s"
+      },
+      {
+        "symbol": "C",
+        "bedeutung": "Konzentration des diffundierenden Stoffes im jeweiligen Medium",
+        "einheit": "mol/m³"
+      },
+      {
+        "symbol": "x",
+        "bedeutung": "Ortskoordinate in Richtung des Konzentrationsgradienten",
+        "einheit": "m"
       }
     ],
-    "typischeFehler": [
+    "quellen": [
+      "Lazik, D. (2014). Membrane-Based Characterization of a Gas Component—A Transient Sensor Theory. Sensors, 14(3), 4599–4617; beschreibt Ficks erstes Gesetz samt Konzentrations- und Flusseinheiten.",
+      "UC Berkeley, Introduction to Bioengineering, Chapter17 Fick’s1st Law",
+      "Matthew Schwartz, Harvard Statistical Mechanics2021, Lecture2§4 Fick’s laws, equations37–38"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4003959/",
+      "https://ucb-bioe.github.io/textbook/chapters/02_tissue/04_ficks_first.html",
+      "https://schwartz.scholars.harvard.edu/sites/g/files/omnuum7046/files/schwartz/files/2-diffusion_0.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/ficksches-gesetz-erste-diffusion"
+  },
+  {
+    "slug": "relatives-risiko",
+    "name": "Relatives Risiko (Risk Ratio)",
+    "latex": "RR=\\frac{a/(a+b)}{c/(c+d)}",
+    "symbol": "RR = [a/(a+b)] / [c/(c+d)]",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik und Epidemiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
       {
-        "fehler": "C und R verwechseln.",
-        "korrektur": "C ist der ganze zweite Fang, R nur die darin wiedergefangenen Markierten."
+        "symbol": "RR",
+        "bedeutung": "Risiko der Gruppe 1 geteilt durch das positive Referenzrisiko",
+        "einheit": "dimensionslos"
       },
       {
-        "fehler": "Die Formel bei offener Population anwenden.",
-        "korrektur": "Geburten, Tode oder Wanderung zwischen den Fängen verfälschen die Schätzung."
+        "symbol": "a",
+        "bedeutung": "Personen mit Ereignis in Gruppe 1",
+        "einheit": "Personen"
       },
       {
-        "fehler": "Bei sehr kleinem R der Rohschätzung vertrauen.",
-        "korrektur": "Kleines R verzerrt stark nach oben; dann die Chapman-Korrektur verwenden."
+        "symbol": "b",
+        "bedeutung": "Personen ohne Ereignis in Gruppe 1",
+        "einheit": "Personen"
       },
       {
-        "fehler": "Annehmen, Markierte mischen sich nicht wieder unter.",
-        "korrektur": "Zwischen den Fängen braucht es genug Zeit für eine gleichmäßige Durchmischung."
+        "symbol": "c",
+        "bedeutung": "Personen mit Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Personen ohne Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
       }
-    ]
+    ],
+    "quellen": [
+      "Cochrane Handbook, Chapter 6: dichotomous outcomes, risk, odds and absolute effects",
+      "CDC Field Epidemiology Manual, Chapter 8: table orientation, association, confounding and uncertainty",
+      "CDC Principles of Epidemiology, Lesson 3, Section 2: incidence proportion, person-time and prevalence"
+    ],
+    "quellenLinks": [
+      "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html",
+      "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/relatives-risiko"
+  },
+  {
+    "slug": "goldman-hodgkin-katz-gleichung",
+    "name": "Goldman-Hodgkin-Katz-Gleichung",
+    "latex": "V_m = \\frac{RT}{F} \\ln \\frac{P_K[K^+]_o+P_{Na}[Na^+]_o+P_{Cl}[Cl^-]_i}{P_K[K^+]_i+P_{Na}[Na^+]_i+P_{Cl}[Cl^-]_o}",
+    "symbol": "Vₘ = (RT/F)·ln(ΣPᵢ·ionₒ / ΣPᵢ·ionᵢ)",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Membranphysiologie und Elektrochemie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "V_m",
+        "bedeutung": "Innenpotential relativ zum Außenraum im stationären GHK-Modell",
+        "einheit": "V"
+      },
+      {
+        "symbol": "R",
+        "bedeutung": "Universelle Gaskonstante",
+        "einheit": "J/(mol·K)"
+      },
+      {
+        "symbol": "T",
+        "bedeutung": "Absolute Temperatur",
+        "einheit": "K"
+      },
+      {
+        "symbol": "F",
+        "bedeutung": "Faraday-Konstante",
+        "einheit": "C/mol"
+      },
+      {
+        "symbol": "P_K, P_Na, P_Cl",
+        "bedeutung": "Relative Membranpermeabilitäten für Kalium, Natrium und Chlorid",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "[Ion]_i, [Ion]_o",
+        "bedeutung": "Ionenkonzentration innen bzw. außen; bei Chlorid ist die Anionenposition im Quotienten vertauscht",
+        "einheit": "mol/L oder mol/m³"
+      }
+    ],
+    "quellen": [
+      "Purves, D. et al., eds. Neuroscience, 2nd ed. Chapter “The Ionic Basis of the Resting Membrane Potential.” NCBI Bookshelf (2001)."
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK10931/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/goldman-hodgkin-katz-gleichung"
+  },
+  {
+    "slug": "diagnostische-sensitivitaet-spezifitaet",
+    "name": "Sensitivität und Spezifität diagnostischer Tests",
+    "latex": "\\mathrm{Sensitivitaet}=\\frac{TP}{TP+FN}, \\qquad \\mathrm{Spezifitaet}=\\frac{TN}{TN+FP}",
+    "symbol": "Sensitivität = TP/(TP+FN); Spezifität = TN/(TN+FP)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "TP",
+        "bedeutung": "Richtig positive Testergebnisse: krank und Test positiv",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "FN",
+        "bedeutung": "Falsch negative Ergebnisse: krank und Test negativ",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "TN",
+        "bedeutung": "Richtig negative Ergebnisse: nicht krank und Test negativ",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "FP",
+        "bedeutung": "Falsch positive Ergebnisse: nicht krank und Test positiv",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "Parikh, R. et al. (2008). Understanding and using sensitivity, specificity and predictive values. Indian Journal of Ophthalmology, 56(1), 45–50."
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2636062/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/diagnostische-sensitivitaet-spezifitaet"
+  },
+  {
+    "slug": "wilson-konfidenzintervall-anteil",
+    "name": "Wilson-Konfidenzintervall für einen Anteil",
+    "latex": "\\hat{p}=\\frac{x}{n},\\quad p_{L,U}=\\frac{\\hat{p}+\\frac{z^2}{2n}\\mp z\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}+\\frac{z^2}{4n^2}}}{1+\\frac{z^2}{n}}",
+    "symbol": "p̂ = x/n; Wilson-Intervall [p_L, p_U]",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik und Anteilswerte",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "x",
+        "bedeutung": "Zahl der beobachteten Erfolge oder Ereignisse",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "n",
+        "bedeutung": "Zahl der unabhängigen binomialen Beobachtungen",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "p̂",
+        "bedeutung": "Beobachteter Stichprobenanteil \\(\\frac{x}{n}\\)",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "z",
+        "bedeutung": "Quantil der Standardnormalverteilung für das gewählte zweiseitige Konfidenzniveau",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "p_L, p_U",
+        "bedeutung": "Untere und obere Grenze des Wilson-Konfidenzintervalls für den Populationsanteil",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "NIST/SEMATECH. e-Handbook of Statistical Methods, §7.2.4.1: Confidence intervals (Wilson method).",
+      "Brown, L.D., Cai, T.T. & DasGupta, A. (2001). Interval Estimation for a Binomial Proportion. Statistical Science, 16(2), 101–133.",
+      "OHID Public Health Technical Guidance: Proportions and odds"
+    ],
+    "quellenLinks": [
+      "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "https://doi.org/10.1214/ss/1009213286",
+      "https://fingertips.phe.org.uk/static-reports/public-health-technical-guidance/Basic_statistics/Proportions.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/wilson-konfidenzintervall-anteil"
+  },
+  {
+    "slug": "cohens-d",
+    "name": "Cohen-d-Effektstärke",
+    "latex": "d=\\frac{\\bar x_1-\\bar x_2}{s_p},\\qquad s_p=\\sqrt{\\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}",
+    "symbol": "d = (x̄₁ − x̄₂) / sₚ",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik und Effektgrößen",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "d",
+        "bedeutung": "Vorzeichenbehaftete Mittelwertdifferenz in gepoolten Standardabweichungen",
+        "einheit": "1"
+      },
+      {
+        "symbol": "x̄₁, x̄₂",
+        "bedeutung": "Mittelwerte unabhängiger Gruppen in festgelegter Reihenfolge",
+        "einheit": "u"
+      },
+      {
+        "symbol": "s₁, s₂",
+        "bedeutung": "Stichprobenstandardabweichungen, nicht Standardfehler",
+        "einheit": "u"
+      },
+      {
+        "symbol": "n₁, n₂",
+        "bedeutung": "Ganze Stichprobengrößen, jeweils mindestens zwei",
+        "einheit": "1"
+      },
+      {
+        "symbol": "sₚ",
+        "bedeutung": "Positive Wurzel der freiheitsgradgewichteten gepoolten Varianz",
+        "einheit": "u"
+      }
+    ],
+    "quellen": [
+      "Lakens, D. (2013). Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs. Frontiers in Psychology, 4, 863.",
+      "David B. Wilson, Campbell Collaboration (2023), Effect Size Calculator equations1.1: pooled sample SD and approximate Hedges correction"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.3389/fpsyg.2013.00863",
+      "https://www.campbellcollaboration.org/calculator/equations"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/cohens-d"
+  },
+  {
+    "slug": "rekombinationsfrequenz-genkartierung",
+    "name": "Rekombinationsfrequenz und genetische Kartierung",
+    "latex": "r = \\frac{N_\\text{rekombinant}}{N_\\text{gesamt}}, \\qquad d \\approx 100r \\;\\mathrm{cM}",
+    "symbol": "r = Nᵣ/N; d ≈ 100r cM (kurze Intervalle)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik und Kopplung",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "r",
+        "bedeutung": "Beobachteter Rekombinantenanteil der Stichprobe; die theoretische Wahrscheinlichkeit ist höchstens 0,5",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "N_rekombinant",
+        "bedeutung": "Zahl der Nachkommen mit rekombinanter Merkmalskombination",
+        "einheit": "Nachkommen"
+      },
+      {
+        "symbol": "N_gesamt",
+        "bedeutung": "Gesamtzahl der klassifizierten Nachkommen",
+        "einheit": "Nachkommen"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Genetische Kartendistanz; für kurze Intervalle ungefähr 100r",
+        "einheit": "cM"
+      }
+    ],
+    "quellen": [
+      "National Research Council, “Mapping and Sequencing the Human Genome”, section “Mapping” (NCBI Bookshelf; centimorgan definition and 1% recombination convention).",
+      "WormBook, “Classical genetic methods” (NCBI Bookshelf; recombinant progeny and mapping calculations)."
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK218246/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK179229/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/rekombinationsfrequenz-genkartierung"
+  },
+  {
+    "slug": "odds-ratio",
+    "name": "Odds Ratio (Chancenverhältnis)",
+    "latex": "OR=\\frac{a/b}{c/d}=\\frac{ad}{bc}",
+    "symbol": "OR = (a/b)/(c/d) = ad/(bc)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik und Epidemiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "OR",
+        "bedeutung": "Odds der Gruppe 1 geteilt durch die Referenz-Odds",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "Personen mit Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "Personen ohne Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "c",
+        "bedeutung": "Personen mit Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Personen ohne Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "Cochrane Handbook, Chapter 6: dichotomous outcomes, risk, odds and absolute effects",
+      "CDC Field Epidemiology Manual, Chapter 8: table orientation, association, confounding and uncertainty",
+      "Office for Health Improvement and Disparities: odds ratio, relative risk and logarithmic intervals"
+    ],
+    "quellenLinks": [
+      "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html",
+      "https://fingertips.phe.org.uk/static-reports/public-health-technical-guidance/Basic_statistics/Odds_ratios_relative_risk.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/odds-ratio"
+  },
+  {
+    "slug": "pielou-evenness-index",
+    "name": "Pielou-Gleichverteilung (Evenness)",
+    "latex": "J'=\\frac{H'}{\\ln S},\\qquad S>1",
+    "symbol": "J′ = H′/ln S, S>1",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Ökologie und Biodiversität",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "J′",
+        "bedeutung": "Normierte Shannon-Gleichmäßigkeit für S>1",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "H′",
+        "bedeutung": "Shannon-Entropie derselben Probe und Logarithmusbasis",
+        "einheit": "nats bei ln"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "Anzahl positiv beobachteter Arten; mindestens zwei für den Quotienten",
+        "einheit": "Arten"
+      }
+    ],
+    "quellen": [
+      "vegan: ecological diversity indices, logarithm convention and finite-sample Simpson",
+      "scikit-bio: Pielou evenness, log-base convention and explicit single-taxon software convention"
+    ],
+    "quellenLinks": [
+      "https://vegandevs.github.io/vegan/reference/diversity.html",
+      "https://scikit.bio/docs/latest/generated/skbio.diversity.alpha.pielou_e.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/pielou-evenness-index"
+  },
+  {
+    "slug": "lotka-volterra-praedator-beute",
+    "name": "Lotka-Volterra-Modell (Räuber und Beute)",
+    "latex": "\\frac{dN}{dt}=aN-bNP, \\quad \\frac{dP}{dt}=cbNP-dP",
+    "symbol": "dN/dt=aN−bNP; dP/dt=cbNP−dP",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "N",
+        "bedeutung": "Beutepopulation",
+        "einheit": "Individuen oder Dichte"
+      },
+      {
+        "symbol": "P",
+        "bedeutung": "Räuberpopulation",
+        "einheit": "Individuen oder Dichte"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "intrinsische Beute-Wachstumsrate ohne Räuber",
+        "einheit": "1/Zeit"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "Begegnungs-/Prädationskoeffizient",
+        "einheit": "1/(Räuber·Zeit)"
+      },
+      {
+        "symbol": "c",
+        "bedeutung": "Umwandlung erbeuteter Nahrung in Räubernachwuchs",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Räuber-Sterberate ohne Beute",
+        "einheit": "1/Zeit"
+      }
+    ],
+    "quellen": [
+      "Joceline Lega (2024), Introduction to Mathematical Modeling, Chapter “Two-Species Models”, University of Arizona Open Textbooks."
+    ],
+    "quellenLinks": [
+      "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/two-species-models/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/lotka-volterra-praedator-beute"
+  },
+  {
+    "slug": "lotka-volterra-konkurrenz",
+    "name": "Lotka-Volterra-Modell interspezifischer Konkurrenz",
+    "latex": "\\frac{dN_1}{dt}=r_1N_1(1-\\frac{N_1+\\alpha_{12}N_2}{K_1}), \\quad \\frac{dN_2}{dt}=r_2N_2(1-\\frac{N_2+\\alpha_{21}N_1}{K_2})",
+    "symbol": "dNᵢ/dt = rᵢNᵢ(1 − (Nᵢ + αᵢⱼNⱼ)/Kᵢ)",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "N₁,N₂",
+        "bedeutung": "Dichten oder Größen der beiden Arten",
+        "einheit": "gleiche Einheit"
+      },
+      {
+        "symbol": "r₁,r₂",
+        "bedeutung": "intrinsische Wachstumsraten",
+        "einheit": "1/Zeit"
+      },
+      {
+        "symbol": "K₁,K₂",
+        "bedeutung": "artspezifische Tragfähigkeiten ohne Konkurrent",
+        "einheit": "gleiche Einheit wie N"
+      },
+      {
+        "symbol": "α₁₂,α₂₁",
+        "bedeutung": "Wirkung einer Einheit der jeweils anderen Art, relativ zur eigenen Art",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Young, T.P. (2001). Species Competition. Encyclopedia of Life Sciences.",
+      "University of Arizona Open Textbook. Two-Species Models.",
+      "University of Tennessee:Interspecific competition,Lotka-Volterra module",
+      "Quantitative Ecology,§16.7 Lotka–Volterra formulation and Box16.1"
+    ],
+    "quellenLinks": [
+      "https://onlinelibrary.wiley.com/doi/10.1002/9780470057339.vac038",
+      "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/two-species-models/",
+      "https://lgross.utk.edu/LGrossTIEMwebsite/home/gross/public_html/bioed/bealsmodules/competition.html",
+      "https://mikheyevlab.github.io/ecology-textbook/16-competition.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/lotka-volterra-konkurrenz"
+  },
+  {
+    "slug": "effektive-populationsgroesse-geschlechterverhaeltnis",
+    "name": "Effektive Populationsgröße bei ungleichem Geschlechterverhältnis",
+    "latex": "N_e=\\frac{4N_mN_f}{N_m+N_f},\\qquad N_m,N_f\\in\\mathbb{N}_{>0}",
+    "symbol": "Nₑ = 4NₘNf/(Nₘ + Nf)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Ne",
+        "bedeutung": "Äquivalente effektive Größe ausschließlich dieses Sex-Ratio-Modells",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Nm,Nf",
+        "bedeutung": "Männlicher und weiblicher Elternpool mit passenden Beitragsannahmen",
+        "einheit": "1"
+      },
+      {
+        "symbol": "N",
+        "bedeutung": "Summe Nm+Nf, nicht automatisch der gesamte Zählbestand",
+        "einheit": "1"
+      },
+      {
+        "symbol": "f",
+        "bedeutung": "Weiblicher Anteil Nf/N bei festgehaltenem N",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Graham Coop: Population and Quantitative Genetics, chapter 4, effective size and unequal parental pools, coalescence derivation",
+      "Robin S. Waples (2024): The Ne/N ratio in applied conservation, section 2.3 Adult sex ratio, equations 4–6; distinctions among census, Ne and Nb"
+    ],
+    "quellenLinks": [
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/04:_Genetic_Drift_and_Neutral_Diversity",
+      "https://onlinelibrary.wiley.com/doi/full/10.1111/eva.13695"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/effektive-populationsgroesse-geschlechterverhaeltnis"
+  },
+  {
+    "slug": "selektionskoeffizient-relative-fitness",
+    "name": "Selektionskoeffizient und relative Fitness",
+    "latex": "w_{AA}=1,\\quad w_{Aa}=1-hs,\\quad w_{aa}=1-s",
+    "symbol": "wAA=1; wAa=1−hs; waa=1−s",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Evolution und Populationsgenetik",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "s",
+        "bedeutung": "relativer Fitnessverlust des aa-Genotyps gegenüber AA",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "h",
+        "bedeutung": "Dominanzparameter für den Effekt im Heterozygoten",
+        "einheit": "dimensionslos, meist 0…1"
+      },
+      {
+        "symbol": "wAA,wAa,waa",
+        "bedeutung": "relative Fitness der drei Genotypen",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Orr, H.A. (2009). Fitness and its role in evolutionary genetics. Nature Reviews Genetics, 10, 531–539."
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2753274/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/selektionskoeffizient-relative-fitness"
+  },
+  {
+    "slug": "kopplungsungleichgewicht-r2",
+    "name": "Kopplungsungleichgewicht und r²",
+    "latex": "D=p_{AB}-p_Ap_B, \\quad r^2=\\frac{D^2}{p_A(1-p_A)p_B(1-p_B)}",
+    "symbol": "D = pAB−pA·pB; r² = D²/[pA(1−pA)pB(1−pB)]",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik und Bioinformatik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "pA,pB",
+        "bedeutung": "marginale Frequenzen der betrachteten Allele an zwei biallelischen Loci",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "pAB",
+        "bedeutung": "Haplotypfrequenz, auf dem beide betrachteten Allele gemeinsam liegen",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "D",
+        "bedeutung": "Kopplungsungleichgewicht als beobachtete minus erwartete gemeinsame Häufigkeit",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "r²",
+        "bedeutung": "quadrierte Korrelation der Allelindikatoren",
+        "einheit": "dimensionslos, 0…1"
+      }
+    ],
+    "quellen": [
+      "Slatkin, M. (2008). Linkage disequilibrium—understanding the evolutionary past and mapping the medical future. Nature Reviews Genetics.",
+      "Matti Pirinen,University of Helsinki:GWAS7,§7.2 Linkage disequilibrium",
+      "Reinhard Bürger,University of Vienna:Mathematical Population Genetics2020,§5 Recombination, pp45–48"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5124487/",
+      "https://www.mv.helsinki.fi/home/mjxpirin/GWAS_course/material/GWAS7.html",
+      "https://homepage.univie.ac.at/Reinhard.Buerger/PopGenVO2020_LN.pdf#page=46"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/kopplungsungleichgewicht-r2"
+  },
+  {
+    "slug": "mutation-selektion-balance-rezessiv",
+    "name": "Mutation-Selektions-Gleichgewicht (rezessives Allel)",
+    "latex": "\\hat q\\approx\\sqrt{\\frac{\\mu}{s}}",
+    "symbol": "q̂ ≈ √(μ/s)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "q̂",
+        "bedeutung": "Gleichgewichtsfrequenz des rezessiven Allels",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "μ",
+        "bedeutung": "Vorwärtsmutationsrate vom häufigen zum seltenen Allel",
+        "einheit": "pro Allel und Generation"
+      },
+      {
+        "symbol": "s",
+        "bedeutung": "Selektionskoeffizient gegen den homozygot rezessiven Genotyp",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Frank, S.A. (2012). Natural selection. III. Selection versus transmission and the levels of selection. Journal of Evolutionary Biology, 25(2), 227–243.",
+      "Steven Carr, Memorial University: Derivation of mutation-selection equilibrium",
+      "Reinhard Bürger2020: Mathematical Population Genetics, §4.3.2 and Corollary4.5"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3258362/",
+      "https://www.mun.ca/biology/scarr/2900_Mutation_derivation.html",
+      "https://homepage.univie.ac.at/Reinhard.Buerger/PopGenVO2020_LN.pdf#page=40"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/mutation-selektion-balance-rezessiv"
+  },
+  {
+    "slug": "heritabilitaet-schmal",
+    "name": "Schmal-sinnige Heritabilität",
+    "latex": "h^2=\\frac{V_A}{V_P},\\qquad V_P>0",
+    "symbol": "h² = Vₐ/Vₚ",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Quantitative Genetik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "h²",
+        "bedeutung": "Heritabilität im engeren Sinne, kein individueller genetischer Anteil",
+        "einheit": "1"
+      },
+      {
+        "symbol": "VA",
+        "bedeutung": "Additive genetische Varianz im erklärten Komponentenmodell",
+        "einheit": "cm²"
+      },
+      {
+        "symbol": "VP",
+        "bedeutung": "Positive gesamte phänotypische Varianz derselben Referenz",
+        "einheit": "cm²"
+      },
+      {
+        "symbol": "H²",
+        "bedeutung": "Breit-sinnige Vergleichsquote VG/VP mit gesamter genetischer Varianz",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Graham Coop: Population and Quantitative Genetics, chapter 7, additive variance, environment reference and narrow/broad-sense distinction",
+      "Beavis, Lamkey, Mahama and Suza: Quantitative Genetics for Plant Breeding, chapter 9, parent-midpoint regression and context of heritability",
+      "Zaitlen, N. and Kraft, P. (2012). Heritability in the genome-wide association era. Human Genetics 131, 1655–1664. DOI: 10.1007/s00439-012-1199-6."
+    ],
+    "quellenLinks": [
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/07:_Phenotypic_Variation_and_the_Resemblance_Between_Relatives",
+      "https://iastate.pressbooks.pub/quantitativegenetics/chapter/selection-response/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3432754/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/heritabilitaet-schmal"
+  },
+  {
+    "slug": "hill-gleichung-sauerstoffsaettigung",
+    "name": "Hill-Gleichung der Sauerstoffsättigung",
+    "latex": "S_{O_2}=\\frac{P_{O_2}^{n}}{P_{50}^{n}+P_{O_2}^{n}}",
+    "symbol": "SO₂ = PO₂ⁿ/(P50ⁿ + PO₂ⁿ)",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "SO₂",
+        "bedeutung": "Anteil der mit Sauerstoff besetzten Hämoglobin-Bindungsstellen",
+        "einheit": "dimensionslos oder %"
+      },
+      {
+        "symbol": "PO₂",
+        "bedeutung": "Sauerstoffpartialdruck",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "P50",
+        "bedeutung": "Partialdruck bei halbmaximaler Sättigung",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "n",
+        "bedeutung": "empirischer Hill-Koeffizient für die Kurvensteilheit",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "NCBI Bookshelf. Oxygen Transport, section on hemoglobin oxygen affinity and the Hill equation.",
+      "Duane W. Sears, UC Santa Barbara Biochemistry: Oxygen Saturation Analysis of Hemoglobin and Myoglobin",
+      "Hulme and Trevethick2010, Ligand binding assays at equilibrium: validation and interpretation, one-site binding and Hill plots"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK54103/",
+      "https://biosci.mcdb.ucsb.edu/biochemistry/tw-lig/hbsat_intro.htm",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3000649/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/hill-gleichung-sauerstoffsaettigung"
+  },
+  {
+    "slug": "herzzeitvolumen",
+    "name": "Herzzeitvolumen",
+    "latex": "\\dot Q=HF\\cdot SV",
+    "symbol": "HZV = HF · SV",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "HZV",
+        "bedeutung": "Herzzeitvolumen pro Ventrikel",
+        "einheit": "L/min"
+      },
+      {
+        "symbol": "HF",
+        "bedeutung": "Herzfrequenz",
+        "einheit": "Schläge/min"
+      },
+      {
+        "symbol": "SV",
+        "bedeutung": "Schlagvolumen je Herzschlag",
+        "einheit": "mL/Schlag"
+      }
+    ],
+    "quellen": [
+      "King, J. & Lowery, D.R. (2023). Physiology, Cardiac Output. StatPearls."
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK470455/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/herzzeitvolumen"
+  },
+  {
+    "slug": "renale-clearance",
+    "name": "Renale Clearance",
+    "latex": "C_x=\\frac{U_x\\dot V}{P_x}",
+    "symbol": "Cx = Ux·V̇/Px",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Cx",
+        "bedeutung": "Clearance der Substanz x",
+        "einheit": "mL/min"
+      },
+      {
+        "symbol": "Ux",
+        "bedeutung": "Urinkonzentration der Substanz x",
+        "einheit": "z. B. mg/mL"
+      },
+      {
+        "symbol": "V̇",
+        "bedeutung": "Urinfluss pro Zeit",
+        "einheit": "mL/min"
+      },
+      {
+        "symbol": "Px",
+        "bedeutung": "Plasmakonzentration der Substanz x",
+        "einheit": "gleiche Einheit wie Ux"
+      }
+    ],
+    "quellen": [
+      "University of Lausanne: Pharmacokinetics — Renal Clearance, Description and Assessment"
+    ],
+    "quellenLinks": [
+      "https://sepia2.unil.ch/pharmacology/parameters/renalclearance/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/renale-clearance"
+  },
+  {
+    "slug": "allometrische-skalierung",
+    "name": "Allometrische Skalierung",
+    "latex": "Y=aM^b",
+    "symbol": "Y = a·Mᵇ",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Y",
+        "bedeutung": "gemessene biologische Größe, etwa Stoffwechselrate",
+        "einheit": "Merkmalseinheit"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "Skalenfaktor für die gewählten Einheiten",
+        "einheit": "Y/Mᵇ"
+      },
+      {
+        "symbol": "M",
+        "bedeutung": "Körpermasse",
+        "einheit": "z. B. kg"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "empirischer Skalierungsexponent",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "West, G.B., Woodruff, W.H. & Brown, J.H. (2002). Allometric scaling of metabolic rate from molecules and mitochondria to cells and mammals. PNAS, 99(Suppl 1), 2473–2478.",
+      "Aaron A. King, University of Michigan, Allometry: model, log transformation and regression-direction example",
+      "OpenStax Biology2e§33.1 Animal Form and Function, bioenergetics and body-size effects"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC128563/",
+      "https://kinglab.eeb.lsa.umich.edu/202/allometry/allometry.html",
+      "https://openstax.org/books/biology-2e/pages/33-1-animal-form-and-function"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/allometrische-skalierung"
+  },
+  {
+    "slug": "qpcr-delta-delta-ct",
+    "name": "ΔΔCt-Methode der qPCR",
+    "latex": "d=\\Delta\\Delta C_t=(C_{T,S}-C_{R,S})-(C_{T,C}-C_{R,C}),\\qquad R=2^{-d}",
+    "symbol": "ΔΔCt = (CT,S − CR,S) − (CT,C − CR,C); R = 2⁻ΔΔCt",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Cₜ,ₛ, Cᵣ,ₛ",
+        "bedeutung": "Ziel- und Referenz-Cq derselben Probe",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Cₜ,꜀, Cᵣ,꜀",
+        "bedeutung": "Ziel- und Referenz-Cq der Kontrollprobe",
+        "einheit": "1"
+      },
+      {
+        "symbol": "d = ΔΔCt",
+        "bedeutung": "Normalisierte Probe minus normalisierte Kontrolle",
+        "einheit": "1"
+      },
+      {
+        "symbol": "R",
+        "bedeutung": "Positives normalisiertes Mengenverhältnis im idealen Modell",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Livak and Schmittgen (2001), Analysis of relative gene expression data using real-time quantitative PCR and the 2−ΔΔCT method, Methods25,402–408",
+      "Pfaffl (2001), A new mathematical model for relative quantification in real-time RT–PCR, Nucleic Acids Research29(9),e45",
+      "Bustin et al. (2025), MIQE 2.0, Clinical Chemistry71(6),634–651, DOI10.1093/clinchem/hvaf043"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1006/meth.2001.1262",
+      "https://doi.org/10.1093/nar/29.9.e45",
+      "https://doi.org/10.1093/clinchem/hvaf043"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/qpcr-delta-delta-ct"
+  },
+  {
+    "slug": "kompetitive-enzymhemmung",
+    "name": "Kompetitive Enzymhemmung",
+    "latex": "v=\\frac{V_{max}[S]}{\\alpha K_m+[S]},\\quad \\alpha=1+\\frac{[I]}{K_i}",
+    "symbol": "v = Vmax[S]/(αKm+[S])",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "v",
+        "bedeutung": "Anfangsgeschwindigkeit bei Substrat und Inhibitor",
+        "einheit": "Konzentration/Zeit"
+      },
+      {
+        "symbol": "Vmax",
+        "bedeutung": "Maximalgeschwindigkeit ohne Änderung der Enzymmenge",
+        "einheit": "Konzentration/Zeit"
+      },
+      {
+        "symbol": "[S]",
+        "bedeutung": "Substratkonzentration",
+        "einheit": "Konzentration"
+      },
+      {
+        "symbol": "Km",
+        "bedeutung": "Michaelis-Konstante ohne Inhibitor",
+        "einheit": "Konzentration"
+      },
+      {
+        "symbol": "α",
+        "bedeutung": "Inhibitionsfaktor \\(1+\\frac{[I]}{Ki}\\)",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "[I], Ki",
+        "bedeutung": "Inhibitorkonzentration und Dissoziationskonstante",
+        "einheit": "Konzentration"
+      }
+    ],
+    "quellen": [
+      "TU Delft Open Textbook. Biochemistry, §4.2: Competitive inhibition and enzyme kinetics."
+    ],
+    "quellenLinks": [
+      "https://interactivetextbooks.tudelft.nl/biochemistry/content/Chapter_4_Enzyme_regulation.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/kompetitive-enzymhemmung"
+  },
+  {
+    "slug": "langmuir-bindungsisotherme",
+    "name": "Langmuir-Bindungsisotherme",
+    "latex": "\\theta=\\frac{K_a C}{1+K_a C}",
+    "symbol": "θ = Ka·C/(1 + Ka·C)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "θ",
+        "bedeutung": "Anteil belegter Bindungsstellen",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "Ka",
+        "bedeutung": "assoziative Bindungskonstante",
+        "einheit": "Konzentration⁻¹"
+      },
+      {
+        "symbol": "C",
+        "bedeutung": "freie Ligandenkonzentration im Gleichgewicht",
+        "einheit": "Konzentration"
+      }
+    ],
+    "quellen": [
+      "Jarmoskaite, I. et al. (2020). Re-evaluating the conventional wisdom in binding assays. eLife.",
+      "Hulme and Trevethick2010, Ligand binding assays at equilibrium: validation and interpretation, equations1–4 and ligand depletion"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7368832/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3000649/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/langmuir-bindungsisotherme"
+  },
+  {
+    "slug": "roc-area-under-curve",
+    "name": "ROC-AUC",
+    "latex": "\\begin{aligned}\\mathrm{AUC}&=\\int_0^1\\mathrm{TPR}(u)\\,du\\\\&=P(s_+>s_-)+\\tfrac12P(s_+=s_-)\\end{aligned}",
+    "symbol": "AUC = P(s+ > s−) + ½ P(s+ = s−)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "AUC",
+        "bedeutung": "Fläche unter der ROC-Kurve",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "FPR",
+        "bedeutung": "Falsch-Positiv-Rate 1−Spezifität",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "Sensitivität",
+        "bedeutung": "Richtig-Positiv-Rate bei jeweiliger Schwelle",
+        "einheit": "Anteil"
+      }
+    ],
+    "quellen": [
+      "Hanley, J.A. & McNeil, B.J. (1982). The meaning and use of the area under a ROC curve. Radiology.",
+      "scikit-learn: roc_auc_score",
+      "R pROC: Compute the area under the ROC curve",
+      "R pROC: Build a ROC curve"
+    ],
+    "quellenLinks": [
+      "https://pubmed.ncbi.nlm.nih.gov/7063747/",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html",
+      "https://search.r-project.org/CRAN/refmans/pROC/html/auc.html",
+      "https://search.r-project.org/CRAN/refmans/pROC/html/roc.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/roc-area-under-curve"
+  },
+  {
+    "slug": "kaplan-meier-schaetzer",
+    "name": "Kaplan-Meier-Schätzer",
+    "latex": "\\hat S(t)=\\prod_{t_j\\le t}\\left(1-\\frac{d_j}{n_j}\\right)",
+    "symbol": "Ŝ(t) = Π(1 − dj/nj)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Ŝ(t)",
+        "bedeutung": "geschätzte Überlebensfunktion bis Zeit t",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "tj",
+        "bedeutung": "beobachtete Ereigniszeit",
+        "einheit": "Zeit"
+      },
+      {
+        "symbol": "dj",
+        "bedeutung": "Ereignisse zur Zeit tj",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "nj",
+        "bedeutung": "unmittelbar vor tj noch ereignisfreie Personen unter Risiko",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "Kaplan, E.L. & Meier, P. (1958). Nonparametric estimation from incomplete observations. Journal of the American Statistical Association.",
+      "Terry Therneau: A package for survival analysis in R, section 2.1",
+      "NIST/SEMATECH e-Handbook: 8.2.1.5 Empirical model fitting — distribution-free Kaplan-Meier approach"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1080/01621459.1958.10501452",
+      "https://stat.ethz.ch/R-manual/R-devel/library/survival/doc/survival.pdf",
+      "https://www.itl.nist.gov/div898/handbook/apr/section2/apr215.htm"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/kaplan-meier-schaetzer"
+  },
+  {
+    "slug": "hazard-funktion",
+    "name": "Hazard-Funktion",
+    "latex": "h(t)=\\lim_{\\Delta t\\to0}\\frac{P(t\\le T<t+\\Delta t\\mid T\\ge t)}{\\Delta t}=\\frac{f(t)}{S(t)}",
+    "symbol": "h(t) = f(t)/S(t)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "h(t)",
+        "bedeutung": "momentane bedingte Ereignisrate zum Zeitpunkt t",
+        "einheit": "Zeit⁻¹"
+      },
+      {
+        "symbol": "T",
+        "bedeutung": "zufällige Zeit bis zum Ereignis",
+        "einheit": "Zeit"
+      },
+      {
+        "symbol": "f(t)",
+        "bedeutung": "Dichte der Ereigniszeit",
+        "einheit": "Zeit⁻¹"
+      },
+      {
+        "symbol": "S(t)",
+        "bedeutung": "Wahrscheinlichkeit, bis t ereignisfrei zu bleiben",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Lin, X. & Halabi, S. (2022). Finding the right hazard function for time-to-event modeling. Cancer Research.",
+      "NIST/SEMATECH e-Handbook: 8.1.2.3 Failure or hazard rate",
+      "NIST/SEMATECH e-Handbook: 8.1.6.1 Exponential",
+      "NIST/SEMATECH e-Handbook: 1.3.6.6.7 Exponential Distribution"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9381898/",
+      "https://www.itl.nist.gov/div898/handbook/apr/section1/apr123.htm",
+      "https://www.itl.nist.gov/div898/handbook/apr/section1/apr161.htm",
+      "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3667.htm"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/hazard-funktion"
+  },
+  {
+    "slug": "logistische-regression",
+    "name": "Logistische Regression",
+    "latex": "\\log\\frac{p}{1-p}=\\beta_0+\\sum_{k=1}^{m}\\beta_k x_k",
+    "symbol": "logit(p) = β₀ + Σβk·xk",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "p",
+        "bedeutung": "modellierte Ereigniswahrscheinlichkeit",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "β0",
+        "bedeutung": "Achsenabschnitt der Logit-Gleichung",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "βk",
+        "bedeutung": "Regressionskoeffizient zum Prädiktor xk",
+        "einheit": "pro xk-Einheit"
+      },
+      {
+        "symbol": "xk",
+        "bedeutung": "Prädiktorwert der k-ten erklärenden Variable",
+        "einheit": "Prädiktoreinheit"
+      }
+    ],
+    "quellen": [
+      "Hosmer, D.W. & Lemeshow, S. (2000). Applied Logistic Regression, 2nd ed. Wiley.",
+      "Keith Levin, University of Wisconsin: STAT340 Lecture 10 — logistic regression",
+      "statsmodels: Logit.cdf — The logistic cumulative distribution function"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1002/0471722146",
+      "https://pages.stat.wisc.edu/~kdlevin/teaching/Fall2022/STAT340/lecs/L10_logistic.html",
+      "https://www.statsmodels.org/stable/generated/statsmodels.discrete.discrete_model.Logit.cdf.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/logistische-regression"
+  },
+  {
+    "slug": "benjamini-hochberg-fdr",
+    "name": "Benjamini-Hochberg-Verfahren",
+    "latex": "k=\\max\\left(\\{0\\}\\cup\\left\\{i:p_{(i)}\\le\\frac{iq}{m}\\right\\}\\right)",
+    "symbol": "k = max({0} ∪ {i: p(i) ≤ iq/m})",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "p(i)",
+        "bedeutung": "i-ter aufsteigend sortierter p-Wert",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "i",
+        "bedeutung": "Rang des sortierten p-Werts",
+        "einheit": "Rang"
+      },
+      {
+        "symbol": "m",
+        "bedeutung": "Zahl der Tests in der vorab definierten Testfamilie",
+        "einheit": "Tests"
+      },
+      {
+        "symbol": "q",
+        "bedeutung": "gewähltes FDR-Niveau",
+        "einheit": "Anteil"
+      }
+    ],
+    "quellen": [
+      "Benjamini, Y. & Hochberg, Y. (1995). Controlling the false discovery rate. Journal of the Royal Statistical Society B.",
+      "R stats: Adjust P-values for Multiple Comparisons",
+      "Benjamini and Yekutieli (2001): The control of the false discovery rate in multiple testing under dependency",
+      "statsmodels: fdrcorrection — p-value correction for false discovery rate"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1111/j.2517-6161.1995.tb02031.x",
+      "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html",
+      "https://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_yekutieli_ANNSTAT2001.pdf",
+      "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.fdrcorrection.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/benjamini-hochberg-fdr"
+  },
+  {
+    "slug": "q10-temperaturkoeffizient",
+    "name": "Q₁₀-Temperaturkoeffizient",
+    "latex": "Q_{10}=(R_2/R_1)^{10\\,\\mathrm K/(T_2-T_1)}",
+    "symbol": "Q10 = (R2/R1)^(10/ΔT)",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "Q₁₀",
+        "bedeutung": "Faktor der Ratenänderung je 10 °C",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "R₁,R₂",
+        "bedeutung": "gemessene Raten bei T₁ und T₂",
+        "einheit": "gleiche Rate"
+      },
+      {
+        "symbol": "T₁,T₂",
+        "bedeutung": "Temperaturen der Messungen",
+        "einheit": "°C"
+      }
+    ],
+    "quellen": [
+      "Thermodynamic implications of high Q10 of thermo-TRP channels in living cells, §Temperature coefficient Q10, Eq.1"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4736789/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/q10-temperaturkoeffizient"
+  },
+  {
+    "slug": "pflanzen-relatives-wachstum",
+    "name": "Relative Wachstumsrate von Pflanzen",
+    "latex": "RGR=\\frac{\\ln W_2-\\ln W_1}{t_2-t_1}",
+    "symbol": "RGR = Δln(W)/Δt",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "RGR",
+        "bedeutung": "relative Wachstumsrate",
+        "einheit": "Zeit⁻¹"
+      },
+      {
+        "symbol": "W₁,W₂",
+        "bedeutung": "Biomasse zu Zeitpunkten t₁ und t₂",
+        "einheit": "z. B. g Trockenmasse"
+      },
+      {
+        "symbol": "t₁,t₂",
+        "bedeutung": "Zeitpunkte der Messung",
+        "einheit": "Tage"
+      }
+    ],
+    "quellen": [
+      "Hoffmann, W.A. & Poorter, H. (2002). Avoiding bias in calculations of relative growth rate. Annals of Botany."
+    ],
+    "quellenLinks": [
+      "https://pubmed.ncbi.nlm.nih.gov/12125771/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/pflanzen-relatives-wachstum"
+  },
+  {
+    "slug": "sauerstoffgehalt-blut",
+    "name": "Arterieller Sauerstoffgehalt",
+    "latex": "C_{aO_2}=1.34\\,Hb\\,S_{aO_2}+0.003\\,P_{aO_2}",
+    "symbol": "CaO₂ = 1,34·Hb·SaO₂ + 0,003·PaO₂",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "CaO₂",
+        "bedeutung": "Sauerstoffgehalt des arteriellen Blutes",
+        "einheit": "mL O₂/dL"
+      },
+      {
+        "symbol": "Hb",
+        "bedeutung": "Hämoglobinkonzentration",
+        "einheit": "g/dL"
+      },
+      {
+        "symbol": "SaO₂",
+        "bedeutung": "arterielle Hämoglobinsättigung als Anteil",
+        "einheit": "0…1"
+      },
+      {
+        "symbol": "PaO₂",
+        "bedeutung": "arterieller Sauerstoffpartialdruck",
+        "einheit": "mmHg"
+      }
+    ],
+    "quellen": [
+      "StatPearls. Oxygen Saturation: Monitoring and Interpretation.",
+      "Respiratory Physiology: A Clinical Approach, Oxygen Content: bound/dissolved terms and coefficient conventions",
+      "OpenStax Anatomy and Physiology 2e §22.5 Transport of Gases: oxygen binding and saturation"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK525974/",
+      "https://respphys.org/05-gas-exchanger/05-ge-05-oxygenation",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/sauerstoffgehalt-blut"
+  },
+  {
+    "slug": "fick-prinzip-herzzeitvolumen",
+    "name": "Fick-Prinzip für das Herzzeitvolumen",
+    "latex": "\\dot Q=\\frac{\\dot V_{O_2}}{C_a-C_v}",
+    "symbol": "Q̇ = V̇O₂/(Ca−Cv)",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Q̇",
+        "bedeutung": "Blutvolumenstrom des Herzens",
+        "einheit": "L/min"
+      },
+      {
+        "symbol": "V̇O₂",
+        "bedeutung": "Sauerstoffverbrauch pro Zeit",
+        "einheit": "mL O₂/min"
+      },
+      {
+        "symbol": "Ca",
+        "bedeutung": "Arterieller Sauerstoffinhalt je Blutvolumen",
+        "einheit": "mL O₂/L Blut"
+      },
+      {
+        "symbol": "Cv",
+        "bedeutung": "Repräsentativer gemischtvenöser Sauerstoffinhalt je Blutvolumen",
+        "einheit": "mL O₂/L Blut"
+      }
+    ],
+    "quellen": [
+      "South Eastern Sydney Local Health District: Cardiac Output and Venous Return, Fick principle section"
+    ],
+    "quellenLinks": [
+      "https://www.seslhd.health.nsw.gov.au/sites/default/files/groups/POWHED/docs/Jack-Marjot-Notes/Physiology/cardiac_output_and_venous_return.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/fick-prinzip-herzzeitvolumen"
+  },
+  {
+    "slug": "inzuchtkoeffizient-population",
+    "name": "Inzuchtkoeffizient und Heterozygotie",
+    "latex": "F_{IS}=1-\\frac{H_O}{H_E}",
+    "symbol": "FIS = 1 − HO/HE",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "FIS",
+        "bedeutung": "relativer Heterozygotenmangel innerhalb der Teilpopulation",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "HO",
+        "bedeutung": "beobachtete Heterozygotie",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "HE",
+        "bedeutung": "erwartete Heterozygotie unter Referenzmodell",
+        "einheit": "Anteil"
+      }
+    ],
+    "quellen": [
+      "Weir, B.S. & Cockerham, C.C. (1984). Estimating F-statistics for the analysis of population structure. Evolution, 38(6), 1358–1370.",
+      "Wright, S. (1922). Coefficients of inbreeding and relationship. The American Naturalist.",
+      "Steven Carr, Memorial University: F-statistics as measures of population structure",
+      "Matti Pirinen, University of Helsinki: GWAS5, relatedness and population structure"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1111/j.1558-5646.1984.tb05657.x",
+      "https://doi.org/10.1086/279872",
+      "https://www.mun.ca/biology/scarr/4250_F-statistics.html",
+      "https://www.mv.helsinki.fi/home/mjxpirin/GWAS_course/material/GWAS5.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/inzuchtkoeffizient-population"
+  },
+  {
+    "slug": "positiver-negativer-vorhersagewert",
+    "name": "Positiver und negativer Vorhersagewert",
+    "latex": "PPV=\\frac{TP}{TP+FP},\\quad NPV=\\frac{TN}{TN+FN}",
+    "symbol": "PPV = TP/(TP+FP); NPV = TN/(TN+FN)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "PPV",
+        "bedeutung": "Anteil Referenz-positiver unter allen Test-positiven Personen",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "NPV",
+        "bedeutung": "Anteil Referenz-negativer unter allen Test-negativen Personen",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "TP, FP, TN, FN",
+        "bedeutung": "Zellen der diagnostischen 2×2-Tabelle",
+        "einheit": "Personen oder Proben"
+      }
+    ],
+    "quellen": [
+      "Parikh, R. et al. (2008). Understanding and using sensitivity, specificity and predictive values. Indian Journal of Ophthalmology, 56(1), 45–50.",
+      "Universität Hamburg, EpiBioManual: Diagnostische Tests — Prädiktive Werte und Satz von Bayes"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2636062/",
+      "https://www.epibiomanual.uni-hamburg.de/startseite/manual/diagnostische-tests/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/positiver-negativer-vorhersagewert"
+  },
+  {
+    "slug": "inzidenzrate-personenzeit",
+    "name": "Inzidenzrate pro Personenzeit",
+    "latex": "IR=\\frac{D}{\\sum_i T_i}",
+    "symbol": "IR = Ereignisse / Personenzeit",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "IR",
+        "bedeutung": "Inzidenzrate im Beobachtungszeitraum",
+        "einheit": "Ereignisse je Personenjahr o. Ä."
+      },
+      {
+        "symbol": "D",
+        "bedeutung": "Zahl neuer Ereignisse",
+        "einheit": "Ereignisse"
+      },
+      {
+        "symbol": "Ti",
+        "bedeutung": "beobachtete Zeit der Person i unter Risiko",
+        "einheit": "Zeit"
+      }
+    ],
+    "quellen": [
+      "CDC. Principles of Epidemiology in Public Health Practice, Lesson 3.",
+      "CDC Principles of Epidemiology: Lesson 3, Section 2 — Morbidity Frequency Measures",
+      "University of Utah WebPath: Basic Biostatistics"
+    ],
+    "quellenLinks": [
+      "https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html",
+      "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html",
+      "https://webpath.med.utah.edu/TUTORIAL/BIOSTATS/BIOSTATS.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/inzidenzrate-personenzeit"
+  },
+  {
+    "slug": "diskretes-populationswachstum",
+    "name": "Diskretes Populationswachstum",
+    "latex": "N_{k+1}=\\lambda N_k,\\qquad N_k=N_0\\lambda^k,\\qquad k\\in\\mathbb N_0,\\quad\\lambda\\ge0",
+    "symbol": "Nₖ₊₁ = λNₖ; Nₖ = N₀λᵏ",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "N₀,Nₖ",
+        "bedeutung": "Anfänglicher und nach k Schritten erwarteter Modellbestand",
+        "einheit": "1"
+      },
+      {
+        "symbol": "λ",
+        "bedeutung": "Endlicher nichtnegativer Multiplikationsfaktor je gleichem Schritt",
+        "einheit": "1"
+      },
+      {
+        "symbol": "k",
+        "bedeutung": "Anzahl vollständiger gleicher Schritte",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Δt",
+        "bedeutung": "Dauer eines Schritts bei Umrechnung in eine stetige Rate",
+        "einheit": "s"
+      },
+      {
+        "symbol": "r",
+        "bedeutung": "Äquivalente stetige Rate ln(λ)/Δt für λ>0",
+        "einheit": "s⁻¹"
+      }
+    ],
+    "quellen": [
+      "Stephen C. Stearns, Yale E&EB122 lecture26: transcript chapters 2–3, multiplicative growth, instantaneous r, finite λ and time references",
+      "OpenStax Biology 2e, section 45.3: successive proportional growth steps and limits of density-independent population models",
+      "H.R. Schneebeli (2012), Populationsmodelle, Graphen und Matrizen, ETH EducETH, pages 4–6: scalar geometric sequence, structured extension and fixed-step model assumptions"
+    ],
+    "quellenLinks": [
+      "https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122/lecture-26",
+      "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth",
+      "https://ethz.ch/content/dam/ethz/special-interest/dual/educeth-dam/documents/Unterrichtsmaterialien/mathematik/Populationsmodelle,%20Graphen%20und%20Matrizen/pop_mod.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/diskretes-populationswachstum"
+  },
+  {
+    "slug": "pfaffl-qpcr-effizienzkorrektur",
+    "name": "Pfaffl-Modell der qPCR-Relativquantifizierung",
+    "latex": "R=\\frac{A_T^{\\Delta Cq_T}}{A_R^{\\Delta Cq_R}},\\qquad\\Delta Cq_j=Cq_{j,C}-Cq_{j,S}",
+    "symbol": "R = AT^ΔCqT / AR^ΔCqR; ΔCq = Cq(Kontrolle) − Cq(Probe)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Aₜ, Aᵣ",
+        "bedeutung": "Vorgegebene Amplifikationsfaktoren je Zyklus, größer als eins",
+        "einheit": "1"
+      },
+      {
+        "symbol": "ΔCqₜ, ΔCqᵣ",
+        "bedeutung": "Je Assay Kontrolle minus Probe, mit Vorzeichen",
+        "einheit": "1"
+      },
+      {
+        "symbol": "R",
+        "bedeutung": "Ziel-/Referenz-Verhältnis der Probe relativ zur Kontrolle",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Pfaffl (2001), A new mathematical model for relative quantification in real-time RT–PCR, Nucleic Acids Research29(9),e45",
+      "Livak and Schmittgen (2001), Analysis of relative gene expression data using real-time quantitative PCR and the 2−ΔΔCT method, Methods25,402–408",
+      "Bustin et al. (2025), MIQE 2.0, Clinical Chemistry71(6),634–651, DOI10.1093/clinchem/hvaf043"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1093/nar/29.9.e45",
+      "https://doi.org/10.1006/meth.2001.1262",
+      "https://doi.org/10.1093/clinchem/hvaf043"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/pfaffl-qpcr-effizienzkorrektur"
+  },
+  {
+    "slug": "gc-gehalt-sequenz",
+    "name": "GC-Gehalt einer Sequenz",
+    "latex": "GC\\% = 100\\cdot\\frac{G+C}{A+T+G+C}",
+    "symbol": "GC% = 100·(G+C)/(A+T+G+C)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "G, C",
+        "bedeutung": "Zahl der Guanin- beziehungsweise Cytosinbasen",
+        "einheit": "Basen"
+      },
+      {
+        "symbol": "A, T",
+        "bedeutung": "Zahl der Adenin- beziehungsweise Thyminbasen in DNA",
+        "einheit": "Basen"
+      },
+      {
+        "symbol": "GC%",
+        "bedeutung": "Anteil von G und C unter gezählten Basen",
+        "einheit": "%"
+      }
+    ],
+    "quellen": [
+      "Biopython, Bio.SeqUtils API: gc_fraction, denominator and ambiguous-base counting conventions"
+    ],
+    "quellenLinks": [
+      "https://biopython.org/docs/latest/api/Bio.SeqUtils.html#Bio.SeqUtils.gc_fraction"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/gc-gehalt-sequenz"
+  },
+  {
+    "slug": "gc-skew-sequenz",
+    "name": "GC-Skew einer Sequenz",
+    "latex": "GC_{\\mathrm{skew}}=\\frac{G-C}{G+C}",
+    "symbol": "GC-Skew = (G − C)/(G + C)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "C",
+        "bedeutung": "Zahl der Cytosinbasen im Fenster",
+        "einheit": "Basen"
+      },
+      {
+        "symbol": "G",
+        "bedeutung": "Zahl der Guaninbasen im Fenster",
+        "einheit": "Basen"
+      },
+      {
+        "symbol": "GCskew",
+        "bedeutung": "normierte G-gegen-C-Asymmetrie; G-Überschuss ist positiv",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Lobry, J.R. (1996). Asymmetric substitution patterns in the two DNA strands of bacteria. Molecular Biology and Evolution 13(5), 660–665; Methods explicitly use the opposite C−G convention.",
+      "Marín, A. and Xia, X. (2008). GC skew in protein-coding genes between the leading and lagging strands in bacterial genomes: New substitution models incorporating strand bias. Journal of Theoretical Biology 253, 508–513; introduction explicitly distinguishes both sign conventions.",
+      "Biopython, Bio.SeqUtils API: GC_skew(seq, window); G−C convention and documented zero-denominator implementation behavior."
+    ],
+    "quellenLinks": [
+      "https://pbil.univ-lyon1.fr/members/lobry/articles/MBE_1996_13_660.pdf",
+      "https://dambe.bio.uottawa.ca/publications/2008jtb.pdf",
+      "https://biopython.org/docs/latest/api/Bio.SeqUtils.html#Bio.SeqUtils.GC_skew"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/gc-skew-sequenz"
+  },
+  {
+    "slug": "n50-genomassemblierung",
+    "name": "N50-Kontiggröße einer Genomassemblierung",
+    "latex": "N_{50}=\\max\\left\\{\\ell:\\sum_{i:L_i\\ge\\ell}L_i\\ge\\frac{L_{\\mathrm{tot}}}{2}\\right\\}",
+    "symbol": "N₅₀",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Li",
+        "bedeutung": "positive Länge des eingeschlossenen Kontigs i",
+        "einheit": "bp"
+      },
+      {
+        "symbol": "N50",
+        "bedeutung": "Kontiglänge beim ersten Erreichen der halben Gesamtassemblylänge",
+        "einheit": "bp"
+      },
+      {
+        "symbol": "Ltot",
+        "bedeutung": "Summe aller eingeschlossenen Kontiglängen",
+        "einheit": "bp"
+      }
+    ],
+    "quellen": [
+      "Ekblom, R. and Wolf, J.B.W. (2014). A field guide to whole-genome sequencing, assembly and annotation. Evolutionary Applications 7(9), 1026–1042. doi:10.1111/eva.12178.",
+      "International Human Genome Sequencing Consortium (2001). Initial sequencing and analysis of the human genome. Nature 409, 860–921; N50 definition on p.871.",
+      "QUAST source: quast_libs/N50.py, NG50_and_LG50 and N50_and_L50."
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4231593/",
+      "https://www.ncbi.nlm.nih.gov/IEB/Research/Acembly/Articles/2001Lander.pdf#page=12",
+      "https://github.com/ablab/quast/blob/master/quast_libs/N50.py#L49-L67"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/n50-genomassemblierung"
+  },
+  {
+    "slug": "nukleotiddiversitaet-pi",
+    "name": "Nukleotiddiversität π",
+    "latex": "\\pi=\\frac{1}{L\\binom n2}\\sum_{i<j}k_{ij}",
+    "symbol": "π = Σᵢ<ⱼ kᵢⱼ / [L·n(n−1)/2]",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "π",
+        "bedeutung": "mittlere paarweise Nukleotidunterschiede pro Stelle",
+        "einheit": "Unterschiede/Stelle"
+      },
+      {
+        "symbol": "kij",
+        "bedeutung": "Zahl der Unterschiede zwischen Sequenzen i und j",
+        "einheit": "Unterschiede"
+      },
+      {
+        "symbol": "n",
+        "bedeutung": "Zahl der Sequenzen in der Stichprobe",
+        "einheit": "Sequenzen"
+      },
+      {
+        "symbol": "L",
+        "bedeutung": "Zahl vergleichbarer ausgerichteter Stellen",
+        "einheit": "Stellen"
+      }
+    ],
+    "quellen": [
+      "Tajima, F. (1983). Evolutionary Relationship of DNA Sequences in Finite Populations. Genetics, 105(2), 437–460.",
+      "Per Unneberg,NBIS2023:DNA variation and nucleotide diversity",
+      "Emmanuel Paradis:pegas nuc.div.DNAbin implementation"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1093/genetics/105.2.437",
+      "https://nbisweden.github.io/workshop-pgip-H23/slides/foundations/",
+      "https://raw.githubusercontent.com/emmanuelparadis/pegas/master/pegas/R/nuc.div.R"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/nukleotiddiversitaet-pi"
+  },
+  {
+    "slug": "fst-populationsdifferenzierung",
+    "name": "FST als Heterozygotie-basierte Populationsdifferenzierung",
+    "latex": "F_{ST}=\\frac{H_T-H_S}{H_T}",
+    "symbol": "FST = (HT − HS)/HT",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "FST",
+        "bedeutung": "relativer Anteil der Gesamtvariation, der mit Teilpopulationsdifferenzierung zusammenhängt",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "HT",
+        "bedeutung": "erwartete Heterozygotie der gepoolten Gesamtpopulation",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "HS",
+        "bedeutung": "mittlere erwartete Heterozygotie innerhalb von Teilpopulationen",
+        "einheit": "Anteil"
+      }
+    ],
+    "quellen": [
+      "Weir, B.S. & Cockerham, C.C. (1984). Estimating F-statistics for the analysis of population structure. Evolution, 38(6), 1358–1370.",
+      "Weir, B.S. & Hill, W.G. (2002). Estimating F-statistics. Annual Review of Genetics, 36, 721–750.",
+      "Alcala and Rosenberg2019:GST-prime,Jost’s D and FST,Eq1 and4–6",
+      "Meirmans and Hedrick2011:Assessing population structure:FST and related measures,pp5–8"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1111/j.1558-5646.1984.tb05657.x",
+      "https://doi.org/10.1146/annurev.genet.36.050802.093940",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6821915/",
+      "https://web.natur.cuni.cz/~muncling/Meirmans2011Fst.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/fst-populationsdifferenzierung"
+  },
+  {
+    "slug": "wright-fisher-driftvarianz",
+    "name": "Wright-Fisher-Varianz der Allelfrequenz",
+    "latex": "\\operatorname{Var}(p_{t+1}|p_t)=\\frac{p_t(1-p_t)}{2N_e}",
+    "symbol": "Var(p′|p) = p(1−p)/(2Ne)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "pₜ",
+        "bedeutung": "Allelfrequenz vor der Generationensampling-Stufe",
+        "einheit": "Anteil 0…1"
+      },
+      {
+        "symbol": "pₜ₊₁",
+        "bedeutung": "zufällige Allelfrequenz in der nächsten Generation",
+        "einheit": "Anteil 0…1"
+      },
+      {
+        "symbol": "Ne",
+        "bedeutung": "effektive diploide Populationsgröße im Modell",
+        "einheit": "Individuen"
+      }
+    ],
+    "quellen": [
+      "Jónás, Á. et al. (2016). Estimating the Effective Population Size from Temporal Allele Frequency Changes in Experimental Evolution. Genetics, 204(2), 723–735.",
+      "Per Unneberg,NBIS2023:Population genetics,Wright-Fisher sampling model",
+      "Brian Charlesworth2022:Fisher’s historic1922 paper,finite population size section"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5068858/",
+      "https://nbisweden.github.io/workshop-pgip-H23/slides/foundations/",
+      "https://academic.oup.com/genetics/article/220/3/iyac006/6541947"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/wright-fisher-driftvarianz"
+  },
+  {
+    "slug": "zuechtergleichung-selektionserfolg",
+    "name": "Züchtergleichung für den Selektionserfolg",
+    "latex": "R=h^2S,\\qquad S=\\bar z_s-\\bar z_0,\\quad R=\\bar z_1-\\bar z_0",
+    "symbol": "R = h²S; S = μs − μ₀; R = μ₁ − μ₀",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "R",
+        "bedeutung": "Erwartetes Nachkommenmittel minus passendes Ausgangsmittel",
+        "einheit": "cm"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "Ausgewähltes Elternmittel minus Ausgangsmittel derselben Elterngeneration",
+        "einheit": "cm"
+      },
+      {
+        "symbol": "h²",
+        "bedeutung": "Kompatible Heritabilität im engeren Sinne in Population und Umwelt",
+        "einheit": "1"
+      },
+      {
+        "symbol": "μ₀,μs,μ₁",
+        "bedeutung": "Ausgangs-, ausgewählter Eltern- und erwarteter Nachkommenmittelwert",
+        "einheit": "cm"
+      }
+    ],
+    "quellen": [
+      "Graham Coop: Population and Quantitative Genetics, chapter 8, selection differential, expected offspring response and long-term qualification",
+      "Beavis, Lamkey, Mahama and Suza: Quantitative Genetics for Plant Breeding, chapter 9, equations 1–6 and selection/response units",
+      "Graham Coop: Population and Quantitative Genetics, chapter 7, additive variance, heritability and parent-midpoint regression",
+      "Hill, W.G. (2014). Applications of Population Genetics to Animal Breeding, Genetics 196, 1–16. Historical discussion of Lush (1937), Animal Breeding Plans. DOI: 10.1534/genetics.112.147850."
+    ],
+    "quellenLinks": [
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/08:_The_Response_to_Phenotypic_Selection",
+      "https://iastate.pressbooks.pub/quantitativegenetics/chapter/selection-response/",
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/07:_Phenotypic_Variation_and_the_Resemblance_Between_Relatives",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3872177/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/zuechtergleichung-selektionserfolg"
+  },
+  {
+    "slug": "kumulative-inzidenz",
+    "name": "Kumulative Inzidenz (Inzidenzproportion)",
+    "latex": "I_c(T)=\\frac{D_{\\mathrm{neu}}(T)}{N_{\\mathrm{Risiko},0}}",
+    "symbol": "I_c(T) = neu betroffene Personen / Ausgangsgruppe",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "I_c(T)",
+        "bedeutung": "Kumulativer Anteil bis zum Endzeitpunkt T",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "Dneu(T)",
+        "bedeutung": "Verschiedene anfangs gefährdete Personen mit Erstereignis bis T",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "Nrisiko,0",
+        "bedeutung": "Anfangs ereignisfreie Ausgangsgruppe unter Risiko",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "CDC Principles of Epidemiology, Lesson 3, Section 2: incidence proportion, person-time and prevalence",
+      "Austin, Lee and Fine (2016): Introduction to the Analysis of Survival Data in the Presence of Competing Risks"
+    ],
+    "quellenLinks": [
+      "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4741409/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/kumulative-inzidenz"
+  },
+  {
+    "slug": "populations-attributable-fraktion",
+    "name": "Populations-attributable Fraktion (PAF)",
+    "latex": "PAF=\\frac{P_e(RR-1)}{1+P_e(RR-1)}",
+    "symbol": "PAF = Pe(RR−1)/[1+Pe(RR−1)]",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "PAF",
+        "bedeutung": "populationsbezogener zurechenbarer Anteil unter dem definierten Gegenfaktual",
+        "einheit": "Anteil 0…1 oder %"
+      },
+      {
+        "symbol": "Pe",
+        "bedeutung": "Expositionsprävalenz in der Zielpopulation",
+        "einheit": "Anteil 0…1"
+      },
+      {
+        "symbol": "RR",
+        "bedeutung": "kausaler Risikoquotient der Exponierten gegenüber Nicht-Exponierten",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "CDC. A Framework for Assessing the Effectiveness of Disease and Injury Prevention. MMWR.",
+      "WHO: Environmental health — Estimations of attributable burden of disease due to a risk factor",
+      "Khosravi et al. (2021): Population attributable fraction in textbooks — Time to revise"
+    ],
+    "quellenLinks": [
+      "https://www.cdc.gov/mmwr/preview/mmwrhtml/00016403.htm",
+      "https://www.who.int/news-room/questions-and-answers/item/environmental-health-estimations-of-attributable-burden-of-disease-due-to-a-risk-factor",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10445975/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/populations-attributable-fraktion"
+  },
+  {
+    "slug": "standardisierte-mortalitaetsratio",
+    "name": "Standardisierte Mortalitätsratio (SMR)",
+    "latex": "SMR=\\frac{O}{E},\\qquad E=\\sum_j PY_jr_j",
+    "symbol": "SMR = beobachtete / erwartete Todesfälle",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "SMR",
+        "bedeutung": "Ratio beobachteter zu erwarteten Todesfällen",
+        "einheit": "dimensionslos oder %"
+      },
+      {
+        "symbol": "O",
+        "bedeutung": "beobachtete Todesfälle in der Kohorte",
+        "einheit": "Todesfälle"
+      },
+      {
+        "symbol": "E",
+        "bedeutung": "erwartete Todesfälle nach Referenzraten über Strata",
+        "einheit": "Todesfälle"
+      },
+      {
+        "symbol": "PYj, rj",
+        "bedeutung": "Kohortenpersonenzeit und Referenzmortalitätsrate in Stratum j",
+        "einheit": "Personenzeit; Todesfälle/Personenzeit"
+      }
+    ],
+    "quellen": [
+      "CDC/NCHS. Analysis of Vital Statistics Data, section on standardized mortality ratio.",
+      "Pennsylvania Department of Health: Standardized Mortality Ratio",
+      "OHID Public Health Technical Guidance: Indirectly standardised ratios"
+    ],
+    "quellenLinks": [
+      "https://www.cdc.gov/nchs/data/isp/5_Analysis_of_Vital_Statistics_V1.0.pdf",
+      "https://www.pa.gov/agencies/health/health-statistics/statistical-resources/understanding-health-statistics/tools-of-the-trade/standardized-mortality-ratio",
+      "https://fingertips.phe.org.uk/static-reports/public-health-technical-guidance/Standardisation/ISRatios.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/standardisierte-mortalitaetsratio"
+  },
+  {
+    "slug": "basisreproduktionszahl-sir",
+    "name": "Basisreproduktionszahl im einfachen SIR-Modell",
+    "latex": "R_0=\\frac{\\beta}{\\gamma},\\qquad R_e=R_0\\frac SN",
+    "symbol": "R₀ = β/γ",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "R₀",
+        "bedeutung": "Basisreproduktionszahl unter den festgelegten Anfangsbedingungen",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "β",
+        "bedeutung": "effektive Übertragungsrate je infektiöser Person und Zeit bei voller Empfänglichkeit",
+        "einheit": "Zeit⁻¹"
+      },
+      {
+        "symbol": "γ",
+        "bedeutung": "Rate des Ausscheidens aus infektiösem Zustand; mittlere Dauer oft \\(\\frac{1}{\\gamma{}}\\)",
+        "einheit": "Zeit⁻¹"
+      }
+    ],
+    "quellen": [
+      "EMBL-EBI: Mathematical modelling for biologists, Case study – Infectious diseases (SIR Models)"
+    ],
+    "quellenLinks": [
+      "https://www.ebi.ac.uk/training/online/courses/mathematical-modelling-biologists/case-study-infectious-diseases-sir-models/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/basisreproduktionszahl-sir"
+  },
+  {
+    "slug": "ejektionsfraktion-herz",
+    "name": "Ejektionsfraktion des Ventrikels",
+    "latex": "EF=\\frac{EDV-ESV}{EDV}=\\frac{SV}{EDV}",
+    "symbol": "EF = (EDV − ESV)/EDV",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "EF",
+        "bedeutung": "ausgeworfener Anteil des enddiastolischen Volumens",
+        "einheit": "Anteil oder %"
+      },
+      {
+        "symbol": "EDV",
+        "bedeutung": "enddiastolisches Volumen vor Kontraktion",
+        "einheit": "mL"
+      },
+      {
+        "symbol": "ESV",
+        "bedeutung": "endsystolisches Restvolumen nach Kontraktion",
+        "einheit": "mL"
+      },
+      {
+        "symbol": "SV",
+        "bedeutung": "Schlagvolumen EDV−ESV",
+        "einheit": "mL/Schlag"
+      }
+    ],
+    "quellen": [
+      "NCBI Bookshelf. Left Ventricular Ejection Fraction.",
+      "OpenStax Anatomy and Physiology2e, §19.4 Cardiac Physiology: Resting Cardiac Output",
+      "Lang et al.2015, ASE/EACVI Recommendations for Cardiac Chamber Quantification, §2.2 EF and §1.2 Volumetric Measurements"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK459131/",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-4-cardiac-physiology",
+      "https://www.asecho.org/wp-content/uploads/2016/02/2015_ChamberQuantificationREV.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/ejektionsfraktion-herz"
+  },
+  {
+    "slug": "alveolaere-ventilation",
+    "name": "Alveoläre Ventilation",
+    "latex": "\\dot V_A=f(V_T-V_D)",
+    "symbol": "V̇A = Atemfrequenz · (Atemzugvolumen − Totraum)",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "V̇A",
+        "bedeutung": "alveoläres Frischluftvolumen pro Zeit",
+        "einheit": "L/min"
+      },
+      {
+        "symbol": "f",
+        "bedeutung": "Atemfrequenz",
+        "einheit": "Atemzüge/min"
+      },
+      {
+        "symbol": "VT",
+        "bedeutung": "Atemzugvolumen pro Atemzug",
+        "einheit": "L/Atemzug"
+      },
+      {
+        "symbol": "VD",
+        "bedeutung": "physiologisches Totraumvolumen pro Atemzug",
+        "einheit": "L/Atemzug"
+      }
+    ],
+    "quellen": [
+      "StatPearls. Physiology, Tidal Volume.",
+      "NCBI Bookshelf. Physiology, Lung Dead Space.",
+      "Respiratory Physiology: A Clinical Approach, Chapter5 Alveolar Ventilation and Carbon Dioxide Elimination",
+      "OpenStax Anatomy and Physiology2e§22.3 The Process of Breathing, respiratory volumes and dead space"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK482502/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK482501/",
+      "https://respphys.org/05-gas-exchanger/05-ge-02-alveolar_ventilation",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-3-the-process-of-breathing"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/alveolaere-ventilation"
+  },
+  {
+    "slug": "maximale-psii-quantenausbeute",
+    "name": "Maximale Quantenausbeute von Photosystem II",
+    "latex": "F_v/F_m=(F_m-F_0)/F_m",
+    "symbol": "Fv/Fm = (Fm − F0)/Fm",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "F0",
+        "bedeutung": "minimale Chlorophyllfluoreszenz bei offenen PSII-Reaktionszentren nach Dunkeladaptation",
+        "einheit": "relative Fluoreszenzeinheit"
+      },
+      {
+        "symbol": "Fm",
+        "bedeutung": "maximale Fluoreszenz unter sättigendem Lichtimpuls",
+        "einheit": "relative Fluoreszenzeinheit"
+      },
+      {
+        "symbol": "Fv",
+        "bedeutung": "variable Fluoreszenz Fm−F0",
+        "einheit": "relative Fluoreszenzeinheit"
+      },
+      {
+        "symbol": "Fv/Fm",
+        "bedeutung": "maximale PSII-Quantenausbeute",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "Maxwell & Johnson (2000), Chlorophyll fluorescence—a practical guide, J Exp Bot 51:659–668, Table1 and Eq4"
+    ],
+    "quellenLinks": [
+      "https://www.esalq.usp.br/lepse/imgs/conteudo_thumb/mini/Cholorophyll-fluorescence---a-practical-guide.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/maximale-psii-quantenausbeute"
+  },
+  {
+    "slug": "transpiration-gaswechsel",
+    "name": "Transpirationsfluss aus Leitfähigkeit und Dampfdruckgefälle",
+    "latex": "E\\approx g_t\\frac{e_i-e_a}{P_{atm}}",
+    "symbol": "E ≈ gt · VPD / Patm",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "E",
+        "bedeutung": "Transpirationsfluss pro Blattfläche",
+        "einheit": "mol H₂O·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "gt",
+        "bedeutung": "Gesamtleitfähigkeit für Wasserdampf einschließlich Blattgrenzschicht",
+        "einheit": "mol·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "ei−ea",
+        "bedeutung": "Dampfdruckdifferenz Blattinneres minus Außenluft",
+        "einheit": "kPa"
+      },
+      {
+        "symbol": "Patm",
+        "bedeutung": "atmosphärischer Gesamtdruck",
+        "einheit": "kPa"
+      }
+    ],
+    "quellen": [
+      "von Caemmerer, S. & Farquhar, G.D. (1981). Some relationships between the biochemistry of photosynthesis and the gas exchange of leaves. Planta.",
+      "Buckley, T.N. (2003). A hydromechanical and biochemical model of stomatal conductance. Plant, Cell & Environment.",
+      "CREAF medfate reference book, §12.2.1 stomatal water pathway: conductances in series and VPD/Patm",
+      "Van de Geijn & Goudriaan, FAO chapter5: stomatal functioning, leaf energy balance and transpiration context"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6878010/",
+      "https://doi.org/10.1046/j.1365-3040.2003.01094.x",
+      "https://emf-creaf.github.io/medfatebook/transpirationsperrysureau.html",
+      "https://www.fao.org/4/w5183e/w5183e07.htm"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/transpiration-gaswechsel"
+  },
+  {
+    "slug": "intraklassenkorrelation",
+    "name": "Intraklassenkorrelation (ICC)",
+    "latex": "\\rho=\\frac{\\tau^2}{\\tau^2+\\sigma^2}",
+    "symbol": "ρ = τ² / (τ² + σ²)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "ρ",
+        "bedeutung": "Populations-ICC im einfachen Random-Intercept-Modell, bei nichtnegativen Komponenten",
+        "einheit": "1"
+      },
+      {
+        "symbol": "τ²",
+        "bedeutung": "Zwischencluster-Varianz derselben Population und Skala",
+        "einheit": "u²"
+      },
+      {
+        "symbol": "σ²",
+        "bedeutung": "Restvarianz innerhalb von Clustern",
+        "einheit": "u²"
+      }
+    ],
+    "quellen": [
+      "Liljequist, Elfving and Skavberg Roaldsen (2019), Intraclass correlation: model1, variance components, expected mean squares and bias, sections2.3–2.4"
+    ],
+    "quellenLinks": [
+      "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219854"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/intraklassenkorrelation"
+  },
+  {
+    "slug": "clusterdesign-effekt",
+    "name": "Designeffekt bei Clusterstichproben",
+    "latex": "DE=1+(m-1)\\rho",
+    "symbol": "DE = 1 + (m − 1) · ρ",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "DE",
+        "bedeutung": "Varianzverhältnis für den ungewichteten Mittelwert bei gleicher Gesamtzahl",
+        "einheit": "1"
+      },
+      {
+        "symbol": "m",
+        "bedeutung": "Gleiche ganze Beobachtungszahl je unabhängigem Cluster",
+        "einheit": "1"
+      },
+      {
+        "symbol": "ρ",
+        "bedeutung": "Gemeinsame nichtnegative Paarkorrelation innerhalb der Cluster",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Wang, Goyal, Lei, Essex and De Gruttola, supplementary material to Sample size considerations in the design of cluster randomized trials of combination HIV prevention, equations1–5",
+      "Fu et al. (2013), AHRQ Methods Guide: Handling Continuous Outcomes in Quantitative Synthesis, Cluster Randomized Trials, equation9"
+    ],
+    "quellenLinks": [
+      "https://stacks.cdc.gov/view/cdc/41985/cdc_41985_DS2.pdf",
+      "https://www.ncbi.nlm.nih.gov/sites/books/NBK154408/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/clusterdesign-effekt"
+  },
+  {
+    "slug": "stichprobengroesse-zwei-mittelwerte",
+    "name": "Fallzahl pro Gruppe für zwei Mittelwerte",
+    "latex": "n=\\frac{2\\sigma^2(z_{1-\\alpha/2}+z_{1-\\beta})^2}{\\delta^2}",
+    "symbol": "n je Gruppe = 2σ²(zα/2 + zβ)²/δ²",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "n",
+        "bedeutung": "erforderliche Fallzahl je Gruppe vor Aufschlag für Ausfälle",
+        "einheit": "Personen/Gruppe"
+      },
+      {
+        "symbol": "σ",
+        "bedeutung": "angenommene gemeinsame Standardabweichung des Outcomes",
+        "einheit": "Outcomeeinheit"
+      },
+      {
+        "symbol": "δ",
+        "bedeutung": "kleinster relevanter Unterschied der Gruppenmittelwerte",
+        "einheit": "Outcomeeinheit"
+      },
+      {
+        "symbol": "α",
+        "bedeutung": "zweiseitiges Signifikanzniveau",
+        "einheit": "Wahrscheinlichkeit"
+      },
+      {
+        "symbol": "β",
+        "bedeutung": "Fehlerwahrscheinlichkeit 2. Art; \\(\\mathrm{Power}=1-\\beta\\)",
+        "einheit": "Wahrscheinlichkeit"
+      }
+    ],
+    "quellen": [
+      "NCBI Bookshelf. Conventional approach to a randomised controlled trial sample size calculation.",
+      "NIST/SEMATECH. Sample sizes required for tests of means.",
+      "Charles J. Krebs: Sample Size Determination and Statistical Power, chapter 7, section 7.1.2",
+      "R stats: Power calculations for one and two sample t tests"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK549166/",
+      "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm",
+      "https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_07_2017.pdf",
+      "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/power.t.test.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/stichprobengroesse-zwei-mittelwerte"
+  },
+  {
+    "slug": "variationskoeffizient",
+    "name": "Variationskoeffizient",
+    "latex": "CV=\\frac{s}{\\bar x},\\qquad CV_{\\%}=100\\,CV,\\qquad\\bar x>0",
+    "symbol": "CV = s / x̄; CV% = 100 · CV",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "CV",
+        "bedeutung": "Standardabweichung relativ zum positiven arithmetischen Mittelwert",
+        "einheit": "1"
+      },
+      {
+        "symbol": "s",
+        "bedeutung": "Nichtnegative Stichprobenstandardabweichung",
+        "einheit": "u"
+      },
+      {
+        "symbol": "x̄",
+        "bedeutung": "Positiver arithmetischer Stichprobenmittelwert",
+        "einheit": "u"
+      }
+    ],
+    "quellen": [
+      "NIST Dataplot, Coefficient of Variation: ratio scales, sample CV and declared lognormal model"
+    ],
+    "quellenLinks": [
+      "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/variationskoeffizient"
+  },
+  {
+    "slug": "sequenzalignment-score-identitaet",
+    "name": "Sequenzalignment: Score und Sequenzidentität",
+    "latex": "F_{ij}=\\max\\{F_{i-1,j-1}+s(x_i,y_j),F_{i-1,j}-g,F_{i,j-1}-g\\},\\quad I=\\frac{N_{\\rm match}}{L}",
+    "symbol": "Fij = max(Diagonale+s, oberhalb−g, links−g); I = Nmatch/L",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Fᵢⱼ",
+        "bedeutung": "Bester globaler Präfixscore bei ausdrücklich linearen Gaps",
+        "einheit": "1"
+      },
+      {
+        "symbol": "s(xᵢ,yⱼ)",
+        "bedeutung": "Vorgegebene Bewertung des aktuellen Zeichenpaares",
+        "einheit": "1"
+      },
+      {
+        "symbol": "g",
+        "bedeutung": "Positive lineare Gapstrafe je zusätzlicher Gapspalte",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Nmatch",
+        "bedeutung": "Ganze Anzahl exakt identischer Zeichenpaare",
+        "einheit": "1"
+      },
+      {
+        "symbol": "L",
+        "bedeutung": "Positive ganze Zahl aller Alignmentspalten einschließlich Gaps",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Biopython, Pairwise sequence alignment: global/local modes, scoring and aligned-column length",
+      "NCBI, BLAST Command Line Applications User Manual, Appendices: alignment length, identity and output fields",
+      "NCBI, The Statistics of Sequence Similarity Scores: local scores, bit scores, database searches and P-values",
+      "Needleman and Wunsch (1970), A general method applicable to the search for similarities in the amino acid sequence of two proteins, J.Mol.Biol.48,443–453; historical origin"
+    ],
+    "quellenLinks": [
+      "https://biopython.org/docs/latest/Tutorial/chapter_pairwise.html",
+      "https://www.ncbi.nlm.nih.gov/books/NBK279684/",
+      "https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html",
+      "https://doi.org/10.1016/0022-2836(70)90057-4"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/sequenzalignment-score-identitaet"
+  },
+  {
+    "slug": "primaerproduktion-energiefluss-oekosystem",
+    "name": "Primärproduktion und Energiefluss im Ökosystem",
+    "latex": "\\mathrm{NPP}=\\mathrm{GPP}-R_A,\\qquad TE_n=\\frac{P_{n+1}}{P_n}\\cdot100\\%",
+    "symbol": "NPP = GPP − RA; TEn = Pn+1/Pn · 100 %",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "GPP",
+        "bedeutung": "Gesamte von Primärproduzenten fixierte Energie oder Kohlenstoffmenge je Fläche und Zeit",
+        "einheit": "kJ·m⁻²·a⁻¹ oder g C·m⁻²·a⁻¹"
+      },
+      {
+        "symbol": "RA",
+        "bedeutung": "Autotrophe Atmung der Primärproduzenten im selben Zeitraum",
+        "einheit": "wie GPP"
+      },
+      {
+        "symbol": "NPP",
+        "bedeutung": "Primärproduktion nach Abzug der autotrophen Atmung auf derselben Basis",
+        "einheit": "wie GPP"
+      },
+      {
+        "symbol": "Pn",
+        "bedeutung": "Produktion auf trophischer Ebene n im festgelegten Zeitraum",
+        "einheit": "gleiche Energie- oder Biomasseeinheit"
+      },
+      {
+        "symbol": "Pn+1",
+        "bedeutung": "Produktion der unmittelbar nächsthöheren trophischen Ebene",
+        "einheit": "wie Pn"
+      },
+      {
+        "symbol": "TEn",
+        "bedeutung": "Anteil der Produktion einer Ebene, der als Produktion der nächsten Ebene erscheint",
+        "einheit": "%"
+      }
+    ],
+    "quellen": [
+      "OpenStax Biology 2e §46.2: Energy Flow through Ecosystems — productivity and ecological efficiency",
+      "University of Michigan: The Flow of Energy from Primary Production to Higher Trophic Levels, Some Definitions"
+    ],
+    "quellenLinks": [
+      "https://openstax.org/books/biology-2e/pages/46-2-energy-flow-through-ecosystems",
+      "https://sites.lsa.umich.edu/globalchange/lectures/flow-of-energy/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/primaerproduktion-energiefluss-oekosystem"
+  },
+  {
+    "slug": "monohybrider-erbgang-wahrscheinlichkeit",
+    "name": "Wahrscheinlichkeit bei monohybriden Kreuzungen",
+    "latex": "P(aa\\mid Aa\\times Aa)=\\frac12\\cdot\\frac12=\\frac14",
+    "symbol": "Aa × Aa: ¼ AA, ½ Aa, ¼ aa",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke"
+    ],
+    "schwierigkeit": "grundlegend",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "A, a",
+        "bedeutung": "Zwei Allele eines betrachteten autosomalen Genorts",
+        "einheit": "Allele"
+      },
+      {
+        "symbol": "P(aa)",
+        "bedeutung": "Wahrscheinlichkeit eines homozygot rezessiven Nachkommens",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "P(Aa)",
+        "bedeutung": "Wahrscheinlichkeit eines heterozygoten Nachkommens",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "P(AA)",
+        "bedeutung": "Wahrscheinlichkeit eines homozygot dominanten Nachkommens",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "OpenStax, Biology 2e, §12.3: Laws of Inheritance."
+    ],
+    "quellenLinks": [
+      "https://openstax.org/books/biology-2e/pages/12-3-laws-of-inheritance"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/monohybrider-erbgang-wahrscheinlichkeit"
+  },
+  {
+    "slug": "qpcr-standardkurve-absolute-quantifizierung",
+    "name": "Absolute qPCR-Quantifizierung mit Standardkurve",
+    "latex": "C_q=m\\log_{10}(N_0/N_{\\rm ref})+b,\\quad N_0=N_{\\rm ref}10^{(C_q-b)/m},\\quad A=10^{-1/m}",
+    "symbol": "Cq = m·log₁₀(N₀/Nref)+b; A = 10^(−1/m)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Cq",
+        "bedeutung": "Vorgegebene Quantifizierungsposition im selben Assay",
+        "einheit": "1"
+      },
+      {
+        "symbol": "m",
+        "bedeutung": "Negative Steigung Cq gegen log₁₀ der Ausgangskopien",
+        "einheit": "1"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "Achsenabschnitt bei einer Kopie pro Reaktion",
+        "einheit": "1"
+      },
+      {
+        "symbol": "N₀, Nref",
+        "bedeutung": "Geschätzte Startkopien je Reaktion und Referenz von einer Kopie",
+        "einheit": "1"
+      },
+      {
+        "symbol": "A, η",
+        "bedeutung": "Amplifikationsfaktor und relativer Zuwachs pro Zyklus",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Bustin et al. (2025), MIQE 2.0, Clinical Chemistry71(6),634–651, DOI10.1093/clinchem/hvaf043",
+      "Pfaffl (2001), A new mathematical model for relative quantification in real-time RT–PCR, Nucleic Acids Research29(9),e45",
+      "Livak and Schmittgen (2001), Analysis of relative gene expression data using real-time quantitative PCR and the 2−ΔΔCT method, Methods25,402–408"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.1093/clinchem/hvaf043",
+      "https://doi.org/10.1093/nar/29.9.e45",
+      "https://doi.org/10.1006/meth.2001.1262"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/qpcr-standardkurve-absolute-quantifizierung"
+  },
+  {
+    "slug": "leslie-matrix-altersstrukturierte-population",
+    "name": "Leslie-Matrix für altersstrukturierte Populationen",
+    "latex": "\\mathbf n_{k+1}=\\mathbf L\\mathbf n_k,\\qquad\\mathbf L=\\begin{pmatrix}F_1&F_2&F_3\\\\S_1&0&0\\\\0&S_2&0\\end{pmatrix}",
+    "symbol": "Nächster Altersvektor = L × bisheriger Altersvektor",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "nₖ",
+        "bedeutung": "Spaltenvektor disjunkter vollständiger Altersklassen beim Zensus k",
+        "einheit": "1"
+      },
+      {
+        "symbol": "L",
+        "bedeutung": "Konstante Matrix für den benannten Zensusschritt",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Fⱼ",
+        "bedeutung": "Zensusangepasste erwartete weibliche Rekruten pro heutiger Einheit der Klasse j",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Sⱼ",
+        "bedeutung": "Überlebenswahrscheinlichkeit zur nächsten endlichen Altersklasse",
+        "einheit": "1"
+      },
+      {
+        "symbol": "k",
+        "bedeutung": "Anzahl vollständiger Zensusschritte",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Scott Creel, Montana State University, Leslie Matrix teaching notes, pages 1–4: census-adjusted fertility, age advancement and terminal versus self-looped class",
+      "Duke University, Leslie Growth Models, part 1: fixed age classes, column-state vectors, first-row recruitment and subdiagonal survival",
+      "H.R. Schneebeli (2012), Populationsmodelle, Graphen und Matrizen, ETH EducETH, pages 4–6: matrix projections and strict spectral/primitive qualifications",
+      "Jonasson, Harkonen, Sundqvist, Edwards and Harding (2022). A Unifying Framework for Estimating Generation Time in Age-Structured Populations. The American Naturalist 200:48–62. Methods: strict and self-looped Leslie models. DOI: 10.1086/719667.",
+      "JGU Mainz (2015): Modulhandbuch B.Sc. Biologie/Molekulare Biologie, Modul 10A Evolution, Biodiversität und Anthropologie (historischer Lehrkontext)"
+    ],
+    "quellenLinks": [
+      "https://www.montana.edu/screel/teaching/bioe-440r-521/documents/leslie.pdf",
+      "https://sites.math.duke.edu/education/ccp/materials/linalg/leslie/lesl1.html",
+      "https://ethz.ch/content/dam/ethz/special-interest/dual/educeth-dam/documents/Unterrichtsmaterialien/mathematik/Populationsmodelle,%20Graphen%20und%20Matrizen/pop_mod.pdf",
+      "https://www.journals.uchicago.edu/doi/10.1086/719667",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/leslie-matrix-altersstrukturierte-population"
+  },
+  {
+    "slug": "pflanzenwasserpotential",
+    "name": "Wasserpotential in Pflanzen",
+    "latex": "\\Psi_w=\\Psi_s+\\Psi_p+\\Psi_g+\\Psi_m",
+    "symbol": "Ψw = Ψs + Ψp + Ψg + Ψm",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "Ψw",
+        "bedeutung": "Gesamtwasserpotential des Systems",
+        "einheit": "MPa"
+      },
+      {
+        "symbol": "Ψs",
+        "bedeutung": "Gelöste Stoffe senken das osmotische Potential",
+        "einheit": "MPa"
+      },
+      {
+        "symbol": "Ψp",
+        "bedeutung": "Hydrostatischer Druckbeitrag, etwa Turgor",
+        "einheit": "MPa"
+      },
+      {
+        "symbol": "Ψg",
+        "bedeutung": "Gravitationsbeitrag aufgrund der Höhe",
+        "einheit": "MPa"
+      },
+      {
+        "symbol": "Ψm",
+        "bedeutung": "Matrixbindung an Oberflächen und Poren",
+        "einheit": "MPa"
+      }
+    ],
+    "quellen": [
+      "OpenStax Biology 2e, §30.5 Transport of Water and Solutes in Plants",
+      "JGU Mainz, B.Sc. Biologie Modul 11 Pflanzenphysiologie und Biochemie, Modulhandbuch"
+    ],
+    "quellenLinks": [
+      "https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/pflanzenwasserpotential"
+  },
+  {
+    "slug": "demografische-netto-reproduktionsrate-generationzeit",
+    "name": "Netto-Reproduktionsrate und Generationzeit aus Lebenstafeln",
+    "latex": "R_0=\\sum_x l_xm_x,\\quad T=\\frac{\\sum_x x l_xm_x}{R_0}",
+    "symbol": "R₀ = Σ lxmx; T = Σxlxmx/R₀",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "R0",
+        "bedeutung": "überlebensgewichtete Töchterzahl pro ursprünglich neugeborenem Weibchen",
+        "einheit": "Töchter je ursprünglich neugeborenem Weibchen"
+      },
+      {
+        "symbol": "T",
+        "bedeutung": "mittleres Reproduktionsalter dieser Kohorte, gewichtet mit lxmx",
+        "einheit": "Zeit"
+      },
+      {
+        "symbol": "x",
+        "bedeutung": "Reproduktionsalter der zugehörigen Kohortenklasse seit Geburt",
+        "einheit": "Zeit"
+      },
+      {
+        "symbol": "lx",
+        "bedeutung": "Anteil der Kohorte, der Alter x erreicht",
+        "einheit": "dimensionsloser Anteil"
+      },
+      {
+        "symbol": "mx",
+        "bedeutung": "bereits über das gesamte Intervall gezählte Töchter je dort überlebendem Weibchen; keine Rate pro Zeiteinheit",
+        "einheit": "Töchter je überlebendem Weibchen"
+      }
+    ],
+    "quellen": [
+      "Lake Forest College. Tutorial on life tables; net reproductive rate and cohort generation time, pp7–10.",
+      "Hoddle, M.S. (2002). Developmental and reproductive biology of Scirtothrips perseae (Thysanoptera: Thripidae). Bulletin of Entomological Research 92, 279–285; life-table definitions and methods, pp280–281."
+    ],
+    "quellenLinks": [
+      "https://campus.lakeforest.edu/menke/PDFs/Guides/Tutorial_lifetables.pdf",
+      "https://biocontrol.ucr.edu/media/4226/download"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/demografische-netto-reproduktionsrate-generationzeit"
+  },
+  {
+    "slug": "alveolaere-gasgleichung",
+    "name": "Alveoläre Gasgleichung",
+    "latex": "P_{AO_2}\\approx F_{IO_2}(P_B-P_{H_2O})-\\frac{P_{aCO_2}}{R_Q}",
+    "symbol": "PAO₂ ≈ FiO₂(PB−PH₂O) − PaCO₂/RQ",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "PAO2",
+        "bedeutung": "Geschätzter alveolärer Sauerstoffpartialdruck",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "FiO2",
+        "bedeutung": "Inspiratorischer Sauerstoffanteil",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "PB",
+        "bedeutung": "Barometrischer Umgebungsdruck",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "PH2O",
+        "bedeutung": "Wasserdampfdruck der befeuchteten Inspirationsluft",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "PaCO2",
+        "bedeutung": "Arterieller Kohlendioxidpartialdruck als Näherung für alveoläres CO₂",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "RQ",
+        "bedeutung": "Respiratorischer Quotient \\(\\frac{VCO_{2}}{VO_{2}}\\)",
+        "einheit": "dimensionslos"
+      }
+    ],
+    "quellen": [
+      "NCBI Bookshelf, Alveolar Gas Equation",
+      "JGU Mainz, B.Sc. Biologie Modul 12 Physiologie, Atmung und Kreislauf, Modulhandbuch",
+      "Cruickshank & Hirschauer (2004), The alveolar gas equation, CEACCP 4(1), 24–27; complete balance p26",
+      "Leonard (2020), Respiratory equations – behind the numbers, SAJAA 26 Suppl3 S90–93; steady balance and full correction S91"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK482268/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://e-safe-anaesthesia.org/e_library/02/The_alveolar_gas_equation_CEACCP_2004.pdf",
+      "https://anaesthetics.ukzn.ac.za/wp-content/uploads/2024/09/Respiratory-equations-Ref-2020.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/alveolaere-gasgleichung"
+  },
+  {
+    "slug": "blast-e-value-sequenzsuche",
+    "name": "BLAST-E-Value bei Sequenzsuchen",
+    "latex": "E\\approx Kmn\\,e^{-\\lambda S},\\quad B=\\frac{\\lambda S-\\ln K}{\\ln2},\\quad E\\approx M2^{-B}",
+    "symbol": "E ≈ Kmn·exp(−λS) ≈ M·2⁻ᴮ",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biostatistik / Bioinformatik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "E",
+        "bedeutung": "Erwartete Anzahl mindestens gleich guter Zufallstreffer im erklärten Suchraum",
+        "einheit": "1"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "Lokaler Rohscore im passenden Scoringmodell",
+        "einheit": "1"
+      },
+      {
+        "symbol": "K, λ",
+        "bedeutung": "Vorgegebene statistische Modellkonstanten",
+        "einheit": "1"
+      },
+      {
+        "symbol": "M",
+        "bedeutung": "Bereits erklärter effektiver Suchraum, nicht Sequenzanzahl",
+        "einheit": "1"
+      },
+      {
+        "symbol": "B",
+        "bedeutung": "Aus passender Kalibrierung stammender Bit-Score",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "NCBI, The Statistics of Sequence Similarity Scores: local scores, bit scores, database searches and P-values",
+      "NCBI, BLAST Command Line Applications User Manual, Appendices: alignment length, identity and output fields"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html",
+      "https://www.ncbi.nlm.nih.gov/books/NBK279684/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/blast-e-value-sequenzsuche"
+  },
+  {
+    "slug": "chao1-artenreichtumsschaetzung",
+    "name": "Chao1-Schätzer für Artenreichtum",
+    "latex": "\\widehat S=S_{obs}+\\frac{f_1^2}{2f_2}\\ (f_2>0),\\qquad \\widehat S_{bc}=S_{obs}+\\frac{f_1(f_1-1)}{2(f_2+1)}",
+    "symbol": "Chao1: beobachtete Arten + geschätzter Zuschlag",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Biostatistik / Ökologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Ŝ",
+        "bedeutung": "Geschätzte Gesamtartenzahl der gewählten abundance-basierten Variante",
+        "einheit": "Arten"
+      },
+      {
+        "symbol": "Sobs",
+        "bedeutung": "Arten mit mindestens einem gezählten Individuum",
+        "einheit": "Arten"
+      },
+      {
+        "symbol": "f₁",
+        "bedeutung": "Arten mit genau einem Individuum; Singletons",
+        "einheit": "Arten"
+      },
+      {
+        "symbol": "f₂",
+        "bedeutung": "Arten mit genau zwei Individuen; Doubletons",
+        "einheit": "Arten"
+      }
+    ],
+    "quellen": [
+      "scikit-bio: abundance-based Chao1, classical and bias-corrected estimators",
+      "vegan: abundance estimateR versus site-incidence specpool and sample-size factors"
+    ],
+    "quellenLinks": [
+      "https://scikit.bio/docs/latest/generated/skbio.diversity.alpha.chao1.html",
+      "https://vegandevs.github.io/vegan/reference/specpool.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/chao1-artenreichtumsschaetzung"
+  },
+  {
+    "slug": "cohens-kappa-interrater",
+    "name": "Cohens Kappa für kategoriale Übereinstimmung",
+    "latex": "\\kappa=\\frac{P_o-P_e}{1-P_e},\\qquad P_e<1",
+    "symbol": "κ = (Pₒ − Pₑ) / (1 − Pₑ)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "κ",
+        "bedeutung": "Randreferenz-korrigierte Übereinstimmung zweier Beurteilender",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Pₒ",
+        "bedeutung": "Beobachteter Anteil gleicher Kategorien in denselben gepaarten Fällen",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Pₑ",
+        "bedeutung": "Summe der Produkte beider marginaler Kategorieanteile",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Jacob Cohen (1986), author retrospective on A coefficient of agreement for nominal scales: marginal-reference interpretation",
+      "scikit-learn official documentation, cohen_kappa_score: marginal reference, weighting and undefined cases"
+    ],
+    "quellenLinks": [
+      "https://garfield.library.upenn.edu/classics1986/A1986AXF2600001.pdf",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cohen_kappa_score.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/cohens-kappa-interrater"
+  },
+  {
+    "slug": "genfluss-migrationsgleichgewicht-allelfrequenz",
+    "name": "Genfluss und Migration: Änderung der Allelfrequenz",
+    "latex": "p^{\\prime}=(1-m)p+mp_m,\\qquad\\Delta p=m(p_m-p)",
+    "symbol": "p′ = (1 − m)p + mpm; Δp = m(pm − p)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "p",
+        "bedeutung": "Frequenz derselben Allelvariante im residenten Genpool vorher",
+        "einheit": "1"
+      },
+      {
+        "symbol": "pm",
+        "bedeutung": "Frequenz derselben Allelvariante in der Quelle",
+        "einheit": "1"
+      },
+      {
+        "symbol": "m",
+        "bedeutung": "Quellenanteil am Genpool nach dem Schritt",
+        "einheit": "1"
+      },
+      {
+        "symbol": "p′",
+        "bedeutung": "Frequenz nach gewichteter Mischung",
+        "einheit": "1"
+      },
+      {
+        "symbol": "Δp",
+        "bedeutung": "Signierte Änderung p′−p",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "University of Texas at Austin: BIO 304 Ecology and Evolution, Migration, post-migration weighting equation",
+      "Suza and Lamkey: Crop Genetics, Population Genetics, Forces Affecting Allele Frequency, Migration",
+      "Graham Coop: Population and Quantitative Genetics, chapter 11, migration, local adaptation and migration-selection distinction",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 8 Genetik und Modul 10A Evolution/Biodiversität (curricular context, not equation source)"
+    ],
+    "quellenLinks": [
+      "https://www.sbs.utexas.edu/levin/bio213/popgen/migration.html",
+      "https://bio.libretexts.org/Bookshelves/Agriculture_and_Horticulture/Crop_Genetics_(Suza_and_Lamkey)/01:_Chapters/1.06:_Population_Genetics",
+      "https://bio.libretexts.org/Bookshelves/Genetics/Population_and_Quantitative_Genetics_(Coop)/11:_The_Interaction_of_Selection_Mutation_and_Migration",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/genfluss-migrationsgleichgewicht-allelfrequenz"
+  },
+  {
+    "slug": "respiratorischer-quotient",
+    "name": "Respiratorischer Quotient (RQ)",
+    "latex": "RQ=\\frac{\\dot V_{CO_2}}{\\dot V_{O_2}}",
+    "symbol": "RQ = V̇CO₂ / V̇O₂",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "RQ",
+        "bedeutung": "respiratorischer Quotient des betrachteten Stoffwechselprozesses",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "V̇CO₂",
+        "bedeutung": "zelluläre CO₂-Produktionsrate",
+        "einheit": "mmol/min oder L/min"
+      },
+      {
+        "symbol": "V̇O₂",
+        "bedeutung": "zelluläre O₂-Verbrauchsrate",
+        "einheit": "gleiche Einheit und Bezugsbedingungen wie V̇CO₂"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: Indirect Calorimetry: From Bench to Bedside, PMC5477450 (RQ versus measured RER)",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 12 Tierphysiologie (curricular context, not equation source)"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5477450/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/respiratorischer-quotient"
+  },
+  {
+    "slug": "mittlere-sequenzierungsabdeckung",
+    "name": "Mittlere Sequenzierungs-Coverage",
+    "latex": "C=\\frac{N\\bar L}{G}=\\frac{\\sum_i L_i}{G}",
+    "symbol": "C = N·L̄/G",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "C",
+        "bedeutung": "theoretische mittlere Read-Tiefe über das Ziel",
+        "einheit": "×"
+      },
+      {
+        "symbol": "N",
+        "bedeutung": "Zahl der Reads gleicher mittlerer Länge oder Read-Paare gemäß Zählkonvention",
+        "einheit": "Read(s)"
+      },
+      {
+        "symbol": "L̄",
+        "bedeutung": "mittlere Länge einer gezählten Sequenz bzw. Summe beider Mate-Längen je Paar",
+        "einheit": "bp"
+      },
+      {
+        "symbol": "G",
+        "bedeutung": "Länge des betrachteten Genoms oder Zielintervalls",
+        "einheit": "bp"
+      },
+      {
+        "symbol": "L_i",
+        "bedeutung": "Länge des einzelnen gemappten Reads im Summenansatz",
+        "einheit": "bp"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: Illumina, Technical Note: Estimating Sequencing Coverage",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 4-2 Bioinformatik/Biostatistik und Modul 8 Genetik (curricular context, not equation source)",
+      "Oxford Nanopore Technologies:How do I calculate coverage?"
+    ],
+    "quellenLinks": [
+      "https://www.illumina.com/documents/products/technotes/technote_coverage_calculation.pdf",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://nanoporetech.com/support/software/data-analysis/how-do-i-calculate-coverage"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/mittlere-sequenzierungsabdeckung"
+  },
+  {
+    "slug": "jukes-cantor-distanzkorrektur",
+    "name": "Jukes-Cantor-Distanzkorrektur",
+    "latex": "d_{JC}=-\\frac{3}{4}\\ln\\left(1-\\frac{4p}{3}\\right)",
+    "symbol": "dJC = −¾ ln(1 − 4p/3)",
+    "kategorie": "biologie",
+    "kapitel": "bio-genetik-evolution",
+    "unterkategorie": "Genetik/Evolution",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "d_JC",
+        "bedeutung": "modellkorrigierte evolutionäre Distanz pro Stelle",
+        "einheit": "Substitutionen/Stelle"
+      },
+      {
+        "symbol": "p",
+        "bedeutung": "beobachteter Anteil ungleicher, ausgerichteter homologer Nukleotidpositionen",
+        "einheit": "Anteil zwischen 0 und 1"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: Oregon State University, Applied Bioinformatics, §4.3.3 Jukes-Cantor 1969",
+      "Curriculum anchor: JGU B.Sc. Biologie, Module 4-2 Bioinformatik/Biostatistik und 10A Evolution (curricular context, not equation source)",
+      "Enno Ohlebusch,University of Ulm2016:Introduction to Bioinformatics,genetic distances,pp95–96",
+      "Weizmann Institute:GCG Distances,Algorithm/Jukes-Cantor Distance"
+    ],
+    "quellenLinks": [
+      "https://open.oregonstate.education/appliedbioinformatics/chapter/chapter-4/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.190/Lehre/WS1516/EiB/ebio_2.pdf#page=95",
+      "https://bip.weizmann.ac.il/education/materials/gcg/distances.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/jukes-cantor-distanzkorrektur"
+  },
+  {
+    "slug": "diagnostische-likelihood-ratios",
+    "name": "Diagnostische Likelihood Ratios",
+    "latex": "LR^+=\\frac{Se}{1-Sp},\\quad LR^-=\\frac{1-Se}{Sp}",
+    "symbol": "LR+ = Se/(1−Sp); LR− = (1−Se)/Sp",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "LR+",
+        "bedeutung": "Likelihood Ratio eines positiven Tests",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "LR−",
+        "bedeutung": "Likelihood Ratio eines negativen Tests",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "Se",
+        "bedeutung": "Sensitivität im definierten Referenzstandard und Zielkollektiv",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "Sp",
+        "bedeutung": "Spezifität im selben Referenzstandard und Zielkollektiv",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "O_vor",
+        "bedeutung": "Vortest-Odds der Erkrankung",
+        "einheit": "Odds"
+      },
+      {
+        "symbol": "O_nach",
+        "bedeutung": "Nachtest-Odds nach Einsetzen des Testergebnisses",
+        "einheit": "Odds"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: NCBI Bookshelf, Clinical Methods, Chapter 6: Use of Likelihood Ratios",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 4-2 Bioinformatik/Biostatistik (curricular context, not formula source)",
+      "University of Utah WebPath: Basic Biostatistics",
+      "scikit-learn: class_likelihood_ratios"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK383/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://webpath.med.utah.edu/TUTORIAL/BIOSTATS/BIOSTATS.html",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.class_likelihood_ratios.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/diagnostische-likelihood-ratios"
+  },
+  {
+    "slug": "konfidenzintervall-relatives-risiko-odds-ratio",
+    "name": "Konfidenzintervalle für relatives Risiko und Odds Ratio",
+    "latex": "[L;U]=\\exp\\!\\left(\\ln\\hat\\theta\\pm zSE_{\\ln\\hat\\theta}\\right)",
+    "symbol": "Log-Wald-Intervall für RR oder OR",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "θ̂",
+        "bedeutung": "Ausdrücklich gewählter positiver Punktschätzer RR oder OR",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "SE(lnθ̂)",
+        "bedeutung": "Passender Standardfehler auf der natürlichen Logarithmusskala",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "z",
+        "bedeutung": "Standardnormalquantil; im Rechner fest 1,96",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "L,U",
+        "bedeutung": "Gemeinsam berichtete untere und obere Grenze",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "Personen mit Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "Personen ohne Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "c",
+        "bedeutung": "Personen mit Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Personen ohne Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "statsmodels Table2x2 source: log odds/risk ratio standard errors and normal intervals",
+      "Cochrane Handbook, Chapter 6: dichotomous outcomes, risk, odds and absolute effects",
+      "Office for Health Improvement and Disparities: odds ratio, relative risk and logarithmic intervals",
+      "CDC Field Epidemiology Manual, Chapter 8: table orientation, association, confounding and uncertainty"
+    ],
+    "quellenLinks": [
+      "https://www.statsmodels.org/stable/_modules/statsmodels/stats/contingency_tables.html",
+      "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "https://fingertips.phe.org.uk/static-reports/public-health-technical-guidance/Basic_statistics/Odds_ratios_relative_risk.html",
+      "https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/konfidenzintervall-relatives-risiko-odds-ratio"
+  },
+  {
+    "slug": "stichprobenumfang-anteil",
+    "name": "Stichprobenumfang zur Schätzung eines Anteils",
+    "latex": "n_0=\\frac{z^2p(1-p)}{d^2}",
+    "symbol": "n₀ = z² p(1−p) / d²",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "n₀",
+        "bedeutung": "erforderlicher Stichprobenumfang vor Korrektur für endliche Population",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "z",
+        "bedeutung": "Standardnormal-Quantil für das gewünschte Konfidenzniveau",
+        "einheit": "dimensionslos"
+      },
+      {
+        "symbol": "p",
+        "bedeutung": "erwarteter Populationsanteil; bei Unkenntnis konservativ 0,5 einsetzen",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "gewünschte halbe Breite des approximativen Intervalls",
+        "einheit": "Anteil"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: CDC Epi Info User Guide, StatCalc: Population Survey or Descriptive Study",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 4-2 Bioinformatik/Biostatistik (curricular context, not formula source)",
+      "NIST/SEMATECH e-Handbook: 3.3.3.3 Selecting Sample Sizes",
+      "STAT301 at Purdue: Inference for a Single Proportion, section 15.7"
+    ],
+    "quellenLinks": [
+      "https://www.cdc.gov/epiinfo/user-guide/statcalc/samplesize.html",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://www.itl.nist.gov/div898/handbook/ppc/section3/ppc333.htm",
+      "https://sisurain.github.io/Purdue_STAT301/chapter15.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/stichprobenumfang-anteil"
+  },
+  {
+    "slug": "holling-typ-ii-funktion",
+    "name": "Holling-Typ-II-Funktion",
+    "latex": "f(N)=\\frac{aN}{1+ahN}",
+    "symbol": "f(N) = aN / (1 + ahN)",
+    "kategorie": "biologie",
+    "kapitel": "bio-oekologie-population",
+    "unterkategorie": "Population/Ökologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "f(N)",
+        "bedeutung": "konsumierte Beute pro Räuber und Zeit bei Beutedichte N",
+        "einheit": "Beute/(Räuber·Zeit)"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "Angriffs- oder Suchrate des Räubers",
+        "einheit": "Fläche/(Räuber·Zeit)"
+      },
+      {
+        "symbol": "N",
+        "bedeutung": "Beutedichte",
+        "einheit": "Beute/Fläche"
+      },
+      {
+        "symbol": "h",
+        "bedeutung": "mittlere Bearbeitungszeit je erbeuteter Beute",
+        "einheit": "Zeit/Beute je Räuber"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: Holling (1959), Some Characteristics of Simple Types of Predation and Parasitism, The Canadian Entomologist",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 10A Evolution/Biodiversität/Ökologie (curricular context, not equation source)",
+      "Beals, Gross & Harrell, University of Tennessee: Type II Functional Response, assumptions and handling-time interpretation",
+      "Hank Stevens, Primer of Ecology, chapter10: resource-dependent type II response and saturation rate"
+    ],
+    "quellenLinks": [
+      "https://doi.org/10.4039/ent91385-7",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://lgross.utk.edu/LGrossTIEMwebsite/home/gross/public_html/bioed/bealsmodules/holling.html",
+      "https://hankstevens.github.io/Primer-of-Ecology/08-consumerResource.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/holling-typ-ii-funktion"
+  },
+  {
+    "slug": "monod-wachstumsmodell",
+    "name": "Monod-Wachstumsmodell",
+    "latex": "\\mu=\\mu_{max}\\frac{S}{K_S+S}",
+    "symbol": "μ = μmax·S/(KS + S)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Biochemie/Molekularbiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "μ",
+        "bedeutung": "spezifische Wachstumsrate bei Substrat S",
+        "einheit": "h⁻¹ oder d⁻¹"
+      },
+      {
+        "symbol": "μ_max",
+        "bedeutung": "maximale spezifische Wachstumsrate unter den betrachteten Kulturbedingungen",
+        "einheit": "gleiche Zeiteinheit wie μ"
+      },
+      {
+        "symbol": "S",
+        "bedeutung": "limitierende Substratkonzentration",
+        "einheit": "mg/L oder mmol/L"
+      },
+      {
+        "symbol": "K_S",
+        "bedeutung": "Halbsättigungskonstante; S bei \\(\\mu=\\frac{\\mu_{\\max}}2\\)",
+        "einheit": "gleiche Konzentrationseinheit wie S"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: Growth Kinetics of Suspended Microbial Cells, PMC98929 (Monod model and parameter meaning)",
+      "Curriculum anchor: JGU B.Sc. Biologie, Module 4-1/4-2 Biochemie und Biostatistik (curricular context, not equation source)",
+      "Cunningham, Lennox & Ross, Montana State University, Biofilms Hypertextbook: Microbial Growth, Monod kinetics and half-saturation",
+      "Kovárová-Kovar & Egli (1998), Growth Kinetics of Suspended Microbial Cells, MMBR62:646–666, accessible summary on parameter and single-substrate limitations"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC98929/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://www.cs.montana.edu/webworks/projects/stevesbook/contents/chapters/chapter002/section002/black/page001.html",
+      "https://journals.asm.org/doi/10.1128/mmbr.62.3.646-666.1998"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/monod-wachstumsmodell"
+  },
+  {
+    "slug": "bohr-totraumsfraktion",
+    "name": "Bohr-Gleichung für die physiologische Totraumfraktion",
+    "latex": "\\frac{V_D}{V_T}=\\frac{P_{A,CO_2}-\\bar P_{E,CO_2}}{P_{A,CO_2}}",
+    "symbol": "VD/VT = (PACO₂ − PECO₂)/PACO₂",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "V_D/V_T",
+        "bedeutung": "physiologische Totraumfraktion des Atemzugvolumens",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "P_A,CO₂",
+        "bedeutung": "alveolärer CO₂-Partialdruck im klassischen Bohr-Modell",
+        "einheit": "mmHg oder kPa"
+      },
+      {
+        "symbol": "P̄_E,CO₂",
+        "bedeutung": "mittlerer CO₂-Partialdruck der gemischten Ausatemluft",
+        "einheit": "gleiche Einheit wie PA,CO₂"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: NCBI Bookshelf, Physiology, Lung Dead Space (Bohr equation and Enghoff distinction)",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 12 Tierphysiologie (curricular context, not equation source)",
+      "Leonard (2020), Respiratory equations – behind the numbers, SAJAA 26 Suppl3 S90–91: original and modified dead-space balances",
+      "Hopkins (2020), Ventilation/Perfusion Relationships and Gas Exchange: Measurement Approaches, Bohr dead space Eq22–26 and Enghoff limitation"
+    ],
+    "quellenLinks": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK482501/",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf",
+      "https://anaesthetics.ukzn.ac.za/wp-content/uploads/2024/09/Respiratory-equations-Ref-2020.pdf",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8274320/"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/bohr-totraumsfraktion"
+  },
+  {
+    "slug": "photosynthese-lichtantwort-saettigung",
+    "name": "Photosynthese-Lichtantwort und Sättigung",
+    "latex": "P_{net}=P_{max}\\frac{I}{I+E_k}-R_d,\\quad E_k=\\frac{P_{max}}{\\alpha}",
+    "symbol": "Pnet = Pmax·I/(I + Ek) − Rd",
+    "kategorie": "biologie",
+    "kapitel": "bio-physiologie",
+    "unterkategorie": "Physiologie",
+    "bildungsniveaus": [
+      "sek2",
+      "hochschulbruecke",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "P_net",
+        "bedeutung": "Netto-CO₂-Aufnahme bei der Lichtintensität I",
+        "einheit": "μmol CO₂·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "P_max",
+        "bedeutung": "asymptotische maximale Brutto-Photosyntheserate des hyperbolischen Modells",
+        "einheit": "μmol CO₂·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "I",
+        "bedeutung": "photosynthetisch aktive Photonenflussdichte",
+        "einheit": "μmol Photonen·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "E_k",
+        "bedeutung": "charakteristische Sättigungsbestrahlung Pmax/α",
+        "einheit": "μmol Photonen·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "R_d",
+        "bedeutung": "Atmung im Licht, als konstanter Abzug angenähert",
+        "einheit": "μmol CO₂·m⁻²·s⁻¹"
+      },
+      {
+        "symbol": "α",
+        "bedeutung": "Anfangssteigung der Brutto-Lichtantwort, Quantumseffizienz",
+        "einheit": "mol CO₂/mol Photonen"
+      }
+    ],
+    "quellen": [
+      "Wu, A. et al. (2016). Connecting Biochemical Photosynthesis Models with Crop Models to Support Crop Improvement. Frontiers in Plant Science, 7:1518, Table 1 (rectangular hyperbola)",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 11 Pflanzenphysiologie und Biochemie (curricular context, not equation source)"
+    ],
+    "quellenLinks": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5061851/#T1",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/photosynthese-lichtantwort-saettigung"
+  },
+  {
+    "slug": "absolute-risikodifferenz",
+    "name": "Absolute Risikodifferenz",
+    "latex": "RD=p_1-p_0=\\frac{a}{a+b}-\\frac{c}{c+d}",
+    "symbol": "RD = Risiko Gruppe 1 − Risiko Gruppe 0",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "hochschulbruecke",
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "RD",
+        "bedeutung": "Gerichtete Differenz p₁−p₀, nicht ihr Betrag",
+        "einheit": "Anteil oder Prozentpunkte"
+      },
+      {
+        "symbol": "p₁",
+        "bedeutung": "Ereignisrisiko der Gruppe 1 im festgelegten Zeitraum",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "p₀",
+        "bedeutung": "Ereignisrisiko der Referenzgruppe 0 im selben Zeitraum",
+        "einheit": "Anteil"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "Personen mit Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "b",
+        "bedeutung": "Personen ohne Ereignis in Gruppe 1",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "c",
+        "bedeutung": "Personen mit Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Personen ohne Ereignis in Referenzgruppe 0",
+        "einheit": "Personen"
+      }
+    ],
+    "quellen": [
+      "Cochrane Handbook, Chapter 6: dichotomous outcomes, risk, odds and absolute effects",
+      "CDC Field Epidemiology Manual, Chapter 8: table orientation, association, confounding and uncertainty"
+    ],
+    "quellenLinks": [
+      "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/absolute-risikodifferenz"
+  },
+  {
+    "slug": "fisher-exakt-test",
+    "name": "Fisher-Exakt-Test",
+    "latex": "\\begin{aligned}P(X=x)&=\\frac{\\binom Kx\\binom{N-K}{n-x}}{\\binom Nn}\\\\p_2&=\\sum_{x:P(X=x)\\le P(X=a)}P(X=x)\\end{aligned}",
+    "symbol": "P(X=x) = C(K,x)C(N−K,n−x)/C(N,n); p₂ = Σ P(T), P(T) ≤ P(Tobs)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Biostatistik",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "N",
+        "bedeutung": "Gesamtzahl aller Beobachtungen in der 2×2-Tafel",
+        "einheit": "Personen oder Fälle"
+      },
+      {
+        "symbol": "K",
+        "bedeutung": "Gesamtzahl der Beobachtungen mit der betrachteten Spaltenausprägung",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "n",
+        "bedeutung": "Größe der betrachteten Zeilengruppe",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "X",
+        "bedeutung": "zufällige Zellhäufigkeit unter fixierten Rändern",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "x",
+        "bedeutung": "möglicher oberer linker Zellwert unter den festen Margen",
+        "einheit": "Fälle"
+      },
+      {
+        "symbol": "a",
+        "bedeutung": "beobachtete obere linke Zellzahl der Tafel [[a,b],[c,d]]",
+        "einheit": "Fälle"
+      }
+    ],
+    "quellen": [
+      "Fachquelle: R stats, fisher.test, Details und Value",
+      "Fachquelle: SciPy, fisher_exact, Null hypothesis and p-values; Odds ratio",
+      "Fachquelle: BMJ Statistics at Square One, Chapter 9: Exact probability test",
+      "Curriculum anchor: JGU B.Sc. Biologie, Modul 4-2 Bioinformatik/Biostatistik (curricular context, not test source)"
+    ],
+    "quellenLinks": [
+      "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/fisher.test.html",
+      "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html",
+      "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/9-exact-probability-test",
+      "https://download.uni-mainz.de/fb10-biologie/Downloads/Studium/Bachelor_Biologie/Modulhandbuch_BSc_Biol__MolBiol_2015.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/fisher-exakt-test"
+  },
+  {
+    "slug": "photosynthese-stoffbilanz",
+    "name": "Fotosynthese: Stoffbilanz und Mengenverhältnisse",
+    "latex": "6\\mathrm{CO_2}+6\\mathrm{H_2O}\\longrightarrow\\mathrm{C_6H_{12}O_6}+6\\mathrm{O_2}",
+    "symbol": "6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Fotosynthese",
+    "bildungsniveaus": [
+      "sek1",
+      "sek2"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "n(CO₂)",
+        "bedeutung": "aufgenommene Stoffmenge Kohlenstoffdioxid",
+        "einheit": "mol"
+      },
+      {
+        "symbol": "n(G)",
+        "bedeutung": "gebildetes Glucoseäquivalent",
+        "einheit": "mol"
+      },
+      {
+        "symbol": "n(O₂)",
+        "bedeutung": "gebildete Stoffmenge Sauerstoff",
+        "einheit": "mol"
+      }
+    ],
+    "quellen": [
+      "OpenStax Biology2e,8.1 Overview of Photosynthesis"
+    ],
+    "quellenLinks": [
+      "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/photosynthese-stoffbilanz"
+  },
+  {
+    "slug": "zellatmung-energiebilanz",
+    "name": "Zellatmung: Stoffbilanz und ATP-Ausbeute",
+    "latex": "\\mathrm{C_6H_{12}O_6}+6\\mathrm{O_2}\\longrightarrow6\\mathrm{CO_2}+6\\mathrm{H_2O}",
+    "symbol": "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Zellatmung",
+    "bildungsniveaus": [
+      "sek2",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "NATP",
+        "bedeutung": "ATP-Äquivalente pro Glucose",
+        "einheit": "1"
+      },
+      {
+        "symbol": "pN",
+        "bedeutung": "P/O-Wert für NADH",
+        "einheit": "1"
+      },
+      {
+        "symbol": "pF",
+        "bedeutung": "P/O-Wert für FADH₂",
+        "einheit": "1"
+      },
+      {
+        "symbol": "pc",
+        "bedeutung": "äquivalente Ausbeute je cytosolischem NADH",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "OpenStax Biology2e,7.4 Oxidative Phosphorylation"
+    ],
+    "quellenLinks": [
+      "https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/zellatmung-energiebilanz"
+  },
+  {
+    "slug": "mikroskop-groessenbestimmung",
+    "name": "Mikroskop: Objektgröße und Maßstabsbalken",
+    "latex": "L_{\\mathrm{Objekt}}=\\frac{L_{\\mathrm{Bild}}}{M}=\\frac{p_{\\mathrm{Objekt}}}{p_{\\mathrm{Balken}}}L_{\\mathrm{Balken}}",
+    "symbol": "Objektgröße = Bildgröße / Vergrößerung",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Mikroskop",
+    "bildungsniveaus": [
+      "sek1",
+      "sek2",
+      "bachelor"
+    ],
+    "schwierigkeit": "fortgeschritten",
+    "abiturRelevant": true,
+    "variablen": [
+      {
+        "symbol": "LObjekt",
+        "bedeutung": "reale Länge des Objekts",
+        "einheit": "µm"
+      },
+      {
+        "symbol": "pObjekt",
+        "bedeutung": "Pixellänge des Objekts",
+        "einheit": "px"
+      },
+      {
+        "symbol": "pBalken",
+        "bedeutung": "Pixellänge des Maßstabsbalkens",
+        "einheit": "px"
+      },
+      {
+        "symbol": "LBalken",
+        "bedeutung": "beschriftete reale Länge des Balkens",
+        "einheit": "µm"
+      }
+    ],
+    "quellen": [
+      "Oxford University Press, New Senior Secondary Mastering Biology: Skill building pack, Calculation, sections A–B"
+    ],
+    "quellenLinks": [
+      "https://eresources.oupchina.com.hk/biology/oxford-new-mastering-biology/resources/sbp_sample_9.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/mikroskop-groessenbestimmung"
+  },
+  {
+    "slug": "zentrifugation-rcf",
+    "name": "Zentrifugation: RCF und Drehzahl",
+    "latex": "\\mathrm{RCF}=\\frac{r\\omega^2}{g_0}=\\frac{4\\pi^2r}{g_0}\\left(\\frac n{60}\\right)^2",
+    "symbol": "RCF = rω²/g₀",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Zentrifugation",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "r",
+        "bedeutung": "Radius zum gewählten Probenort",
+        "einheit": "m"
+      },
+      {
+        "symbol": "n",
+        "bedeutung": "Drehzahl in Umdrehungen pro Minute",
+        "einheit": "rpm"
+      },
+      {
+        "symbol": "ω",
+        "bedeutung": "Winkelgeschwindigkeit",
+        "einheit": "rad/s"
+      },
+      {
+        "symbol": "RCF",
+        "bedeutung": "Beschleunigung relativ zu g₀",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "Eppendorf Micro Centrifuge5415C Instruction Manual,Technical Data; geometric circular-motion derivation"
+    ],
+    "quellenLinks": [
+      "https://www.nist.gov/system/files/documents/ncnr/Centrifuge_Eppendorf_5415C.pdf"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/zentrifugation-rcf"
+  },
+  {
+    "slug": "zellzaehlung-keimzahl",
+    "name": "Zellzählung und Keimzahl: Zählvolumen und Verdünnung",
+    "latex": "c_{\\mathrm{Original}}=\\frac{N}{Vd}=\\frac{ND}{V},\\qquad D=1/d",
+    "symbol": "Konzentration = Anzahl / (Volumen·Verdünnungsanteil)",
+    "kategorie": "biologie",
+    "kapitel": "bio-biostatistik",
+    "unterkategorie": "Zellzählung und Keimzahl",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "N",
+        "bedeutung": "gezählte Zellobjekte oder Kolonien",
+        "einheit": "1"
+      },
+      {
+        "symbol": "V",
+        "bedeutung": "tatsächlich erfasstes verdünntes Probenvolumen",
+        "einheit": "mL"
+      },
+      {
+        "symbol": "d",
+        "bedeutung": "Anteil der Originalprobe nach Verdünnung",
+        "einheit": "1"
+      },
+      {
+        "symbol": "D",
+        "bedeutung": "Kehrwert des Verdünnungsanteils",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "FDA Bacteriological Analytical Manual Chapter3,January2026,plate-count estimation; ATCC Animal Cell Culture Guide,counting-chamber volume"
+    ],
+    "quellenLinks": [
+      "https://www.fda.gov/media/191248/download"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/zellzaehlung-keimzahl"
+  },
+  {
+    "slug": "gemischte-enzymhemmung",
+    "name": "Gemischte Enzymhemmung: α, α′ und scheinbare Parameter",
+    "latex": "v=\\frac{V_{max}[S]}{\\alpha K_m+\\alpha^{\\prime}[S]},\\quad\\alpha=1+\\frac{[I]}{K_i},\\quad\\alpha^{\\prime}=1+\\frac{[I]}{K_i^{\\prime}}",
+    "symbol": "v = Vmax·[S] / (αKm + α′[S])",
+    "kategorie": "biologie",
+    "kapitel": "bio-biochemie-molekularbiologie",
+    "unterkategorie": "Gemischte Enzymhemmung",
+    "bildungsniveaus": [
+      "bachelor",
+      "fachvertiefung"
+    ],
+    "schwierigkeit": "universitaet",
+    "abiturRelevant": false,
+    "variablen": [
+      {
+        "symbol": "Vmax",
+        "bedeutung": "Maximalgeschwindigkeit ohne Inhibitor",
+        "einheit": "Geschwindigkeitseinheit"
+      },
+      {
+        "symbol": "Km",
+        "bedeutung": "Michaelis-Konstante ohne Inhibitor",
+        "einheit": "Konzentration"
+      },
+      {
+        "symbol": "[S],[I]",
+        "bedeutung": "freie Substrat- und Inhibitorkonzentration",
+        "einheit": "Konzentration"
+      },
+      {
+        "symbol": "Ki,Ki′",
+        "bedeutung": "Bindungskonstanten der beiden Modellzustände",
+        "einheit": "Konzentration"
+      },
+      {
+        "symbol": "α,α′",
+        "bedeutung": "hier definierte Bindungsfaktoren",
+        "einheit": "1"
+      }
+    ],
+    "quellen": [
+      "GraphPad Prism11 Curve Fitting Guide,Mixed-model inhibition; own translation from Ki′/Ki to two binding factors"
+    ],
+    "quellenLinks": [
+      "https://www.graphpad.com/guides/prism/latest/curve-fitting/reg_mixered_model.htm"
+    ],
+    "url": "https://quanta-study.de/tafelwerk/gemischte-enzymhemmung"
   }
 ]

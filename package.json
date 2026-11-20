@@ -1,44 +1,44 @@
 {
   "name": "quanta-bio-formeln",
-  "version": "2.0.0",
-  "description": "8 wissenschaftlich aufbereitete Biologie-Formeln für Abitur, Studium und Universität — Biochemie, Genetik, Populationsbiologie, Ökologie. Mit LaTeX, Variablen, Herleitung, Umstellungen und typischen Fehlern. Von Quanta (quanta-study.de).",
+  "version": "3.0.0",
+  "description": "Compact German biologie formula reference data with LaTeX, variable metadata, source references and TypeScript helpers.",
+  "private": false,
+  "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
+    "formeln.json",
     "index.js",
     "index.d.ts",
-    "formeln.json"
+    "schema.json",
+    "README.md",
+    "CITATION.cff",
+    "LICENSE",
+    "LICENSE-SCOPE.md",
+    "CHANGELOG.md",
+    "manifest.json",
+    "test"
   ],
   "scripts": {
-    "test": "node -e \"const f = require('.'); console.log('✅', f.formeln.length, 'Bio-Formeln geladen');\""
+    "test": "node --test test/contract.test.cjs"
   },
   "keywords": [
-    "biologie",
-    "biologie-formeln",
-    "biology",
-    "enzymkinetik",
-    "michaelis-menten",
-    "hardy-weinberg",
-    "populationsgenetik",
-    "oekologie",
-    "biochemie",
-    "medizin",
-    "vorklinik",
+    "dataset",
+    "formula",
     "latex",
-    "mint",
-    "studium",
-    "university",
-    "fsrs",
-    "quanta",
-    "education",
-    "germany"
+    "biologie",
+    "typescript",
+    "quanta-study"
   ],
-  "author": "Quanta <ammm.creativetech@gmail.com> (https://quanta-study.de)",
+  "author": {
+    "name": "Quanta Study / AM Creative Tech UG (haftungsbeschränkt)",
+    "url": "https://quanta-study.de/"
+  },
   "license": "CC-BY-4.0",
-  "homepage": "https://quanta-study.de/biologie-lernen",
+  "homepage": "https://quanta-study.de/tafelwerk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ammmcreativetech-dot/quanta-bio-formeln.git"
+    "url": "git+https://github.com/ammmcreativetech-dot/quanta-bio-formeln.git"
   },
   "bugs": {
     "url": "https://github.com/ammmcreativetech-dot/quanta-bio-formeln/issues"

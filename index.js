@@ -1,11 +1,11 @@
 'use strict';
+// Generated compact reference helpers; no application, article or provider dependency.
 const formeln = require('./formeln.json');
-
-function getFormelBySlug(slug) {
-  return formeln.find(f => f.slug === slug);
-}
-function getFormelByUnterkategorie(unterkategorie) {
-  return formeln.filter(f => f.unterkategorie === unterkategorie);
-}
-
-module.exports = { formeln, getFormelBySlug, getFormelByUnterkategorie };
+const getAllFormeln = () => formeln;
+const getFormelBySlug = slug => formeln.find(formel => formel.slug === slug);
+const getFormelByKategorie = kategorie => formeln.filter(formel => formel.kategorie === kategorie);
+const getFormelByKapitel = chapterId => formeln.filter(formel => formel.kapitel === chapterId);
+const getFormelByUnterkategorie = unterkategorie => formeln.filter(formel => formel.unterkategorie === unterkategorie);
+const getFormelByBildungsniveau = level => formeln.filter(formel => formel.bildungsniveaus.includes(level));
+const getAbiturFormeln = () => formeln.filter(formel => formel.abiturRelevant);
+module.exports = {formeln, getAllFormeln, getFormelBySlug, getFormelByKategorie, getFormelByUnterkategorie, getFormelByKapitel, getFormelByBildungsniveau, getAbiturFormeln};
